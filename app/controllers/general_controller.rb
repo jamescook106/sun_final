@@ -8,6 +8,11 @@ class GeneralController < ApplicationController
     end
   end
 
+  def champion
+    @champions = Champion.all
+    render template: "general/champions"
+  end
+
   #Method for seeing if page exists
   def valid_page?
     File.exist?(Pathname.new(Rails.root + "app/views/general/#{params[:page]}.html.erb"))
