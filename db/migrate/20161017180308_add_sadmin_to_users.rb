@@ -1,5 +1,5 @@
 class AddSadminToUsers < ActiveRecord::Migration
   def change
-    add_column :users, :sadmin, :boolean
+    add_column :users, :sadmin, :boolean, default: false
   end
 end
