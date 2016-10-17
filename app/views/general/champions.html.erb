@@ -1,0 +1,12 @@
+<% @title="Champions" %>
+
+<div class = "row large-12 columns">
+  <h1> Learning Route Champions </h1>
+<div>
+
+<% @champions.each do |apple| %>
+  <div class = "row large-12 columns">
+    <p>Name: <%= apple.first_name %> <%= apple.last_name %></p>
+    <%= simple_format(apple.short_description) %>
+  </div>
+<% end %>
