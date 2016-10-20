@@ -3,3 +3,12 @@
 <div class = "row large-12 columns">
   <h1> <%= @champions.first_name %> </h1>
 <div>
+
+  <div class = "row large-12 columns">
+    <div class = "large-5 columns">
+      <%=image_tag(@champions.headshot,width:"100%") %>
+    </div>
+    <div class = "large-7 columns">
+      <%= simple_format(@champions.long_text) %>
+    </div>
+  </div>
