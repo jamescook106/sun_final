@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   get "/champions" => "general#champion"
   get "/champions/:id" => "general#champion_full"
+  get "/knowledge" => "general#resource_home"
   get "/:page" => "general#static"
 
   # The priority is based upon order of creation: first created -> highest priority.

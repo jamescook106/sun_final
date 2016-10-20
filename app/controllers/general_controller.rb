@@ -8,8 +8,13 @@ class GeneralController < ApplicationController
     end
   end
 
-  #Champions part
+  def resource_home
+    @resources = Resource.order(:id)
+    render template: "general/resources"
+  end
 
+
+  #Champions part
   def champion
     @champions = Champion.all
     render template: "general/champions"
