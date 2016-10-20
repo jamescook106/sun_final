@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   get "/champions" => "general#champion"
+  get "/champions/:id" => "general#champion_full"
   get "/:page" => "general#static"
 
   # The priority is based upon order of creation: first created -> highest priority.
