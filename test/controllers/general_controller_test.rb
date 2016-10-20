@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class GeneralControllerTest < ActionController::TestCase
+  include Devise::Test::ControllerHelpers
 
   def setup
     @base_title = "SUN"
@@ -40,6 +41,18 @@ class GeneralControllerTest < ActionController::TestCase
     get :static, page: 'lr2'
     assert_response :success
     assert_select "title", "Learning Route 2 | #{@base_title}"
+  end
+
+  test "should get champions" do
+    get :champion
+    assert_response :success
+    assert_select "title", "Champions | #{@base_title}"
+  end
+
+  test "should get resources" do
+    get :resource_home
+    assert_response :success
+    assert_select "title", "Resources | #{@base_title}"
   end
 
 end
