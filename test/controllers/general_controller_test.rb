@@ -45,14 +45,34 @@ class GeneralControllerTest < ActionController::TestCase
 
   test "should get champions" do
     get :champion
+    champion=Champion.new
+    champion.save
     assert_response :success
     assert_select "title", "Champions | #{@base_title}"
+  end
+
+  test "should get champion profile" do
+    champion=Champion.new
+    champion.first_name='James'
+    champion.save
+    get :champion_full, id:champion.id
+    assert_response :success
+    assert_select "title", champion.first_name + " | #{@base_title}"
   end
 
   test "should get resources" do
     get :resource_home
     assert_response :success
     assert_select "title", "Resources | #{@base_title}"
+  end
+
+  test "should get resource detail" do
+    resource=Resource.new
+    resource.name='TEST'
+    resource.save
+    get :resource_full, id:resource.id
+    assert_response :success
+    assert_select "title", resource.name + " | #{@base_title}"
   end
 
 end
