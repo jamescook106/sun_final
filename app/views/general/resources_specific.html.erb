@@ -3,3 +3,11 @@
 <div class = "row large-12 columns">
   <h1> Resource Information: <%= @resources.name %> </h1>
 <div>
+
+<div class = "row large-12 columns">
+  <h4> <%= @resources.name %> </h4>
+  <%= simple_format(@resources.short) %>
+  <%= @resources.file.content_type %>
+  <br>
+  <%= link_to "Download", @resources.file.url(:original, false) %>
+</div>
