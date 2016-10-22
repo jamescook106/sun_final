@@ -7,5 +7,6 @@
 <% @resources.each do |apple| %>
   <div class = "large-12 columns">
     <%= apple.file.content_type %>
+    <%= link_to "Download", apple.file.url(:original, false) %>
   </div>
 <% end %>
