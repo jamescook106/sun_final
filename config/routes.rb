@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
-  
+
   get "/champions" => "champion#index"
   get "/champions/:id" => "champion#champion_description"
 
   get "/knowledge" => "resource#index"
+  get "/knowledge/new" => "resource#new"
+  post "/knowledge/new" => "resource#create"
   get "/knowledge/:id" => "resource#full_description"
 
   get "/:page" => "general#static"

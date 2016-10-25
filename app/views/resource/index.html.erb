@@ -4,6 +4,11 @@
   <h1> Resources</h1>
 <div>
 
+<div class = "row large-12 columns">
+  <%= link_to "Upload", "/knowledge/new" %>
+<div>
+  <br>
+
 <% @resources.each do |apple| %>
   <div class = "row large-12 columns">
     <% url = 'knowledge/' + apple.id.to_s %>
