@@ -8,21 +8,6 @@ class GeneralController < ApplicationController
     end
   end
 
-  def resource_home
-    @resources = Resource.order(:id)
-    render template: "general/resources"
-  end
-
-  def resource_full
-    @resources = Resource.find_by_id(params[:id])
-    if @resources
-      render template: "general/resources_specific"
-    else
-      redirect_to "/knowledge"
-    end
-  end
-
-
   #Champions part
   def champion
     @champions = Champion.all

@@ -60,19 +60,4 @@ class GeneralControllerTest < ActionController::TestCase
     assert_select "title", champion.first_name + " | #{@base_title}"
   end
 
-  test "should get resources" do
-    get :resource_home
-    assert_response :success
-    assert_select "title", "Resources | #{@base_title}"
-  end
-
-  test "should get resource detail" do
-    resource=Resource.new
-    resource.name='TEST'
-    resource.save
-    get :resource_full, id:resource.id
-    assert_response :success
-    assert_select "title", resource.name + " | #{@base_title}"
-  end
-
 end
