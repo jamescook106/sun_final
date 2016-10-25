@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
-
-  get 'resource/index'
-
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
-  get "/champions" => "general#champion"
-  get "/champions/:id" => "general#champion_full"
+  
+  get "/champions" => "champion#index"
+  get "/champions/:id" => "champion#champion_description"
+
   get "/knowledge" => "resource#index"
   get "/knowledge/:id" => "resource#full_description"
+
   get "/:page" => "general#static"
 
   # The priority is based upon order of creation: first created -> highest priority.
