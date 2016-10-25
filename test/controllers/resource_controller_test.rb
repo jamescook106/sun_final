@@ -15,6 +15,8 @@ class ResourceControllerTest < ActionController::TestCase
   test "should get resource detail" do
     resource=Resource.new
     resource.name='TEST'
+    resource.short='Short'
+    resource.long='Long'
     resource.save
     get :full_description, id:resource.id
     assert_response :success
