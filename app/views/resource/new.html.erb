@@ -1,0 +1,26 @@
+<% @title="New Resource" %>
+
+<div class = "row large-12 columns">
+  <h1> New Resource</h1>
+  <%= form_for :resource do |f| %>
+  <div class="field">
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.text_area :short %>
+  </div>
+
+  <div class="field">
+    <%= f.text_area :long %>
+  </div>
+
+  <div class="field">
+  <%= f.file_field :file %>
+</div>
+
+  <div class="field">
+    <%= f.submit %>
+  </div>
+<% end %>
+<div>
