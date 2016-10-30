@@ -1,5 +1,8 @@
 class Resource < ActiveRecord::Base
 
+  enum language: [ :English, :Spanish, :French]
+  enum type: [:Document, :Movie, :Image]
+
   validates :name, presence:true, length: { minimum: 2 }
   validates :short, presence:true
   validates :long, presence:true
