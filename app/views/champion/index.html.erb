@@ -10,10 +10,10 @@
 <% name = apple.first_name + ' ' + apple.last_name%>
 <% url = 'champions/' + apple.id.to_s %>
   <div class = "row large-12 columns">
-    <div class = "large-5 columns">
+    <div class = "large-3 columns">
       <%=link_to image_tag(apple.headshot.url,width:"100%"),url %>
     </div>
-    <div class = "large-7 columns">
+    <div class = "large-9 columns">
       <a href=<%= url %>><%= name %></a>
       <%= simple_format(apple.short_description) %>
     </div>

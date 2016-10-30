@@ -24,6 +24,10 @@
     <% if user_signed_in? %>
       <p> SIGNED IN </p>
       <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+      <% if current_user.admin? %>
+      <li><%= link_to "Admin", '/admin' %></li>
+      <% end %>
+      <li><%= link_to "Profile", edit_user_registration_path %></li>
     <% else %>
       <%= form_for(:user, :url => session_path(:user)) do |f| %>
         <%= f.text_field :email %>
