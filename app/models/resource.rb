@@ -10,4 +10,8 @@ class Resource < ActiveRecord::Base
   has_attached_file :file
   do_not_validate_attachment_file_type :file
 
+  def self.search(search)
+    where("name LIKE ?", "%#{search}%") 
+  end
+
 end
