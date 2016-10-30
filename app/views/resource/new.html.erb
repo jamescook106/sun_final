@@ -16,6 +16,14 @@
   </div>
 
   <div class="field">
+    <%= f.select :language, ['English', 'Spanish', 'French'] %>
+  </div>
+
+  <div class="field">
+    <%= f.select :contenttype, ['Document', 'Movie', 'Picture'] %>
+  </div>
+
+  <div class="field">
   <%= f.file_field :file %>
 </div>
 
