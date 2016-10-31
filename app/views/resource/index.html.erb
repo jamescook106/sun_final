@@ -7,7 +7,8 @@
   <div class = "row large-12 columns">
   <%= form_tag search_index_path, method: :get do %>
     <%= text_field_tag :search, params[:search] %>
-    <%= select_tag "language", options_for_select(['English','Spanish','French'].map{|o| [o.humanize,o] }) %>
+    <%= select_tag "language", options_for_select(['','English','Spanish','French'].map{|o| [o.humanize,o] }) %>
+    <%= select_tag "contenttype", options_for_select(['','Document','Movie','Picture'].map{|o| [o.humanize,o] }) %>
     <%= submit_tag "Search", name: nil %>
   <% end %>
   <div>
