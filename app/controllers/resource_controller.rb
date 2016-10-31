@@ -1,4 +1,8 @@
 class ResourceController < ApplicationController
+
+  before_filter :authenticate_user!,
+    :only => [:new]
+
   def index
     @resources = Resource.order(:id)
     render template: "resource/index"
@@ -15,6 +19,7 @@ class ResourceController < ApplicationController
 
   def new
     @resource = Resource.new
+    raise CanCan::AccessDenied unless can? :upload, @resource
   end
 
   def create

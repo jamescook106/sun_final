@@ -2,17 +2,22 @@
 
 <div class = "row large-12 columns">
   <h1> New Resource</h1>
+  <p> Below is a form to upload new resources onto the site. Please ensure that you fill out all fields as clearly as possibke
+  to help other users identify your resource. If you have any problems please contact the admin.</p>
   <%= form_for :resource do |f| %>
   <div class="field">
-    <%= f.text_field :name %>
+    <%= f.label :name, 'Name of Resource' %>
+    <%= f.text_field :name, label:false %>
   </div>
 
   <div class="field">
-    <%= f.text_area :short %>
+    <%= f.label :short, 'Short Description of Resource' %>
+    <%= f.text_area :short, label:false %>
   </div>
 
   <div class="field">
-    <%= f.text_area :long %>
+    <%= f.label :long, 'Long Description of Resource' %>
+    <%= f.text_area :long, label:false %>
   </div>
 
   <div class="field">
@@ -20,7 +25,8 @@
   </div>
 
   <div class="field">
-    <%= f.select :contenttype, ['Document', 'Movie', 'Picture'] %>
+    <%= f.label :contenttype, 'Content Type' %>
+    <%= f.select :contenttype, ['Document', 'Movie', 'Picture'], label:false %>
   </div>
 
   <div class="field">
