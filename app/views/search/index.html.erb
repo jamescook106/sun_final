@@ -2,20 +2,21 @@
     <h1> Resources</h1>
   <div>
 
-  <% @resources.each do |apple| %>
-    <div class = "row large-12 columns">
-      <% url = 'knowledge/' + apple.id.to_s %>
-      <h4> <%= apple.name %> </h4>
-      <%= simple_format(apple.short) %>
-      <%= apple.file.content_type %>
-      <br>
-      <%= link_to "Download", apple.file.url(:original, false) %>
-      <br>
-      <a href=<%= url %>>Full Description </a>
+    <div class = "row">
+    <% @resources.each do |apple| %>
+      <div class = "large-6 columns">
+        <% url = 'knowledge/' + apple.id.to_s %>
+        <h4> Resource: <%= apple.name %> </h4>
+        <%= simple_format(apple.short) %>
+        <%= apple.file.content_type %>
+        <br>
+        <%= link_to "Download", apple.file.url(:original, false) %>
+        <br>
+        <a href=<%= url %>>Full Description </a>
+      </div>
+    <% end %>
     </div>
-    <br>
 
-  <% end %>
 
   <% if @resources.blank? %>
     <h4>There are no resources containing the term <%= params[:search] %>.</h4>

@@ -1,27 +1,47 @@
 <% @title="Resources" %>
 
-<div class = "row large-12 columns">
-  <h1> Resources</h1>
-<div>
+<div class = "row">
+  <div class = 'large-12 columns'>
+    <h1> Resources</h1>
+  </div>
+</div>
 
-  <div class = "row large-12 columns">
-  <%= form_tag search_index_path, method: :get do %>
-    <%= text_field_tag :search, params[:search] %>
-    <%= select_tag "language", options_for_select(['','English','Spanish','French'].map{|o| [o.humanize,o] }) %>
-    <%= select_tag "contenttype", options_for_select(['','Document','Movie','Picture'].map{|o| [o.humanize,o] }) %>
-    <%= submit_tag "Search", name: nil %>
-  <% end %>
-  <div>
+<div class = "row">
+  <div class = 'large-8 columns'>
+    <h3> Search for a Resource </hr>
+      <br>
+    <%= form_tag search_index_path, method: :get do %>
+      <%= label_tag :search , 'What would you like to find?' %>
+      <%= text_field_tag :search, params[:search] %>
+      <%= label_tag :language , 'Language of Resource' %>
+      <%= select_tag "language", options_for_select(['','English','Spanish','French'].map{|o| [o.humanize,o] }) %>
+      <%= label_tag :contenttype , 'Content Type of Resource' %>
+      <%= select_tag "contenttype", options_for_select(['','Document','Movie','Picture'].map{|o| [o.humanize,o] }) %>
+      <%= button_tag( 'Search',name: nil, type: 'submit',class: "success button") %>
+    <% end %>
+  </div>
+  <div class = 'large-4 columns' style="border-left: 1px solid #E3E5E8;">
+    <h3> Upload a New Resource </h3>
+    <p> Have a great resource that you would like to share? Click the button below to upload
+      a new resource to the site! (You must be logged in and approved by admin to use this feature) </p>
+      <br>
+    <a class="expanded success button" href="/knowledge/new">Upload</a>
+  </div>
+</div>
 
-<div class = "row large-12 columns">
-  <%= link_to "Upload", "/knowledge/new" %>
-<div>
-  <br>
+<br>
 
+<div class = "row">
+  <div class = 'large-12 columns'>
+    <h1> Latest Resources</h1>
+  </div>
+</div>
+
+<div class = "row">
 <% @resources.each do |apple| %>
-  <div class = "row large-12 columns">
+  <div class = "large-6 columns">
     <% url = 'knowledge/' + apple.id.to_s %>
-    <h4> <%= apple.name %> </h4>
+    <h4> Resource: <%= apple.name %> </h4>
     <%= simple_format(apple.short) %>
     <%= apple.file.content_type %>
     <br>
@@ -29,5 +49,5 @@
     <br>
     <a href=<%= url %>>Full Description </a>
   </div>
-  <br>
 <% end %>
+</div>
