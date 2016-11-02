@@ -23,7 +23,9 @@
         </div>
         <div class="small-2 columns">
           <h4><center> Language </center></h1>
-          <p> <center><small>English | Français | Español</small></center></p>
+            <small><%= link_to "English", :locale=>'en'%>
+            <%= link_to "Francias", :locale=>'fr'%>
+            <%= link_to "Espanol", :locale=>'es'%></small>
         </div>
     </div>
 
@@ -54,8 +56,8 @@
         <div class="top-bar">
           <div class="top-bar-left">
             <ul class="menu">
-              <li><a href="/index">Home</a></li>
-              <li><a href="/about_sun">About SUN</a></li>
+              <li><a href="/index"><%=t :Home %></a></li>
+              <li><a href="/about_sun"><%=t :About_SUN %></a></li>
               <li><a href="/about_lr">About Learning Route Programs</a></li>
               <li><a href="/lr1">LR1 RWANDA</a></li>
               <li><a href="/lr2">LR2 ASIA</a></li>
@@ -70,7 +72,7 @@
       </div>
     </div>
     <br>
-    
+
     <div class = "row">
       <div class = 'large-12 columns'>
         <p class="notice"><%= notice %></p>
