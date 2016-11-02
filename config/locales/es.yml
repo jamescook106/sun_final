@@ -20,4 +20,21 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 es:
-  Home: 'Casa' 
+  Home: 'Casa'
+  activerecord:
+    attributes:
+      resource:
+        name: "Nombre"
+        short: "Descripción breve"
+        long: "Descripción larga"
+    errors:
+      models:
+        resource:
+          attributes:
+            name:
+              blank: "es requerido"
+              too_short: "demasiado corto"
+            short:
+              blank: "es requerido"
+            long:
+              blank: "es requerido"

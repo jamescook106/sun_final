@@ -13,17 +13,17 @@
   <% end %>
   <%= form_for :resource do |f| %>
   <div class="field">
-    <%= f.label :name, 'Name of Resource' %>
+    <%= f.label :name %>
     <%= f.text_field :name, label:false %>
   </div>
 
   <div class="field">
-    <%= f.label :short, 'Short Description of Resource' %>
+    <%= f.label :short%>
     <%= f.text_area :short, label:false %>
   </div>
 
   <div class="field">
-    <%= f.label :long, 'Long Description of Resource' %>
+    <%= f.label :long %>
     <%= f.text_area :long, label:false %>
   </div>
 
@@ -32,7 +32,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :contenttype, 'Content Type' %>
+    <%= f.label :contenttype%>
     <%= f.select :contenttype, ['Document', 'Movie', 'Picture'], label:false %>
   </div>
 
