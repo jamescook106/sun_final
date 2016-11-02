@@ -20,4 +20,19 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      resource:
+        name: "Name"
+        short: "Short Description"
+        long: "Long Description"
+    errors:
+      models:
+        resource:
+          attributes:
+            name:
+              blank: "is required"
+            short:
+              blank: "is required"
+            long:
+              blank: "is required"
