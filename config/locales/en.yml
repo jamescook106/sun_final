@@ -28,6 +28,7 @@ en:
   knowledge: "Resources"
   champions: "Champions"
   contact: "Contact"
+  title: "Champions"
   activerecord:
     attributes:
       resource:
