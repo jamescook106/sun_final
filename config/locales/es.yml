@@ -1,40 +1,38 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 es:
-  Home: 'Casa'
+  About_Learning_Route_Programs: 
+  About_SUN: 
+  Home: Casa
   activerecord:
     attributes:
       resource:
-        name: "Nombre"
-        short: "Descripción breve"
-        long: "Descripción larga"
+        contenttype: 
+        long: Descripción larga
+        name: Nombre
+        short: Descripción breve
     errors:
       models:
         resource:
           attributes:
-            name:
-              blank: "es requerido"
-              too_short: "demasiado corto"
-            short:
-              blank: "es requerido"
             long:
-              blank: "es requerido"
+              blank: es requerido
+            name:
+              blank: es requerido
+              too_short: demasiado corto
+            short:
+              blank: es requerido
+  c_champion:
+    index:
+      title: 
+  c_general: 
+  c_resource:
+    index:
+      title: Recursos
+    new:
+      title: Nuevo recurso
+  c_search: 
+  champions: 
+  contact: 
+  knowledge: 
+  lr1: 
+  lr2: 
+  title: 

@@ -1,48 +1,50 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  Home: "Home"
-  About_SUN: "About SUN"
-  About_Learning_Route_Programs: "Learning Route Programs"
-  lr1: "Learning Route 1"
-  lr2: "Learning Route 2"
-  knowledge: "Resources"
-  champions: "Champions"
-  contact: "Contact"
-  title: "Champions"
+  About_Learning_Route_Programs: Learning Route Programs
+  About_SUN: About SUN
+  Home: Home
   activerecord:
     attributes:
       resource:
-        name: "Name"
-        short: "Short Description"
-        long: "Long Description"
-        contenttype: "Content Type"
+        contenttype: Content Type
+        long: Long Description
+        name: Name
+        short: Short Description
     errors:
       models:
         resource:
           attributes:
-            name:
-              blank: "is required"
-            short:
-              blank: "is required"
             long:
-              blank: "is required"
+              blank: is required
+            name:
+              blank: is required
+              too_short: to short
+            short:
+              blank: is required
+  c_champion:
+    index:
+      title: Champions
+  c_general:
+    about_lr:
+      title: About Learning Routes
+    about_sun:
+      title: About SUN
+    contact:
+      title: Contact
+    index:
+      title: Home
+    lr1:
+      title: Learning Route 1
+    lr2:
+      title: Learning Route 2
+  c_resource:
+    index:
+      title: Resources
+    new:
+      title: New Resource
+  c_search:
+  champions: Champions
+  contact: Contact
+  knowledge: Resources
+  lr1: Learning Route 1
+  lr2: Learning Route 2
+  title: Champions
