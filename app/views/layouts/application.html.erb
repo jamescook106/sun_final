@@ -36,14 +36,14 @@
             <li>
               <a href="#">Menu</a>
               <ul class="menu vertical nested">
-                <li><a href="/index">Home</a></li>
-                <li><a href="/about_sun">About SUN</a></li>
-                <li><a href="/about_lr">About Learning Route Programs</a></li>
-                <li><a href="/lr1">LR1 RWANDA</a></li>
-                <li><a href="/lr2">LR2 ASIA</a></li>
-                <li><a href="/knowledge">Learning and Resource Centre</a></li>
-                <li><a href="/champions">LR Champions</a></li>
-                <li><a href="/contact">Contact Us</a></li>
+                <li> <%= link_to t(:Home),index_path  %> </li>
+                <li> <%= link_to t(:About_SUN), about_sun_path  %> </li>
+                <li> <%= link_to t(:About_Learning_Route_Programs), about_lr_path  %> </li>
+                <li> <%= link_to t(:lr1),lr1_path  %> </li>
+                <li> <%= link_to t(:lr2),lr2_path  %> </li>
+                <li> <%= link_to t(:knowledge),knowledge_path  %> </li>
+                <li> <%= link_to t(:champions),champions_path  %> </li>
+                <li> <%= link_to t(:contact),contact_path  %> </li>
               </ul>
             </li>
           </ul>
@@ -56,14 +56,14 @@
         <div class="top-bar">
           <div class="top-bar-left">
             <ul class="menu">
-              <li><a href= "/index"><%=t :Home %></a></li>
-              <li><a href="/about_sun"><%=t :About_SUN %></a></li>
-              <li><a href="/about_lr"><%=t :About_Learning_Route_Programs %></a></li>
-              <li><a href="/lr1">LR1 RWANDA</a></li>
-              <li><a href="/lr2">LR2 ASIA</a></li>
-              <li><a href="/knowledge">Learning and Resource Centre</a></li>
-              <li><a href="/champions">LR Champions</a></li>
-              <li><a href="/contact">Contact Us</a></li>
+              <li> <%= link_to t(:Home),index_path  %> </li>
+              <li> <%= link_to t(:About_SUN), about_sun_path  %> </li>
+              <li> <%= link_to t(:About_Learning_Route_Programs), about_lr_path  %> </li>
+              <li> <%= link_to t(:lr1),lr1_path  %> </li>
+              <li> <%= link_to t(:lr2),lr2_path  %> </li>
+              <li> <%= link_to t(:knowledge),knowledge_path  %> </li>
+              <li> <%= link_to t(:champions),champions_path  %> </li>
+              <li> <%= link_to t(:contact),contact_path  %> </li>
             </ul>
           </div>
           <div class="top-bar-right">

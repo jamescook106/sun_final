@@ -1,7 +1,6 @@
 class ChampionController < ApplicationController
   def index
     @champions = Champion.all
-    render template: "champion/index"
   end
 
   def champion_description

@@ -5,7 +5,6 @@ class ResourceController < ApplicationController
 
   def index
     @resources = Resource.order(:id)
-    render template: "resource/index"
   end
 
   def full_description

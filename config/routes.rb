@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
 
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+
+  scope "(:locale)", :locale => /en|fr|es/ do
+
   get 'search/index'
 
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
 
   get "/champions" => "champion#index"
@@ -13,7 +16,15 @@ Rails.application.routes.draw do
   post "/knowledge/new" => "resource#create"
   get "/knowledge/:id" => "resource#full_description"
 
+  get "/index" => "general#static", page:'index'
+  get "/about_sun" => "general#static", page:'about_sun'
+  get "/about_lr" => "general#static", page:'about_lr'
+  get "/lr1" => "general#static", page:'lr1'
+  get "/lr2" => "general#static", page:'lr2'
+  get "/contact" => "general#static", page:'contact'
   get "/:page" => "general#static"
+
+end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
