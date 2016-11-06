@@ -20,6 +20,14 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  Home: "Home"
+  About_SUN: "About SUN"
+  About_Learning_Route_Programs: "Learning Route Programs"
+  lr1: "Learning Route 1"
+  lr2: "Learning Route 2"
+  knowledge: "Resources"
+  champions: "Champions"
+  contact: "Contact"
   activerecord:
     attributes:
       resource:
