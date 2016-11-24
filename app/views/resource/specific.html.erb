@@ -6,7 +6,11 @@
 
 <div class = "row large-12 columns">
   <h4> <%= @resources.name %> </h4>
-  <%= simple_format(@resources.short) %>
+  <%= simple_format(@resources.long) %>
+  <% if @resources.contenttype=="Document" %>
+  <%=link_to image_tag("document.png", alt: "Document", title: "Document"), @resources.file.url(:original, false)%>
+  <br>
+  <% end %>
   <%= @resources.file.content_type %>
   <br>
   <%= link_to "Download", @resources.file.url(:original, false) %>

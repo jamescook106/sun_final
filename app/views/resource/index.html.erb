@@ -43,6 +43,10 @@
     <% url = 'knowledge/' + apple.id.to_s %>
     <h4> Resource: <%= apple.name %> </h4>
     <%= simple_format(apple.short) %>
+    <% if apple.contenttype=="Document" %>
+    <%=link_to image_tag("document.png", alt: "Document", title: "Document"), apple.file.url(:original, false)%>
+    <br>
+    <% end %>
     <%= apple.file.content_type %>
     <br>
     <%= link_to "Download", apple.file.url(:original, false) %>
