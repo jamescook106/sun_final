@@ -8,17 +8,33 @@
 
 <div class = "row">
   <div class = 'large-8 columns'>
+    <div class = 'large-12 columns' style='padding:0px'>
     <h3> Search for a Resource </hr>
       <br>
     <%= form_tag search_index_path, method: :get do %>
       <%= label_tag :search , 'What would you like to find?' %>
       <%= text_field_tag :search, params[:search] %>
-      <%= label_tag :language , 'Language of Resource' %>
+    </div>
+    <div class = 'large-6 columns' style='padding:0px'>
+      <%= label_tag :language , t('activerecord.attributes.resource.language')  %>
       <%= select_tag "language", options_for_select(['','English','Spanish','French'].map{|o| [o.humanize,o] }) %>
-      <%= label_tag :contenttype , 'Content Type of Resource' %>
+    </div>
+    <div class = 'large-6 columns' style='padding:0px'>
+      <%= label_tag :contenttype , t('activerecord.attributes.resource.contenttype') %>
       <%= select_tag "contenttype", options_for_select(['','Document','Movie','Picture'].map{|o| [o.humanize,o] }) %>
+    </div>
+    <div class = 'large-6 columns' style='padding:0px'>
+      <%= label_tag :thematic_tag , t('activerecord.attributes.resource.thematic_tag')  %>
+      <%= select_tag(:thematic_tag, options_for_select([['', ''], ['Nutrition','Nutrition'], ['Health','Health'], ['Agriculture','Agriculture'],['WASH','WASH'],['Equity','Equity'],['Gender/Youth','GenderOrYouth'],['Climate Change','ClimateChange']], selected: :thematic_tag )) %>
+    </div>
+    <div class = 'large-6 columns' style='padding:0px'>
+      <%= label_tag :content_tag , t('activerecord.attributes.resource.content_tag') %>
+      <%= select_tag(:content_tag, options_for_select([['', ''], ['Advocacy','Advocacy'],['Policy','Policy'],['Campaign and Social Mobilisation','CampaignAndSocialMobilisation'],['Communication','Communication'],['Fundraising','Fundraising'],['Bes tPractises and Innovation','BestPractisesAndInnovation'],['Governance','Governance'],['Capacity Development','CapacityDevelopment'],['Multistakeholders Platform','MultistakeholdersPlatform']], selected: :content_tag )) %>
+    </div>
+    <div class = 'large-12 columns' style='padding:0px'>
       <%= button_tag( 'Search',name: nil, type: 'submit',class: "success button") %>
     <% end %>
+    </div>
   </div>
   <div class = 'large-4 columns' style="border-left: 1px solid #E3E5E8;">
     <h3> Upload a New Resource </h3>
