@@ -11,12 +11,32 @@
     <% end %>
   </ul>
   <% end %>
+</div>
+
   <%= form_for :resource do |f| %>
+
+<div class = "large-6 columns">
   <div class="field">
     <%= f.label :name %>
     <%= f.text_field :name, label:false %>
   </div>
+</div>
 
+<div class = "large-3 columns">
+  <div class="field">
+    <%= f.label :protected %>
+    <%= f.check_box :protected,label:false%>
+  </div>
+</div>
+
+<div class = "large-3 columns">
+  <div class="field">
+    <%= f.label :award %>
+    <%= f.check_box :award,label:false  %>
+  </div>
+</div>
+
+<div class = "large-12 columns">
   <div class="field">
     <%= f.label :short%>
     <%= f.text_area :short, label:false %>

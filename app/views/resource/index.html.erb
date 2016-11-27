@@ -39,7 +39,7 @@
 
 <div class = "row">
 <% @resources.each do |apple| %>
-  <div class = "large-6 columns">
+  <div class = "large-4 columns">
     <% url = 'knowledge/' + apple.id.to_s %>
     <h4> Resource: <%= apple.name %> </h4>
     <%= simple_format(apple.short) %>
@@ -47,7 +47,13 @@
     <%=link_to image_tag("document.png", alt: "Document", title: "Document"), apple.file.url(:original, false)%>
     <br>
     <% end %>
+    <% if apple.contenttype=="Picture"  && apple.file.exists?%>
+    <%=link_to image_tag(apple.file.url, alt: apple.name, title: apple.name), apple.file.url(:original, false)%>
+    <br>
+    <% end %>
     <%= apple.file.content_type %>
+    <br>
+    <%= apple.file.exists?%>
     <br>
     <%= link_to "Download", apple.file.url(:original, false) %>
     <br>

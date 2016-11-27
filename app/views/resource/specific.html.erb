@@ -4,7 +4,9 @@
   <h1> Resource Information: <%= @resources.name %> </h1>
 <div>
 
-<div class = "row large-12 columns">
+<div class='row'>
+
+<div class = "large-8 columns">
   <h4> <%= @resources.name %> </h4>
   <%= simple_format(@resources.long) %>
   <% if @resources.contenttype=="Document" %>
@@ -14,4 +16,15 @@
   <%= @resources.file.content_type %>
   <br>
   <%= link_to "Download", @resources.file.url(:original, false) %>
+</div>
+<div class = "large-4 columns">
+<% if @resources.contenttype=="Document" %>
+<%=link_to image_tag("document.png", alt: @resources.name, title: @resources.name), @resources.file.url(:original, false)%>
+<br>
+<% end %>
+<% if @resources.contenttype=="Picture"  && @resources.file.exists?%>
+<%=link_to image_tag(@resources.file.url, alt: @resources.name, title: @resources.name), @resources.file.url(:original, false)%>
+<br>
+<% end %>
+</div>
 </div>

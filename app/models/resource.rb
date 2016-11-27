@@ -11,9 +11,7 @@ class Resource < ActiveRecord::Base
   validates :language, presence:true
   validates :contenttype, presence:true
   validates :thematic_tag, presence:true
-  validates :protected, presence:true
   validates :content_tag, presence:true
-  validates :award, presence:true
 
   has_attached_file :file
   do_not_validate_attachment_file_type :file
