@@ -16,17 +16,69 @@ class Resource < ActiveRecord::Base
   has_attached_file :file
   do_not_validate_attachment_file_type :file
 
-  def self.search(search,language,contenttype)
-    if language.blank? && contenttype.blank?
-      where("name iLIKE ?", "%#{search}%")
-    elsif contenttype.blank?
-      where("name iLIKE ? AND language = ?", "%#{search}%", Resource.languages["#{language}"])
-    elsif language.blank?
-      where("name iLIKE ? AND contenttype = ?", "%#{search}%", Resource.contenttypes["#{contenttype}"])
-    else
-      where("name iLIKE ? AND contenttype = ? AND language = ?", "%#{search}%", Resource.contenttypes["#{contenttype}"], Resource.languages["#{language}"])
-    end
+  def self.search(search,language,contenttype,content_tag,thematic_tag)
 
+    if language.blank?
+      if contenttype.blank?
+        if content_tag.blank?
+          if thematic_tag.blank?
+            where("name iLIKE ?", "%#{search}%")
+          else
+            where("name iLIKE ? AND thematic_tag = ?", "%#{search}%",Resource.thematic_tags["#{thematic_tag}"])
+          end
+        else
+          if thematic_tag.blank?
+            where("name iLIKE ? AND content_tag = ?", "%#{search}%",Resource.content_tags["#{content_tag}"])
+          else
+            where("name iLIKE ? AND thematic_tag = ? AND content_tag = ?", "%#{search}%",Resource.thematic_tags["#{thematic_tag}"],Resource.content_tags["#{content_tag}"])
+          end
+        end
+      else
+        if content_tag.blank?
+          if thematic_tag.blank?
+            where("name iLIKE ? AND contenttype = ?", "%#{search}%", Resource.contenttypes["#{contenttype}"])
+          else
+            where("name iLIKE ? AND thematic_tag = ? AND contenttype = ?", "%#{search}%",Resource.thematic_tags["#{thematic_tag}"], Resource.contenttypes["#{contenttype}"])
+          end
+        else
+          if thematic_tag.blank?
+            where("name iLIKE ? AND content_tag = ? AND contenttype = ?", "%#{search}%",Resource.content_tags["#{content_tag}"], Resource.contenttypes["#{contenttype}"])
+          else
+            where("name iLIKE ? AND thematic_tag = ? AND content_tag = ? AND contenttype = ?", "%#{search}%",Resource.thematic_tags["#{thematic_tag}"],Resource.content_tags["#{content_tag}"], Resource.contenttypes["#{contenttype}"])
+          end
+        end
+      end
+    else
+      if contenttype.blank?
+        if content_tag.blank?
+          if thematic_tag.blank?
+            where("name iLIKE ? AND language = ?", "%#{search}%",Resource.languages["#{language}"])
+          else
+            where("name iLIKE ? AND thematic_tag = ? AND language = ?", "%#{search}%",Resource.thematic_tags["#{thematic_tag}"], Resource.languages["#{language}"])
+          end
+        else
+          if thematic_tag.blank?
+            where("name iLIKE ? AND content_tag = ? AND language = ?", "%#{search}%",Resource.content_tags["#{content_tag}"], Resource.languages["#{language}"])
+          else
+            where("name iLIKE ? AND thematic_tag = ? AND content_tag = ? AND language = ?", "%#{search}%",Resource.thematic_tags["#{thematic_tag}"],Resource.content_tags["#{content_tag}"], Resource.languages["#{language}"])
+          end
+        end
+      else
+        if content_tag.blank?
+          if thematic_tag.blank?
+            where("name iLIKE ? AND contenttype = ? AND language = ?", "%#{search}%", Resource.contenttypes["#{contenttype}"], Resource.languages["#{language}"])
+          else
+            where("name iLIKE ? AND thematic_tag = ? AND contenttype = ? AND language = ?", "%#{search}%",Resource.thematic_tags["#{thematic_tag}"], Resource.contenttypes["#{contenttype}"], Resource.languages["#{language}"])
+          end
+        else
+          if thematic_tag.blank?
+            where("name iLIKE ? AND content_tag = ? AND contenttype = ? AND language = ?", "%#{search}%",Resource.content_tags["#{content_tag}"], Resource.contenttypes["#{contenttype}"], Resource.languages["#{language}"])
+          else
+            where("name iLIKE ? AND thematic_tag = ? AND content_tag = ? AND contenttype = ? AND language = ?", "%#{search}%",Resource.thematic_tags["#{thematic_tag}"],Resource.content_tags["#{content_tag}"], Resource.contenttypes["#{contenttype}"], Resource.languages["#{language}"])
+          end
+        end
+      end
+    end
   end
 
 end
