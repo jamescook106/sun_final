@@ -1,4 +1,5 @@
 class ChampionController < ApplicationController
+  
   def index
     @champions = Champion.all
   end
@@ -11,4 +12,5 @@ class ChampionController < ApplicationController
       redirect_to "/champions"
     end
   end
+
 end

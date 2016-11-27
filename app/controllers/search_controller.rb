@@ -8,4 +8,5 @@ class SearchController < ApplicationController
       @resources = Resource.all
     end
   end
+  
 end
