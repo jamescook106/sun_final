@@ -5,9 +5,11 @@ en:
   activerecord:
     attributes:
       resource:
-        contenttype: Content Type
+        contenttype: Resource Type
+        content_tag: Content Tag
+        thematic_tag: Thematic Tag
         long: Long Description
-        name: Name
+        name: Name of Resource
         short: Short Description
     errors:
       models:

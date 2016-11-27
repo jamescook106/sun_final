@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161030162737) do
+ActiveRecord::Schema.define(version: 20161127143227) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,16 @@ ActiveRecord::Schema.define(version: 20161030162737) do
     t.boolean  "currated",          default: false
     t.integer  "language",          default: 0
     t.integer  "contenttype",       default: 0
+    t.boolean  "protected",         default: false
+    t.integer  "thematic_tag",      default: 0
+    t.integer  "content_tag",       default: 0
+    t.boolean  "award",             default: false
+  end
+
+  create_table "searches", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "keywords"
   end
 
   create_table "users", force: :cascade do |t|

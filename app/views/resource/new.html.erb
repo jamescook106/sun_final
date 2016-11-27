@@ -1,6 +1,6 @@
 <% @title=t('c_resource.new.title') %>
-
-<div class = "row large-12 columns">
+<div class="row">
+<div class = "large-12 columns">
   <h1> New Resource</h1>
   <p> Below is a form to upload new resources onto the site. Please ensure that you fill out all fields as clearly as possibke
   to help other users identify your resource. If you have any problems please contact the admin.</p>
@@ -26,16 +26,36 @@
     <%= f.label :long %>
     <%= f.text_area :long, label:false %>
   </div>
+</div>
 
+<div class = "large-6 columns">
+  <div class="field">
+    <%= f.label :thematic_tag%>
+    <%= f.select :thematic_tag, [['Nutrition','Nutrition'], ['Health','Health'], ['Agriculture','Agriculture'],['WASH','WASH'],['Equity','Equity'],['Gender/Youth','GenderOrYouth'],['Climate Change','ClimateChange']], label:false  %>
+  </div>
+</div>
+
+<div class = "large-6 columns">
+  <div class="field">
+    <%= f.label :content_tag%>
+    <%= f.select :content_tag, [['Advocacy','Advocacy'],['Policy','Policy'],['Campaign and Social Mobilisation','CampaignAndSocialMobilisation'],['Communication','Communication'],['Fundraising','Fundraising'],['Bes tPractises and Innovation','BestPractisesAndInnovation'],['Governance','Governance'],['Capacity Development','CapacityDevelopment'],['Multistakeholders Platform','MultistakeholdersPlatform']], label:false %>
+  </div>
+</div>
+
+<div class = "large-6 columns">
   <div class="field">
     <%= f.select :language, ['English', 'Spanish', 'French'] %>
   </div>
+</div>
 
+<div class = "large-6 columns">
   <div class="field">
     <%= f.label :contenttype%>
     <%= f.select :contenttype, ['Document', 'Movie', 'Picture'], label:false %>
   </div>
+</div>
 
+<div class = "large-12 columns">
   <div class="field">
   <%= f.file_field :file %>
 </div>
@@ -44,4 +64,5 @@
     <%= f.submit %>
   </div>
 <% end %>
-<div>
+</div>
+</div>
