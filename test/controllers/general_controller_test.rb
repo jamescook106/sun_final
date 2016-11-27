@@ -16,7 +16,7 @@ class GeneralControllerTest < ActionController::TestCase
   test "should get about_sun" do
     get :static, page: 'about_sun'
     assert_response :success
-    assert_select "title", "About Sun | #{@base_title}"
+    assert_select "title", "About SUN | #{@base_title}"
   end
 
   test "should get about_lr" do
@@ -28,7 +28,7 @@ class GeneralControllerTest < ActionController::TestCase
   test "should get contact" do
     get :static, page: 'contact'
     assert_response :success
-    assert_select "title", "Contact Us | #{@base_title}"
+    assert_select "title", "Contact | #{@base_title}"
   end
 
   test "should get lr1" do

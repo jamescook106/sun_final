@@ -23,6 +23,36 @@ en:
               too_short: to short
             short:
               blank: is required
+  m_resource:
+    language:
+      eng: English
+      spa: Spanish
+      fre: French
+    contenttype:
+      photo: Picture
+      video: Video
+      AaP: Articles and Publications
+      champion: Champion
+      presentations: Presentations
+      websites: Websites
+    thematic_tag:
+      Nutrition: Nutrition
+      Health: Health
+      Agriculture: Agriculture
+      WASH: WASH
+      Equity: Equity
+      GenderOrYouth: Gender/Youth
+      ClimateChange: Climate Change
+    content_tag:
+      Advocacy: Advocacy
+      Policy: Policy
+      CampaignAndSocialMobilisation: Campaign and Social Mobilisation
+      Communication: Communication
+      Fundraising: Fundraising
+      BestPractisesAndInnovation: Best Practises and Innovation
+      Governance: Governance
+      CapacityDevelopment: Capacity Development
+      MultistakeholdersPlatform: Multistakeholders Platform
   c_champion:
     index:
       title: Champions

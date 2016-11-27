@@ -51,27 +51,27 @@
 <div class = "large-6 columns">
   <div class="field">
     <%= f.label :thematic_tag%>
-    <%= f.select :thematic_tag, [['Nutrition','Nutrition'], ['Health','Health'], ['Agriculture','Agriculture'],['WASH','WASH'],['Equity','Equity'],['Gender/Youth','GenderOrYouth'],['Climate Change','ClimateChange']], label:false  %>
+    <%= f.select :thematic_tag, [[t('m_resource.thematic_tag.Nutrition'),'Nutrition'], [t('m_resource.thematic_tag.Health'),'Health'], [t('m_resource.thematic_tag.Agriculture'),'Agriculture'],[t('m_resource.thematic_tag.WASH'),'WASH'],[t('m_resource.thematic_tag.Equity'),'Equity'],[t('m_resource.thematic_tag.GenderOrYouth'),'GenderOrYouth'],[t('m_resource.thematic_tag.ClimateChange'),'ClimateChange']], label:false  %>
   </div>
 </div>
 
 <div class = "large-6 columns">
   <div class="field">
     <%= f.label :content_tag%>
-    <%= f.select :content_tag, [['Advocacy','Advocacy'],['Policy','Policy'],['Campaign and Social Mobilisation','CampaignAndSocialMobilisation'],['Communication','Communication'],['Fundraising','Fundraising'],['Bes tPractises and Innovation','BestPractisesAndInnovation'],['Governance','Governance'],['Capacity Development','CapacityDevelopment'],['Multistakeholders Platform','MultistakeholdersPlatform']], label:false %>
+    <%= f.select :content_tag, [[t('m_resource.content_tag.Advocacy'),'Advocacy'],[t('m_resource.content_tag.Policy'),'Policy'],[t('m_resource.content_tag.CampaignAndSocialMobilisation'),'CampaignAndSocialMobilisation'],[t('m_resource.content_tag.Communication'),'Communication'],[t('m_resource.content_tag.Fundraising'),'Fundraising'],[t('m_resource.content_tag.BestPractisesAndInnovation'),'BestPractisesAndInnovation'],[t('m_resource.content_tag.Governance'),'Governance'],[t('m_resource.content_tag.CapacityDevelopment'),'CapacityDevelopment'],[t('m_resource.content_tag.MultistakeholdersPlatform'),'MultistakeholdersPlatform']], label:false %>
   </div>
 </div>
 
 <div class = "large-6 columns">
   <div class="field">
-    <%= f.select :language, ['English', 'Spanish', 'French'] %>
+    <%= f.select :language, [[t('m_resource.language.eng'),'English'], [t('m_resource.language.fre'),'French'], [t('m_resource.language.spa'),'Spanish']] %>
   </div>
 </div>
 
 <div class = "large-6 columns">
   <div class="field">
     <%= f.label :contenttype%>
-    <%= f.select :contenttype, ['Document', 'Movie', 'Picture'], label:false %>
+    <%= f.select :contenttype, [[t('m_resource.contenttype.AaP'),'Document'], [t('m_resource.contenttype.video'),'Movie'], [t('m_resource.contenttype.photo'),'Picture'], [t('m_resource.contenttype.presentations'),'Presentation'], [t('m_resource.contenttype.champion'),'Champion'], [t('m_resource.contenttype.websites'),'Website']], label:false %>
   </div>
 </div>
 

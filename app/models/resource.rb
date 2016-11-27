@@ -1,7 +1,7 @@
 class Resource < ActiveRecord::Base
 
   enum language: { English: 0, Spanish: 1, French: 2}
-  enum contenttype: {Document: 0, Movie: 1, Picture: 2}
+  enum contenttype: {Document: 0, Movie: 1, Picture: 2, Presentation: 3, Champion: 4, Website: 5}
   enum thematic_tag: {Nutrition: 0, Health: 1, Agriculture: 2, WASH: 3, Equity: 4, GenderOrYouth:5, ClimateChange:6}
   enum content_tag: {Advocacy: 0, Policy:1, CampaignAndSocialMobilisation:2, Communication:3, Fundraising:4, BestPractisesAndInnovation: 5, Governance: 6, CapacityDevelopment:7, MultistakeholdersPlatform:8}
 

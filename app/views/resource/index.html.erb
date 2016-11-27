@@ -17,19 +17,19 @@
     </div>
     <div class = 'large-6 columns' style='padding:0px'>
       <%= label_tag :language , t('activerecord.attributes.resource.language')  %>
-      <%= select_tag "language", options_for_select(['','English','Spanish','French'].map{|o| [o.humanize,o] }) %>
+      <%= select_tag(:language, options_for_select([['', ''], [t('m_resource.language.eng'),'English'], [t('m_resource.language.fre'),'French'], [t('m_resource.language.spa'),'Spanish']], selected: :language )) %>
     </div>
     <div class = 'large-6 columns' style='padding:0px'>
       <%= label_tag :contenttype , t('activerecord.attributes.resource.contenttype') %>
-      <%= select_tag "contenttype", options_for_select(['','Document','Movie','Picture'].map{|o| [o.humanize,o] }) %>
+        <%= select_tag(:contenttype, options_for_select([['', ''],[t('m_resource.contenttype.AaP'),'Document'], [t('m_resource.contenttype.video'),'Movie'], [t('m_resource.contenttype.photo'),'Picture'], [t('m_resource.contenttype.presentations'),'Presentation'], [t('m_resource.contenttype.champion'),'Champion'], [t('m_resource.contenttype.websites'),'Website']], selected: :contenttype )) %>
     </div>
     <div class = 'large-6 columns' style='padding:0px'>
       <%= label_tag :thematic_tag , t('activerecord.attributes.resource.thematic_tag')  %>
-      <%= select_tag(:thematic_tag, options_for_select([['', ''], ['Nutrition','Nutrition'], ['Health','Health'], ['Agriculture','Agriculture'],['WASH','WASH'],['Equity','Equity'],['Gender/Youth','GenderOrYouth'],['Climate Change','ClimateChange']], selected: :thematic_tag )) %>
+      <%= select_tag(:thematic_tag, options_for_select([['', ''], [t('m_resource.thematic_tag.Nutrition'),'Nutrition'], [t('m_resource.thematic_tag.Health'),'Health'], [t('m_resource.thematic_tag.Agriculture'),'Agriculture'],[t('m_resource.thematic_tag.WASH'),'WASH'],[t('m_resource.thematic_tag.Equity'),'Equity'],[t('m_resource.thematic_tag.GenderOrYouth'),'GenderOrYouth'],[t('m_resource.thematic_tag.ClimateChange'),'ClimateChange']], selected: :thematic_tag )) %>
     </div>
     <div class = 'large-6 columns' style='padding:0px'>
       <%= label_tag :content_tag , t('activerecord.attributes.resource.content_tag') %>
-      <%= select_tag(:content_tag, options_for_select([['', ''], ['Advocacy','Advocacy'],['Policy','Policy'],['Campaign and Social Mobilisation','CampaignAndSocialMobilisation'],['Communication','Communication'],['Fundraising','Fundraising'],['Bes tPractises and Innovation','BestPractisesAndInnovation'],['Governance','Governance'],['Capacity Development','CapacityDevelopment'],['Multistakeholders Platform','MultistakeholdersPlatform']], selected: :content_tag )) %>
+      <%= select_tag(:content_tag, options_for_select([['', ''], [t('m_resource.content_tag.Advocacy'),'Advocacy'],[t('m_resource.content_tag.Policy'),'Policy'],[t('m_resource.content_tag.CampaignAndSocialMobilisation'),'CampaignAndSocialMobilisation'],[t('m_resource.content_tag.Communication'),'Communication'],[t('m_resource.content_tag.Fundraising'),'Fundraising'],[t('m_resource.content_tag.BestPractisesAndInnovatio'),'BestPractisesAndInnovation'],[t('m_resource.content_tag.Governance'),'Governance'],[t('m_resource.content_tag.CapacityDevelopment'),'CapacityDevelopment'],[t('m_resource.content_tag.MultistakeholdersPlatform'),'MultistakeholdersPlatform']], selected: :content_tag )) %>
     </div>
     <div class = 'large-12 columns' style='padding:0px'>
       <%= button_tag( 'Search',name: nil, type: 'submit',class: "success button") %>
