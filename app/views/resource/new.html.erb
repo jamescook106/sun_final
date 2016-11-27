@@ -75,11 +75,18 @@
   </div>
 </div>
 
-<div class = "large-12 columns">
+<div class = "large-6 columns">
   <div class="field">
   <%= f.file_field :file %>
 </div>
+</div>
 
+<div class = "large-6 columns">
+  <%= f.label :external %>
+  <%= f.text_field :external, label:false %>
+</div>
+
+<div class = "large-12 columns">
   <div class="field">
     <%= f.submit %>
   </div>

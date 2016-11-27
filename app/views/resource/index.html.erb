@@ -53,9 +53,12 @@
     <% end %>
     <%= apple.file.content_type %>
     <br>
-    <%= apple.file.exists?%>
-    <br>
-    <%= link_to "Download", apple.file.url(:original, false) %>
+    <% if apple.file.exists?%>
+      <%= link_to "Download", apple.file.url(:original, false) %>
+    <% else %>
+      <a href= <%= apple.external %> >Link to External Content</a>
+    <% end %>
+
     <br>
     <a href=<%= url %>>Full Description </a>
   </div>

@@ -11,6 +11,7 @@ en:
         long: Long Description
         name: Name of Resource
         short: Short Description
+        external: External Link
     errors:
       models:
         resource:

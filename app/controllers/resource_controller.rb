@@ -34,7 +34,7 @@ class ResourceController < ApplicationController
   private
 
   def resource_params
-    params.require(:resource).permit(:name, :short, :long, :file, :language, :contenttype, :protected, :thematic_tag, :content_tag, :award)
+    params.require(:resource).permit(:name, :short, :long, :file, :language, :contenttype, :protected, :thematic_tag, :content_tag, :award, :external)
   end
 
 end

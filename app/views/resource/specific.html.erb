@@ -15,7 +15,11 @@
   <% end %>
   <%= @resources.file.content_type %>
   <br>
-  <%= link_to "Download", @resources.file.url(:original, false) %>
+  <% if @resources.file.exists?%>
+    <%= link_to "Download", @resources.file.url(:original, false) %>
+  <% else %>
+    <a href= <%= @resources.external %> >Link to External Content</a>
+  <% end %>
 </div>
 <div class = "large-4 columns">
 <% if @resources.contenttype=="Document" %>
