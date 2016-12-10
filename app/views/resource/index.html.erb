@@ -89,12 +89,12 @@
     <% if apple.contenttype=="Document"  && apple.file.exists?%>
       <% if apple.protected %>
         <% if user_signed_in? %>
-          <%=link_to image_tag("document.png", alt: apple.name, title: apple.name), apple.file.url(:original, false)%>
+          <%=link_to image_tag(apple.file.url(:thumb), alt: apple.name, title: apple.name), apple.file.url(:original, false)%>
         <% else %>
-          <%=image_tag("document.png", alt: apple.name, title: apple.name)%>
+          <%=image_tag(apple.file.url(:thumb), alt: apple.name, title: apple.name)%>
         <% end %>
       <% else %>
-        <%=link_to image_tag("document.png", alt: apple.name, title: apple.name), apple.file.url(:original, false)%>
+        <%=link_to image_tag(apple.file.url(:thumb), alt: apple.name, title: apple.name), apple.file.url(:original, false)%>
       <% end %>
     <br>
     <% end %>

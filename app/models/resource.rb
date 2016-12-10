@@ -13,7 +13,7 @@ class Resource < ActiveRecord::Base
   validates :thematic_tag, presence:true
   validates :content_tag, presence:true
 
-  has_attached_file :file
+  has_attached_file :file, :styles => { :thumb => ["400x400>", :jpg] }
   do_not_validate_attachment_file_type :file
 
   def self.search(search,language,contenttype,content_tag,thematic_tag)
