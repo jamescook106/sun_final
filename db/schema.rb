@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161210124707) do
+ActiveRecord::Schema.define(version: 20161210125406) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "champions", force: :cascade do |t|
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.string   "first_name"
     t.string   "last_name"
     t.text     "short_description"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20161210124707) do
     t.datetime "headshot_updated_at"
     t.text     "long_text"
     t.text     "contact"
+    t.boolean  "featured",              default: false
   end
 
   create_table "resources", force: :cascade do |t|

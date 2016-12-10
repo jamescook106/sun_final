@@ -8,4 +8,14 @@ class ChampionTest < ActiveSupport::TestCase
     assert true
   end
 
+  test "Featured Champion default false" do
+    champion=Champion.new
+    champion.save
+    if champion.featured==false
+      assert true, 'Featured Champion default false'
+    else
+      assert false, 'Featured Champion default true'
+    end
+  end
+
 end
