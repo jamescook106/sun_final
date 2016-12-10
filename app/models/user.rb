@@ -5,4 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   enum gender: { Male: 0, Female: 1, IDWTS: 2}
+
+  validates :name, presence:true
+  validates :surname, presence:true
+  validates :country, presence:true
 end
