@@ -34,7 +34,9 @@
   		<h3> Join Us Now!</h3>
   	</div>
   	<p>We use the facebook group to discuss, revise the next steps before actually doing them and to revise our steps while and after we are going forward! Use this page to feed, shape OUR learning program.</p>
+    <% if !user_signed_in? %>
       <%= button_to('Register', new_user_registration_path, method: :get, class:"expanded success button")  %>
+    <% end %>
     <div class="callout secondary">
   		<h3> Login </h3>
   	</div>
