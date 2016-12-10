@@ -67,9 +67,9 @@ en:
     index:
       title: Home
     lr1:
-      title: Learning Route 1
+      title: Learning Route Rwanda
     lr2:
-      title: Learning Route 2
+      title: Learning Route Asia
   c_resource:
     index:
       title: Resources
@@ -79,6 +79,6 @@ en:
   champions: Champions
   contact: Contact
   knowledge: Resources
-  lr1: Learning Route 1
-  lr2: Learning Route 2
+  lr1: Learning Route Rwanda
+  lr2: Learning Route Asia
   title: Champions
