@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161127161838) do
+ActiveRecord::Schema.define(version: 20161210124707) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 20161127161838) do
     t.integer  "content_tag",       default: 0
     t.boolean  "award",             default: false
     t.text     "external"
+    t.boolean  "featured"
   end
 
   create_table "searches", force: :cascade do |t|
