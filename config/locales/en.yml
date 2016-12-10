@@ -12,6 +12,23 @@ en:
         name: Name of Resource
         short: Short Description
         external: External Link
+      user:
+        name: Name
+        surname: Surname
+        email: Email Address
+        gender: Gender
+        dob: Date of Birth
+        country: Country
+        organisation: Belonging Organisation
+        msun: Member of Sun
+        sunorg: Network/Alliance of SUN (If a member of SUN)
+        motivation: Tell us about you! (max 200 characters)
+        newsletter: Opt in to receive the SUN Newsletter
+        skype: Skype
+        whatsapp: Whatsapp
+        linkedin: LinkedIn
+        facebook: Facebook
+        c_other: Other Contact Information
     errors:
       models:
         resource:
@@ -54,6 +71,11 @@ en:
       CapacityDevelopment: Capacity Development
       MultistakeholdersPlatform: Multistakeholders Platform
     protected: You need to be signed in to view this resource
+  m_user:
+    gender:
+      Male: Male
+      Female: Female
+      IDWTS: I don't want to say
   c_champion:
     index:
       title: Champions

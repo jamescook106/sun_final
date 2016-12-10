@@ -1,14 +1,127 @@
-<div class='row column large 12'>
+<div class='row'>
+
+<div class= 'large-12 columns'>
 
 <h2>Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+</div>
 
+<div class= 'large-6 columns'>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, autofocus: true, label:false %>
+  </div>
+</div>
+
+<div class= 'large-6 columns'>
+  <div class="field">
+    <%= f.label :surname %>
+    <%= f.text_field :surname, autofocus: true, label:false %>
+  </div>
+</div>
+
+<div class = "large-6 columns">
+  <div class="field">
+    <%= f.label :gender%>
+    <%= f.select :gender, [[t('m_user.gender.Male'),'Male'], [t('m_user.gender.Female'),'Female'], [t('m_user.gender.IDWTS'),'IDWTS']], label:false %>
+  </div>
+</div>
+
+<div class = "large-6 columns">
+  <div class="field">
+    <%= f.label :dob%>
+    <%= f.text_field :dob, autofocus: true, label:false %>
+  </div>
+</div>
+
+<div class = "large-6 columns">
+  <div class="field">
+    <%= f.label :country%>
+    <%= f.text_field :country, autofocus: true, label:false %>
+  </div>
+</div>
+
+<div class = "large-6 columns">
+  <div class="field">
+    <%= f.label :organisation%>
+    <%= f.text_field :organisation, autofocus: true, label:false  %>
+  </div>
+</div>
+
+<div class = "large-6 columns">
+  <div class="field">
+    <%= f.label :msun %>
+    <%= f.check_box :msun,label:false  %>
+  </div>
+</div>
+
+<div class = "large-6 columns">
+  <div class="field">
+    <%= f.label :sunorg %>
+    <%= f.text_field :sunorg,label:false  %>
+  </div>
+</div>
+
+<div class= 'large-12 columns'>
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.email_field :email, autofocus: true, label:false %>
+  </div>
+</div>
+
+<div class = "large-6 columns">
+  <div class="field">
+    <%= f.label :skype %>
+    <%= f.text_field :skype,label:false  %>
+  </div>
+</div>
+
+<div class = "large-6 columns">
+  <div class="field">
+    <%= f.label :linkedin %>
+    <%= f.text_field :linkedin,label:false  %>
+  </div>
+</div>
+
+<div class = "large-6 columns">
+  <div class="field">
+    <%= f.label :whatsapp %>
+    <%= f.text_field :whatsapp,label:false  %>
+  </div>
+</div>
+
+<div class = "large-6 columns">
+  <div class="field">
+    <%= f.label :facebook %>
+    <%= f.text_field :facebook,label:false  %>
+  </div>
+</div>
+
+<div class= 'large-12 columns'>
+  <div class="field">
+    <%= f.label :c_other %>
+    <%= f.text_field :c_other, autofocus: true, label:false %>
+  </div>
+</div>
+
+<div class= 'large-12 columns'>
+  <div class="field">
+    <%= f.label :motivation %>
+    <%= f.text_area :motivation, autofocus: true, label: false %>
+  </div>
+</div>
+
+<div class = "large-6 columns">
+  <div class="field">
+    <%= f.label :newsletter %>
+    <%= f.check_box :newsletter,label:false  %>
+  </div>
+</div>
+
+<div class= 'large-12 columns'>
   <div class="field">
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
@@ -19,24 +132,16 @@
   <div class="field">
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
+</div>
 
-  <div class="field">
-    <%= f.text_field :country, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.text_field :organisation, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.text_area :motivation, autofocus: true %>
-  </div>
-
+<div class= 'large-12 columns'>
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
+  <%= render "devise/shared/links" %>
+</div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+
 
 </div>
