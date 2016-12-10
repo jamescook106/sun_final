@@ -26,10 +26,16 @@
       <br>
     <% end %>
 
-    <% if @resources.contenttype=="Movie"  && !@resources.file.exists?%>
+    <% if @resources.contenttype=="Movie"  && !@resources.file.exists?(:thumb)%>
         <%=link_to image_tag('video.jpg', alt: @resources.name, title: @resources.name), @resources.external%>
         <br>
     <% end %>
+
+    <% if @resources.contenttype=="Presentation"  && !@resources.file.exists?(:thumb)%>
+        <%=link_to image_tag('presentation.png', alt: @resources.name, title: @resources.name), @resources.external%>
+        <br>
+    <% end %>
+
   </div>
 
 </div>

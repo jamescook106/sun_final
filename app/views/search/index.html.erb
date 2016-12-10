@@ -61,7 +61,7 @@
         <br>
         <% end %>
 
-        <% if apple.contenttype=="Movie"  && !apple.file.exists?%>
+        <% if apple.contenttype=="Movie"  && !apple.file.exists?(:thumb)%>
           <% if apple.protected %>
             <% if user_signed_in? %>
               <%=link_to image_tag('video.jpg', alt: apple.name, title: apple.name), apple.external%>
@@ -73,6 +73,20 @@
           <% end %>
         <br>
         <% end %>
+
+            <% if apple.contenttype=="Presentation"  && !apple.file.exists?(:thumb)%>
+              <% if apple.protected %>
+                <% if user_signed_in? %>
+                  <%=link_to image_tag('presentation.png', alt: apple.name, title: apple.name), apple.external%>
+                <% else %>
+                  <%=image_tag('presentation.png', alt: apple.name, title: apple.name)%>
+                <% end %>
+              <% else %>
+                <%=link_to image_tag('presentation.png', alt: apple.name, title: apple.name), apple.external%>
+              <% end %>
+            <br>
+            <% end %>
+
       </div>
     </div>
     </div>
