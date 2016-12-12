@@ -56,11 +56,11 @@
 }
 
 .top-bar a{
-	color: white;
+	color: black;
 }
 
-.top-bar li{
-	border-right: 2px solid white;
+a.drop{
+	color:white;
 }
 
 footer{
@@ -91,10 +91,12 @@ footer a{
 
 hr{
 	background-image:#f68220;
-	height: 3px;
+	height: 4px;
 	color: #f68220;
 	background-color: #f68220;
 	border: none;
 	max-width:none;
 	padding:0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
 }
