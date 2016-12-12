@@ -1,6 +1,8 @@
 class GeneralController < ApplicationController
 
   def static
+    @champions = Champion.order(:id)
+    @resources = Resource.order(:id)
     if valid_page?
       render template: "general/#{params[:page]}"
     else

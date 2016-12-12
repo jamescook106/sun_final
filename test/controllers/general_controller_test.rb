@@ -34,13 +34,13 @@ class GeneralControllerTest < ActionController::TestCase
   test "should get lr1" do
     get :static, page: 'lr1'
     assert_response :success
-    assert_select "title", "Learning Route 1 | #{@base_title}"
+    assert_select "title", "Learning Route Rwanda | #{@base_title}"
   end
 
   test "should get lr2" do
     get :static, page: 'lr2'
     assert_response :success
-    assert_select "title", "Learning Route 2 | #{@base_title}"
+    assert_select "title", "Learning Route Asia | #{@base_title}"
   end
 
 end
