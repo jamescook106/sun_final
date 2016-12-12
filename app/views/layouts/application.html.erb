@@ -85,21 +85,48 @@
 
     <%= yield %>
     <br>
-    <div class="row">
-      <div class="medium-12 columns callout bottom alert">
-        <div class="medium-3 columns">
-          <h6 class="green">BROWSE</h6>
-        </div>
-        <div class="medium-3 columns">
-          <h6 class="green">ABOUT SUN</h6>
-        </div>
-        <div class="medium-3 columns">
-          <h6 class="green">SUN NETWORKS</h6>
-        </div>
-        <div class="medium-3 columns">
-        </div>
-      </div>
+
+  <div class="row expanded F1">
+    <div class="row nested-row large-12 columns">
+    <br>
+    <div class="large-3 columns">
+      <br>
+      <h5> SOCIAL MEDIA</h5>
     </div>
+    <div class="large-3 columns FR">
+      <br>
+      <h5> BROWSE</h5>
+      <ul>
+        <li><%= link_to t(:About_SUN), about_sun_path  %> </li>
+        <li> <%= link_to t(:About_Learning_Route_Programs), about_lr_path  %> </li>
+        <li> <%= link_to t(:knowledge),knowledge_path  %> </li>
+        <li> <%= link_to t(:champions),champions_path  %> </li>
+      </ul>
+      <br>
+    </div>
+    <div class="large-3 columns FR">
+      <br>
+      <h5> Learning Route</h5>
+      <ul>
+        <li> <%= link_to t(:About_Learning_Route_Programs), about_lr_path  %> </li>
+        <li> <%= link_to t(:lr1),lr1_path  %> </li>
+        <li> <%= link_to t(:lr2),lr2_path  %> </li>
+      </ul>
+    </div>
+    <div class="large-3 columns FR">
+      <br>
+      <p> PARTNERS</p>
+      <ul>
+      </ul>
+    </div>
+  </div>
+  <br>
+  </div>
+  <div class="row expanded F2">
+    <br>
+    <center><p> &copy Copyright 2016 SUN CSN</p></center>
+    <br>
+  </div>
 
   </body>
 </html>
