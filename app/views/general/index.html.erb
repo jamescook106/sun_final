@@ -16,18 +16,89 @@
       <div class="callout secondary">
         <h3> Featured </h3>
       </div>
-      <div class="large-6 columns">
-        <p> Featured Champion </p>
+      <div class="large-6 columns" style="padding:0px">
+        <h3> Featured Champion </h3>
+        <% @champions.reverse.each do |champ| %>
+        <% c_counter=0 %>
+          <% if champ.featured? %>
+          <% c_counter=1 %>
+            <% name = champ.first_name + ' ' + champ.last_name%>
+            <%= name %>
+            <br>
+            <br>
+            <% url = 'champions/' + champ.id.to_s %>
+            <center>
+            <%=link_to image_tag(champ.headshot.url,width:"90%"),url %>
+          </center>
+            <br>
+            <br>
+            <% break %>
+          <% end %>
+        <% end %>
       </div>
-      <div class="large-6 columns">
-        <p> Featured Resource </p>
+      <div class="large-6 columns" style="padding:0px">
+        <h3> Featured Resource </h3>
+        <% @resources.each do |rec| %>
+        <% r_counter=0 %>
+          <% if rec.featured? %>
+          <% r_counter=1 %>
+            <%= rec.name %>
+            <br>
+            <br>
+            <% url = 'knowledge/' + rec.id.to_s %>
+            <center>
+            <% if rec.contenttype=="Document"  && rec.file.exists?%>
+              <% if rec.protected %>
+                <% if user_signed_in? %>
+                  <%=link_to image_tag(rec.file.url(:thumb), alt: rec.name, title: rec.name), url%>
+                <% else %>
+                  <%=image_tag(rec.file.url(:thumb), alt: rec.name, title: rec.name)%>
+                <% end %>
+              <% else %>
+                <%=link_to image_tag(rec.file.url(:thumb), alt: rec.name, title: rec.name), url%>
+              <% end %>
+            <br>
+            <% end %>
+
+            <% if rec.contenttype=="Picture"  && rec.file.exists?%>
+              <% if rec.protected %>
+                <% if user_signed_in? %>
+                  <%=link_to image_tag(rec.file.url, alt: rec.name, title: rec.name), url%>
+                <% else %>
+                  <%=image_tag(rec.file.url, alt: rec.name, title: rec.name)%>
+                <% end %>
+              <% else %>
+                <%=link_to image_tag(rec.file.url, alt: rec.name, title: rec.name), url%>
+              <% end %>
+            <br>
+            <% end %>
+
+            <% if rec.contenttype=="Movie"  && !rec.file.exists?(:thumb)%>
+              <% if rec.protected %>
+                <% if user_signed_in? %>
+                  <%=link_to image_tag('video.jpg', alt: rec.name, title: rec.name), url%>
+                <% else %>
+                  <%=image_tag('video.jpg', alt: rec.name, title: rec.name)%>
+                <% end %>
+              <% else %>
+                <%=link_to image_tag('video.jpg', alt: rec.name, title: rec.name), url%>
+              <% end %>
+            <br>
+            <% end %>
+            <% break %>
+          <% end %>
+        <% end %>
+      </center>
       </div>
       <br>
     </div>
     <br>
+    <br>
+    <div class="large-12 columns" style='padding:0px'>
     <div class="callout secondary">
   		<h3> Latest News </h3>
   	</div>
+  </div>
   </div>
   <div class="large-4 columns">
   	<div class="callout secondary">
