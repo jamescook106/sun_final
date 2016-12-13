@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
 
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+    mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   scope "(:locale)", :locale => /en|fr|es/ do
 
   get 'search/index'
 
   devise_for :users
+
+  get 'news/index'
 
   get "/champions" => "champion#index"
   get "/champions/:id" => "champion#champion_description"
