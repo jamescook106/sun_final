@@ -57,3 +57,5 @@ gem 'devise'
 gem 'cancancan'
 
 gem 'foundation_rails_helper'
+
+gem 'kaminari'

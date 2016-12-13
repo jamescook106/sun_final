@@ -228,6 +228,7 @@ DEPENDENCIES
   foundation_rails_helper
   jbuilder (~> 2.0)
   jquery-rails
+  kaminari
   paperclip
   pg
   rails (= 4.2.6)

@@ -106,6 +106,9 @@ en:
     new:
       title: New Resource
   c_search:
+  c_news:
+    index:
+      title: News
   champions: Champions
   contact: Contact
   knowledge: Resources
