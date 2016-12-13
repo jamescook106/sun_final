@@ -22,11 +22,9 @@
         <div class="large-5 end columns LANGUAGEBAR">
           <center>
             <small>
-              <b>
             <%= link_to "English", :locale=>'en'%>
             <%= link_to "Francias", :locale=>'fr'%>
-            <%= link_to "Espanol", :locale=>'es',style:'border-left-style:solid'%>
-          </b>
+            <%= link_to "Espanol", :locale=>'es'%>
             <%=link_to image_tag("TwitterLogo_white.png", alt: "Twitter", title: "Twitter", size:'25x25'),"https://twitter.com/suncsn"%>
             <%=link_to image_tag("FB-f-Logo__white_50.png", alt: "Facebook", title: "Facebook", size:'25x25'),"https://twitter.com/suncsn"%>
             <%=link_to image_tag("YouTube-logo-light.png", alt: "Youtube", title: "Youtube", size:'55x25'),"https://twitter.com/suncsn"%>
@@ -90,6 +88,7 @@
     </div>
 <br>
     <%= yield %>
+    <br>
     <br>
 <footer>
     <div class="row large-12 columns">
