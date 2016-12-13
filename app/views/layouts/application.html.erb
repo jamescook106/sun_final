@@ -14,12 +14,12 @@
   <body>
 
     <div class="row LOGOCONTAINER">
-        <div class="small-6 columns LOGOBAR">
+        <div class="large-6 columns LOGOBAR">
           <%=link_to image_tag("SUN_LOGO.jpg", alt: "Scaling Up Nutrition", title: "Scaling Up Nutrition"),"http://scalingupnutrition.org"%>
         </div>
         <div class="small-1 columns LOGOBAR">
         </div>
-        <div class="small-5 end columns LANGUAGEBAR">
+        <div class="large-5 end columns LANGUAGEBAR">
           <center>
             <small>
               <b>
@@ -42,14 +42,15 @@
             <li>
               <a href="#">Menu</a>
               <ul class="menu vertical nested">
-                <li> <%= link_to t(:Home),index_path  %> </li>
-                <li> <%= link_to t(:About_SUN), about_sun_path  %> </li>
-                <li> <%= link_to t(:About_Learning_Route_Programs), about_lr_path  %> </li>
-                <li> <%= link_to t(:lr1),lr1_path  %> </li>
-                <li> <%= link_to t(:lr2),lr2_path  %> </li>
-                <li> <%= link_to t(:knowledge),knowledge_path  %> </li>
-                <li> <%= link_to t(:champions),champions_path  %> </li>
-                <li> <%= link_to t(:contact),contact_path  %> </li>
+                  <li style='background-color:#666666;'> <%= link_to t(:News), news_index_path,style: 'color:white'  %> </li>
+                <li> <%= link_to t(:Home),index_path,class: 'drop'    %> </li>
+                <li> <%= link_to t(:About_SUN), about_sun_path,class: 'drop'    %> </li>
+                <li> <%= link_to t(:About_Learning_Route_Programs), about_lr_path,class: 'drop'    %> </li>
+                <li> <%= link_to t(:lr1),lr1_path,class: 'drop'    %> </li>
+                <li> <%= link_to t(:lr2),lr2_path,class: 'drop'    %> </li>
+                <li> <%= link_to t(:knowledge),knowledge_path,class: 'drop'    %> </li>
+                <li> <%= link_to t(:champions),champions_path,class: 'drop'    %> </li>
+                <li> <%= link_to t(:contact),contact_path,class: 'drop'    %> </li>
               </ul>
             </li>
           </ul>
@@ -58,10 +59,11 @@
     </div>
 <hr>
 <div class="row hide-for-small-only"  style='padding:0px'>
-  <div class="medium-12 columns" style='padding:0px'>
+  <div class="medium-12 columns">
     <div class="top-bar" style='padding:0px'>
       <div class="top-bar-left" style='padding:0px'>
         <ul class="dropdown menu" data-dropdown-menu>
+          <li style='background-color:#666666;'> <%= link_to t(:News), news_index_path,style: 'color:white'  %> </li>
           <li> <%= link_to t(:Home),index_path  %> </li>
           <li> <%= link_to t(:About_SUN), about_sun_path  %> </li>
           <li>
