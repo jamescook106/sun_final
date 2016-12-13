@@ -3,6 +3,7 @@ class GeneralController < ApplicationController
   def static
     @champions = Champion.order(:id)
     @resources = Resource.order(:id)
+    @posts = News.order(:id).limit(2)
     if valid_page?
       render template: "general/#{params[:page]}"
     else
