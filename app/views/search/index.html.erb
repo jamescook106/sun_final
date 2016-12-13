@@ -97,3 +97,7 @@
   <% if @resources.blank? %>
     <h4>There are no resources currently available with those search parameters</h4>
   <% end %>
+
+  <div class = "row large-12 columns">
+      <%= paginate @resources %>
+  </div>
