@@ -100,3 +100,26 @@ hr{
 	margin-bottom: 0px;
 	margin-top: 0px;
 }
+
+.LOGOBAR{
+	margin-top: auto;
+	padding-bottom: 15px;
+	padding-top:15px;
+}
+
+.LOGOCONTAINER{
+	padding-bottom:0px;
+	align-items: bottom;
+	display: flex;
+}
+
+.LANGUAGEBAR{
+	background-color:#cdcdcd;
+	padding: 15px;
+	margin-top: auto;
+}
+
+.LANGUAGEBAR a{
+	color: #f68220;
+	padding: 5px;
+}

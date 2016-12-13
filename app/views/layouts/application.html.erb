@@ -13,21 +13,25 @@
 
   <body>
 
-    <div class="row" style='padding:0px'>
-      <br>
-        <div class="small-5 columns">
+    <div class="row LOGOCONTAINER">
+        <div class="small-6 columns LOGOBAR">
           <%=link_to image_tag("SUN_LOGO.jpg", alt: "Scaling Up Nutrition", title: "Scaling Up Nutrition"),"http://scalingupnutrition.org"%>
         </div>
-        <div class="small-5 columns">
-          <%=link_to image_tag("LEARNING_ROUTE.png", alt: "Learning Route", title: "Learning Route"),"http://suncivilsocietynet.wix.com/learningroute"%>
+        <div class="small-1 columns LOGOBAR">
         </div>
-        <div class="small-2 columns">
-          <h4><center> Language </center></h4>
-            <small><center><%= link_to "English", :locale=>'en'%>
+        <div class="small-5 end columns LANGUAGEBAR">
+          <center>
+            <small>
+              <b>
+            <%= link_to "English", :locale=>'en'%>
             <%= link_to "Francias", :locale=>'fr'%>
-            <%= link_to "Espanol", :locale=>'es'%></center></small>
-            <small> <br> </small>
-            <center><a href="https://twitter.com/suncsn" class="twitter-follow-button" data-show-count="false">Follow @suncsn</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></center>
+            <%= link_to "Espanol", :locale=>'es',style:'border-left-style:solid'%>
+          </b>
+            <%=link_to image_tag("TwitterLogo_white.png", alt: "Twitter", title: "Twitter", size:'25x25'),"https://twitter.com/suncsn"%>
+            <%=link_to image_tag("FB-f-Logo__white_50.png", alt: "Facebook", title: "Facebook", size:'25x25'),"https://twitter.com/suncsn"%>
+            <%=link_to image_tag("YouTube-logo-light.png", alt: "Youtube", title: "Youtube", size:'55x25'),"https://twitter.com/suncsn"%>
+          </small>
+          </center>
         </div>
     </div>
 
