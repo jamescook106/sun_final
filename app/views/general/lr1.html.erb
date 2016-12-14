@@ -2,4 +2,71 @@
 
 <div class = "row large-12 columns">
   <h1> <%= t('c_general.lr1.title') %> </h1>
+  <center>
+    <%=image_tag("LR1.png", width:"80%")%>
+  </center>
+  <p> The Rwanda Learning Route took place between 30 October and 5 November 2016, visiting nutrition-focused projects in Kigali, Nyanza, Huye and Gisagara. The participants included representatives from CSAs in eight countries: Ethiopia; Kenya; Malawi; Rwanda; Sierra Leone; Nigeria; Tanzania; Uganda; Zimbabwe. Each country delegation was made up of three representatives working at national or subnational level. </p>
+</div>
+<br>
+<hr>
+<br>
+<div class='row'>
+<div class="large-6 columns">
+  <h3> Quick Links </h3>
+  <ul class='circles'>
+    <li><%= link_to 'Rwanda Learning Route background report', 'http://media.wix.com/ugd/a1d6d9_ef0bae0d771c45778c2be473eb065cf0.pdf', target: "_blank"%></li>
+    <li><%= link_to 'Interviews', 'http://media.wix.com/ugd/a1d6d9_ef0bae0d771c45778c2be473eb065cf0.pdf', target: "_blank"%></li>
+    <li><%= link_to 'Articles', 'http://media.wix.com/ugd/a1d6d9_ef0bae0d771c45778c2be473eb065cf0.pdf', target: "_blank"%></li>
+    <li><%= link_to 'CSAs Innovation plans', 'http://media.wix.com/ugd/a1d6d9_ef0bae0d771c45778c2be473eb065cf0.pdf', target: "_blank"%></li>
+    <li><%= link_to 'Award', 'http://media.wix.com/ugd/a1d6d9_ef0bae0d771c45778c2be473eb065cf0.pdf', target: "_blank"%></li>
+
+  </ul>
+  <h3> Videos </h3>
+  <br>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/2zLQsloC5s8?list=PLmkP-_uSr1KrjJn-Fn6jK_WwaoTvXmEvE" frameborder="0" allowfullscreen></iframe>
+  <br>
+  <br>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/GdIz3-BFfFg" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="large-6 columns RHS">
+  <h3> Map of Project Visits </h3>
+  <br>
+  <iframe src="https://www.google.com/maps/d/embed?mid=1T94flKQQ2WOHRH6O_REvjK7b_D8" width="100%" height="400px"></iframe>
+  <br>
+  <br>
+  <h3> Rwanda Learning Route Timeline </h3>
+  <br>
+  <%=image_tag("africa.jpg")%>
+</div>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<div class='row'>
+<div class="large-8 columns">
+  <h3> Latest News </h3>
+  <% @posts.each do |apple| %>
+    <div class = "large-12 columns" style="padding-left:0px">
+      <h4><%= apple.title%> </h4>
+      <%= simple_format(apple.short) %>
+      <% if apple.external %>
+        <%= link_to 'External Link', apple.external, target: "_blank"%>
+      <% else %>
+        <%= link_to 'More Information', apple.id.to_s%>
+      <% end %>
+      <br>
+      <br>
+    </div>
+  <% end %>
+</div>
+<div class="large-4 columns RHS">
+<h3> Join Us Now! </h3>
+<p>We use the facebook group to discuss, revise the next steps before actually doing them and to revise our steps while and after we are going forward! Use this page to feed, shape OUR learning program.</p>
+<%=link_to image_tag("FACEBOOK.jpg"),"https://www.facebook.com/groups/SUNCSNLearningRoute/"%>
+<br>
+<br>
+<h3> Latest Tweets</h3>
+<a class="twitter-timeline" data-height="600" href="https://twitter.com/SUNCSN">Tweets by SUNCSN</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
 </div>

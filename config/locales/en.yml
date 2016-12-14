@@ -1,7 +1,4 @@
 en:
-  About_Learning_Route_Programs: Learning Route Programs
-  About_SUN: About SUN
-  Home: Home
   activerecord:
     attributes:
       resource:
@@ -91,15 +88,15 @@ en:
     about_lr:
       title: About Learning Routes
     about_sun:
-      title: About SUN
+      title: About SUN CSN
     contact:
       title: Contact
     index:
       title: Home
     lr1:
-      title: Learning Route Rwanda
+      title: About Learning Route Rwanda
     lr2:
-      title: Learning Route Asia
+      title: Do you want to host the Learning Route Asia 2017?
   c_resource:
     index:
       title: Resources
@@ -109,6 +106,9 @@ en:
   c_news:
     index:
       title: News
+  About_Learning_Route_Programs: Learning Route Programs
+  About_SUN: About SUN CSN
+  Home: Home
   champions: Champions
   contact: Contact
   knowledge: Resources
