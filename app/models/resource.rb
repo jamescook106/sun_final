@@ -13,8 +13,13 @@ class Resource < ActiveRecord::Base
   validates :thematic_tag, presence:true
   validates :content_tag, presence:true
 
-  has_attached_file :file, :styles => { :thumb => ["400x400>", :jpg] }
+  has_attached_file :file, :styles => lambda { |a| a.instance.is_processable? ? {:thumbnail => "400x400>"} : {} }
   do_not_validate_attachment_file_type :file
+
+  def is_processable?
+    return false unless file.content_type
+    ['image/jpeg', 'image/pjpeg', 'image/gif', 'image/png', 'image/x-png', 'image/jpg', 'application/pdf'].include?(file.content_type)
+  end
 
   def self.search(search,language,contenttype,content_tag,thematic_tag)
 
