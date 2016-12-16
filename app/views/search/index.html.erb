@@ -2,39 +2,10 @@
     <h1> Resources</h1>
   </div>
 
-    <% @resources.each do |apple| %>
-    <div class = "row">
-      <div class = "large-12 columns"  style='padding:0px'>
-        <div class = "large-8 columns">
-        <% url = '/knowledge/' + apple.id.to_s %>
-        <h4> Resource: <%= apple.name %> </h4>
-        <%= simple_format(apple.short) %>
-        <% if apple.protected %>
-          <% if user_signed_in? %>
-            <% if apple.file.exists?%>
-              <%= link_to "Download", apple.file.url(:original, false) %> <br>
-            <% else %>
-              <a href= <%= apple.external %> >Link to External Content</a> <br>
-            <% end %>
-          <% end %>
-        <% else %>
-          <% if apple.file.exists?%>
-            <%= link_to "Download", apple.file.url(:original, false) %> <br>
-          <% else %>
-            <a href= <%= apple.external %> >Link to External Content</a> <br>
-          <% end %>
-        <% end %>
-        <% if apple.protected %>
-          <% if user_signed_in? %>
-            <a href=<%= url %>>Full Description </a>
-          <% else %>
-            <%=t('m_resource.protected')%>
-          <% end %>
-        <% else %>
-          <a href=<%= url %>>Full Description </a>
-        <% end %>
-      </div>
-      <div class = "large-4 columns">
+  <% @resources.each do |apple| %>
+  <div class = "row">
+    <div class = "large-12 columns" style='padding:0px'>
+      <div class = "medium-3 columns">
         <% if apple.contenttype=="Document"  && apple.file.exists?%>
           <% if apple.protected %>
             <% if user_signed_in? %>
@@ -74,24 +45,53 @@
         <br>
         <% end %>
 
-            <% if apple.contenttype=="Presentation"  && !apple.file.exists?(:thumb)%>
-              <% if apple.protected %>
-                <% if user_signed_in? %>
-                  <%=link_to image_tag('presentation.png', alt: apple.name, title: apple.name), apple.external%>
-                <% else %>
-                  <%=image_tag('presentation.png', alt: apple.name, title: apple.name)%>
-                <% end %>
-              <% else %>
-                <%=link_to image_tag('presentation.png', alt: apple.name, title: apple.name), apple.external%>
-              <% end %>
-            <br>
+        <% if apple.contenttype=="Presentation"  && !apple.file.exists?(:thumb)%>
+          <% if apple.protected %>
+            <% if user_signed_in? %>
+              <%=link_to image_tag('presentation.png', alt: apple.name, title: apple.name), apple.external%>
+            <% else %>
+              <%=image_tag('presentation.png', alt: apple.name, title: apple.name)%>
             <% end %>
+          <% else %>
+            <%=link_to image_tag('presentation.png', alt: apple.name, title: apple.name), apple.external%>
+          <% end %>
+        <br>
+        <% end %>
 
       </div>
+      <div class = "medium-9 columns">
+      <% url = 'knowledge/' + apple.id.to_s %>
+      <h3><%= apple.name %> </h3>
+      <%= simple_format(apple.short) %>
+      <% if apple.protected %>
+        <% if user_signed_in? %>
+          <% if apple.file.exists?%>
+            <%= link_to "Download", apple.file.url(:original, false) %> <br>
+          <% else %>
+            <a href= <%= apple.external %> >Link to External Content</a> <br>
+          <% end %>
+        <% end %>
+      <% else %>
+        <% if apple.file.exists?%>
+          <%= link_to "Download", apple.file.url(:original, false) %> <br>
+        <% else %>
+          <a href= <%= apple.external %> >Link to External Content</a> <br>
+        <% end %>
+      <% end %>
+      <% if apple.protected %>
+        <% if user_signed_in? %>
+          <a href=<%= url %>>Full Description </a>
+        <% else %>
+          <%=t('m_resource.protected')%>
+        <% end %>
+      <% else %>
+        <a href=<%= url %>>Full Description </a>
+      <% end %>
     </div>
-    </div>
-    <br>
-    <% end %>
+  </div>
+  </div>
+  <br>
+  <% end %>
 
 
   <% if @resources.blank? %>

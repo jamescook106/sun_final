@@ -77,6 +77,7 @@ Two weeks preparation and 5-7 days for the international learning exchange. </li
   <% @posts.each do |apple| %>
     <div class = "large-12 columns" style="padding-left:0px">
       <h4><%= apple.title%> </h4>
+      <p> News added on: <%= apple.created_at.to_date %> </p>
       <%= simple_format(apple.short) %>
       <% if apple.external %>
         <%= link_to 'External Link', apple.external, target: "_blank"%>

@@ -124,7 +124,7 @@
       <% end %>
     <% end %>
     <% if !user_signed_in? %>
-        <%= button_to('Register', new_user_registration_path, method: :get, class:"expanded success button")  %>
+        <%= button_to('Register to become a Contributer', new_user_registration_path, method: :get, class:"expanded success button")  %>
       <% end %>
     <br>
       <h3> Latest Tweets</h3>
@@ -140,6 +140,7 @@
     <% @posts.each do |apple| %>
       <div class = "large-6 columns" style='padding-left:0px'>
         <h4><%= apple.title%> </h4>
+        <p> News added on: <%= apple.created_at.to_date %> </p>
         <%= simple_format(apple.short) %>
         <% if apple.external %>
           <%= link_to 'External Link', apple.external, target: "_blank"%>

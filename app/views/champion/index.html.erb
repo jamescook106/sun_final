@@ -9,6 +9,11 @@
 
 <br>
 
+<div class="large-12 columns row">
+  <h3> SUN CSN Champions</h3>
+  <br>
+</div>
+
 <% @champions.each do |apple| %>
 <% name = apple.first_name + ' ' + apple.last_name%>
 <% url = 'champions/' + apple.id.to_s %>
@@ -19,10 +24,14 @@
     <div class = "large-9 columns">
       <a href=<%= url %>><%= name %></a>
       <%= simple_format(apple.short_description) %>
+      <a href=<%= url %>>Full Description </a>
     </div>
   </div>
   <br>
 <% end %>
+<br>
+<hr>
+<br>
 
 <div class="large-12 columns row">
   <h3> Nominate a potential Champion </h3>

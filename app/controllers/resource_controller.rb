@@ -4,7 +4,7 @@ class ResourceController < ApplicationController
     :only => [:new]
 
   def index
-    @resources = Resource.order(:id)
+    @resources = Resource.order(:id).reverse_order
   end
 
   def full_description
