@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   scope "(:locale)", :locale => /en|fr|es/ do
 
   get 'search/index'
+  get 'search/award'
 
   devise_for :users
 

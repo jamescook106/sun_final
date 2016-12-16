@@ -9,4 +9,7 @@ class SearchController < ApplicationController
     end
   end
 
+  def award
+    @resources = Resource.where("award=true").page(params[:page]).order(:id).reverse_order.per(5)
+  end
 end
