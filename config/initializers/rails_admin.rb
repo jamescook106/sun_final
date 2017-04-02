@@ -34,9 +34,45 @@ RailsAdmin.config do |config|
     edit
     delete
     show_in_app
+  end
 
-    ## With an audit adapter, you can add:
-    # history_index
-    # history_show
+  config.model News do
+    edit do
+      field :title do
+        required true
+        label 'Headline'
+        help 'This is the headline for your article'
+      end
+      field :short do
+        required true
+        label 'Preview text'
+        help 'This is a short summary of the article that would appear on the news homepage'
+      end
+      field :long do
+        required true
+        label 'Pre-Quote Text'
+        help 'This is your intoductory paragraph/paragraphs that will appear before the quote'
+      end
+      field :quote do
+        required true
+        label 'Article Quote'
+        help 'This is the quote from the articles'
+      end
+      field :post do
+        required true
+        label 'Post-Quote Text'
+        help 'This is the paragraph/paragraphs that will appear after the quote'
+      end
+      field :picture do
+        required true
+        label 'Image'
+        help 'Please ensure this image is copyright free and is landscape'
+      end
+      field :external do
+        required false
+        label 'Link to external article'
+        help 'Leave this blank unless you are linking to an article you are not hosting on the site'
+      end
+    end
   end
 end
