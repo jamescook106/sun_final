@@ -1,6 +1,10 @@
 class NewsController < ApplicationController
   def index
-    @posts = News.order("created_at DESC").page(params[:page]).per(10)
+    if params[:search]
+      @posts = News.search(params[:search]).order("created_at DESC").page(params[:page]).per(10)
+    else
+      @posts = News.order("created_at DESC").page(params[:page]).per(10)
+    end
   end
 
 

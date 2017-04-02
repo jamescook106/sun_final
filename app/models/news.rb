@@ -13,4 +13,8 @@ class News < ActiveRecord::Base
     :news => "300x200#"}
   do_not_validate_attachment_file_type :picture
 
+  def self.search(search)
+    where("title iLIKE ? OR short iLIKE ?", "%#{search}%","%#{search}%")
+  end
+
 end
