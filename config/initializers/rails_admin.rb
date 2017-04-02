@@ -66,7 +66,12 @@ RailsAdmin.config do |config|
       field :picture do
         required true
         label 'Image'
-        help 'Please ensure this image is copyright free and is landscape'
+        help 'Image needs to be landscape (6x4)'
+      end
+      field :caption do
+        required true
+        label 'Image Caption'
+        help 'A short image caption including any copyright information '
       end
       field :external do
         required false
