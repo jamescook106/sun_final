@@ -102,7 +102,7 @@ hr{
 }
 
 .LOGOBAR{
-	margin-top: auto;
+	margin-top: 0 auto;
 	padding-bottom: 25px;
 	padding-top:25px;
 }
@@ -128,6 +128,7 @@ hr{
   -webkit-align-items: bottom;
 	align-items: bottom;
 	display: flex;
+	margin: 0 auto;
 }
 
 .LANGUAGEBAR{
