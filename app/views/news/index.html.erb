@@ -6,7 +6,8 @@
 
 
 <% @posts.each do |apple| %>
-  <div class = "row large-12 columns">
+  <div class= 'row'>
+   <div class = "large-9 columns">
     <h4><%= apple.title%> </h4>
     <p> News added on: <%= apple.created_at.to_date %> </p>
     <%= simple_format(apple.short) %>
@@ -16,7 +17,13 @@
       <%= link_to 'More Information', apple.id.to_s%>
     <% end %>
   </div>
-  <br>
+  <div class = "large-3 columns">
+    <% if apple.picture %>
+    <%=image_tag(apple.picture.url(:home), alt: apple.title, title: apple.title)%>
+    <% end %>
+  </div>
+ </div>
+ <br>
 <% end %>
 
 
