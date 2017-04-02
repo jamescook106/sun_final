@@ -90,7 +90,7 @@ en:
     about_sun:
       title: About SUN CSN
     contact:
-      title: Contact
+      title: Support
     index:
       title: Home
     lr1:
@@ -108,9 +108,11 @@ en:
       title: News
   About_Learning_Route_Programs: Learning Route Programs
   About_SUN: About SUN CSN
+  About_us: About Us
+  our_work: Our Work
   Home: Home
   champions: Champions
-  contact: Contact
+  contact: Support
   knowledge: Resources
   lr1: Learning Route Rwanda
   lr2: Learning Route Asia

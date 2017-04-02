@@ -25,6 +25,10 @@ Rails.application.routes.draw do
   get "/about_lr" => "general#static", page:'about_lr'
   get "/lr1" => "general#static", page:'lr1'
   get "/lr2" => "general#static", page:'lr2'
+  get "/our_network" => "general#static", page:'our_network'
+  get "/what_we_do" => "general#static", page:'what_we_do'
+  get "/governance" => "general#static", page:'governance'
+  get "/advocacy" => "general#static", page:'advocacy'
   get "/contact" => "general#static", page:'contact'
   get "/:page" => "general#static"
 
