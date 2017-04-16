@@ -80,4 +80,57 @@ RailsAdmin.config do |config|
       end
     end
   end
+
+  config.model Country do
+    edit do
+      field :name do
+        required true
+        label 'Country and Alliance Name'
+        help 'Name of the Country and Alliance'
+      end
+      field :region do
+        required true
+        label 'Region of country'
+      end
+      field :key_p do
+        required true
+        label 'Key Priorities'
+        help 'One Sentance to describe the key priorities of the Alliance'
+      end
+      field :key_a do
+        required true
+        label 'Key Activities'
+        help 'One Sentance to describe the key activities of the Alliance'
+      end
+      field :nns do
+        required true
+        label 'National Nutrition Stats'
+        help 'Please provide a link to the progress report for National Nutrition Stats'
+      end
+      field :contact do
+        required true
+        label 'Contact Details'
+        help 'Contact Details for the Alliance'
+      end
+      field :website do
+        required false
+        label 'Link to Website'
+        help 'Full URL of website'
+      end
+      field :flag do
+        required true
+        label 'Country Flag'
+      end
+      field :photo do
+        required true
+        label 'Photo of Alliance'
+      end
+      field :news do
+        required false
+        label 'Latest News'
+        help 'Please provide a few sentances highlighting the latest news of the Alliance'
+      end
+    end
+  end
+
 end
