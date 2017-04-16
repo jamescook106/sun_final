@@ -2,11 +2,18 @@
 
 <div class = "row large-12 columns">
     <h1> Our Network </h1>
+
+    <p>The SUN CSN represents over 2000 national, regional and international organisations and networks with national alliances in 39 countries.  </p>
+    <p>The SUN Civil Society Network (SUN CSN) is part of the Scaling Up Nutrition (SUN) Movement. The SUN CSN encourages the formation of vibrant civil society alliances in each SUN country to support national plans to tackle hunger and malnutrition. </p>
+    <center>
+    <%=image_tag("map.jpg", alt: "A map showing SUN movement", title: "A map showing SUN movement")%>
+  </center>
+  <p><b>Find out more about each of the national SUN Civil Society Alliances:</b></p>
 </div>
 
 <div class = "row large-12 columns">
 <ul class="vertical menu" data-accordion-menu>
-  <li>
+  <li class="COUNTRY-LIST">
     <a href="#">Asia</a>
     <ul class="menu vertical nested">
       <% @countries.each do |apple| %>
@@ -16,7 +23,7 @@
       <% end %>
     </ul>
   </li>
-  <li>
+  <li class="COUNTRY-LIST">
     <a href="#">West Africa</a>
     <ul class="menu vertical nested">
       <% @countries.each do |apple| %>
@@ -26,7 +33,7 @@
       <% end %>
     </ul>
   </li>
-  <li>
+  <li class="COUNTRY-LIST">
     <a href="#">South and East Africa</a>
     <ul class="menu vertical nested">
       <% @countries.each do |apple| %>
@@ -36,7 +43,7 @@
       <% end %>
     </ul>
   </li>
-  <li>
+  <li class="COUNTRY-LIST">
     <a href="#">Latin America</a>
     <ul class="menu vertical nested">
       <% @countries.each do |apple| %>
