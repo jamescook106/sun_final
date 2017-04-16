@@ -3,3 +3,48 @@
 <div class = "row large-12 columns">
     <h1> Our Network </h1>
 </div>
+
+<div class = "row large-12 columns">
+<ul class="vertical menu" data-accordion-menu>
+  <li>
+    <a href="#">Asia</a>
+    <ul class="menu vertical nested">
+      <% @countries.each do |apple| %>
+      <% if apple.region=='ASIA' %>
+      <li><%= link_to apple.name, 'country/' +apple.id.to_s%></li>
+      <% end %>
+      <% end %>
+    </ul>
+  </li>
+  <li>
+    <a href="#">West Africa</a>
+    <ul class="menu vertical nested">
+      <% @countries.each do |apple| %>
+      <% if apple.region=='WEST_AFRICA' %>
+      <li><%= link_to apple.name, 'country/' +apple.id.to_s%></li>
+      <% end %>
+      <% end %>
+    </ul>
+  </li>
+  <li>
+    <a href="#">South and East Africa</a>
+    <ul class="menu vertical nested">
+      <% @countries.each do |apple| %>
+      <% if apple.region=='SOUTH_EAST_AFRICA' %>
+      <li><%= link_to apple.name, 'country/' +apple.id.to_s%></li>
+      <% end %>
+      <% end %>
+    </ul>
+  </li>
+  <li>
+    <a href="#">Latin America</a>
+    <ul class="menu vertical nested">
+      <% @countries.each do |apple| %>
+      <% if apple.region=='LATIN_AMERICA' %>
+      <li><%= link_to apple.name, 'country/' +apple.id.to_s%></li>
+      <% end %>
+      <% end %>
+    </ul>
+  </li>
+</ul>
+</div>
