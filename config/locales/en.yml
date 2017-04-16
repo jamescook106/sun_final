@@ -97,6 +97,10 @@ en:
       title: About Learning Route Rwanda
     lr2:
       title: Do you want to host the Learning Route Asia 2017?
+    governance:
+      title: Governance
+    what_we_do:
+      title: What we do
   c_resource:
     index:
       title: Resources
