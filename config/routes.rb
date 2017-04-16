@@ -20,6 +20,9 @@ Rails.application.routes.draw do
   post "/knowledge/new" => "resource#create"
   get "/knowledge/:id" => "resource#full_description"
 
+  get "/our_network" => "country#network", page:'our_network'
+  get 'country/:id' => "country#specific"
+
   get "/index" => "general#static", page:'index'
   get "/about_sun" => "general#static", page:'about_sun'
   get "/about_lr" => "general#static", page:'about_lr'

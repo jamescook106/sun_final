@@ -110,6 +110,9 @@ en:
   c_news:
     index:
       title: News
+  c_country:
+    our_network:
+      title: Our Network
   About_Learning_Route_Programs: Learning Route Programs
   About_SUN: About SUN CSN
   About_us: About Us
