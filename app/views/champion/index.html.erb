@@ -16,7 +16,8 @@
       <%=link_to image_tag(apple.headshot.url,width:"100%"),url %>
     </div>
     <div class = "large-9 columns">
-      <a href=<%= url %>><%= name %></a>
+      <h4 class='nname'><a href=<%= url %>><%= name %></a></h4>
+      <p> <b> <%=apple.country %> </b> </p>
       <%= simple_format(apple.short_description) %>
       <a href=<%= url %>>Full Description </a>
     </div>
