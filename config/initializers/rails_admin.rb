@@ -133,4 +133,54 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model Champion do
+    edit do
+      field :first_name do
+        required true
+        label 'First name(s)'
+        help 'First name(s) of the Champion'
+      end
+      field :last_name do
+        required true
+        label 'Last name(s)'
+        help 'Last name(s) of the Champion'
+      end
+      field :country do
+        required true
+        label 'Country'
+        help 'Country of Champion'
+      end
+      field :LR do
+        required false
+        label 'Learning Route Champion'
+        help 'Tick this box to specify that this Champion is a Learning Route Champion'
+      end
+      field :featured do
+        required false
+        label 'Featured'
+        help 'Tick this box to feature this Champion on the homepage'
+      end
+      field :short_description do
+        required true
+        label 'Short Description'
+        help 'This is a short description of the champion that will appear on the Nutrition Champions splash page'
+      end
+      field :long_text do
+        required true
+        label 'Long Description'
+        help 'This is a long description of the champion that will appear on the specific champion page'
+      end
+      field :contact do
+        required true
+        label 'Contact Details'
+        help 'Contact Details of the Champion'
+      end
+      field :headshot do
+        required false
+        label 'Champion Photo'
+        help 'A photo of the champion'
+      end
+    end
+  end
+
 end
