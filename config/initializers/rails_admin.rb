@@ -190,6 +190,11 @@ RailsAdmin.config do |config|
         label 'Resource Title'
         help 'Title of the Resource'
       end
+      field :approved do
+        required false
+        label 'Approved?'
+        help 'Tick to approve the resourse'
+      end
       field :hid do
         required true
         label 'Resource Uploader ID'

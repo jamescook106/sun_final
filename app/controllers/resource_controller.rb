@@ -4,11 +4,11 @@ class ResourceController < ApplicationController
     :only => [:new]
 
   def index
-    @resources = Resource.order(:id).reverse_order
+    @resources = Resource.approved.order(:id).reverse_order
   end
 
   def full_description
-    @resources = Resource.find_by_id(params[:id])
+    @resources = Resource.approved.find_by_id(params[:id])
     if @resources
       render template: "resource/specific"
     else
