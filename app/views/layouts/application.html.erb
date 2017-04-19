@@ -41,8 +41,16 @@
             <li>
               <a href="#">Menu</a>
               <ul class="menu vertical nested">
-                <li style='background-color:#666666;'> <%= link_to 'Login',user_session_path,style: 'color:white'  %> </li>
                 <li style='background-color:#666666;'> <%= link_to t(:News), news_index_path,style: 'color:white'  %> </li>
+                    <% if user_signed_in? %>
+                      <% if current_user.admin? %>
+                        <li style='background-color:#666666;'> <%= link_to "Admin", '/admin' ,style: 'color:white'  %> </li>
+                      <% end %>
+                      <li style='background-color:#666666;'> <%= link_to "Profile", edit_user_registration_path,style: 'color:white'  %> </li>
+                      <li style='background-color:#666666;'> <%= link_to "Logout", destroy_user_session_path, :method => :delete ,style: 'color:white'  %> </li>
+                    <% else %>
+                      <li  style='background-color:#666666;'> <%= link_to 'Login',user_session_path,style: 'color:white'  %> </li>
+                    <% end %>
                 <li> <%= link_to t(:Home),index_path,class: 'drop'    %> </li>
                 <li> <%= link_to t(:our_network),our_network_path,class: 'drop'  %> </li>
                 <li> <%= link_to t(:what_we_do),what_we_do_path,class: 'drop'    %> </li>
@@ -64,8 +72,16 @@
     <div class="top-bar" style='padding:0px'>
       <div class="top-bar-left" style='padding:0px'>
         <ul class="dropdown menu" data-dropdown-menu>
-          <li style='background-color:#666666;'> <%= link_to t(:News), news_index_path,style: 'color:white'  %> </li>
-          <li  style='background-color:#666666; border-left: 1px solid #E3E5E8;'> <%= link_to 'Login',user_session_path,style: 'color:white'  %> </li>
+          <li style='background-color:#666666; border-left: 1px solid #E3E5E8;'> <%= link_to t(:News), news_index_path,style: 'color:white'  %> </li>
+              <% if user_signed_in? %>
+                <% if current_user.admin? %>
+                  <li style='background-color:#666666; border-left: 1px solid #E3E5E8;;'> <%= link_to "Admin", '/admin' ,style: 'color:white'  %> </li>
+                <% end %>
+                <li style='background-color:#666666; border-left: 1px solid #E3E5E8;;'> <%= link_to "Profile", edit_user_registration_path,style: 'color:white'  %> </li>
+                <li style='background-color:#666666; border-left: 1px solid #E3E5E8;;'> <%= link_to "Logout", destroy_user_session_path, :method => :delete ,style: 'color:white'  %> </li>
+              <% else %>
+                <li  style='background-color:#666666; border-left: 1px solid #E3E5E8;'> <%= link_to 'Login',user_session_path,style: 'color:white'  %> </li>
+              <% end %>
           <li> <%= link_to t(:Home),index_path  %> </li>
           <li>
             <%= t(:About_us)%>
