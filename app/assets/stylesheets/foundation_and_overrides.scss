@@ -132,7 +132,7 @@ hr{
 }
 
 .LANGUAGEBAR{
-	background-color:#cdcdcd;
+	background-color:#E5E5E5;
 	padding: 5px;
 	margin-top: auto;
 }
@@ -140,6 +140,21 @@ hr{
 .LANGUAGEBAR a{
 	color: #f68220;
 	padding: 5px;
+}
+.CER{
+	display: inline;
+}
+.CER a{
+	border-left: 1px solid rgba(102,102,102,0.5);
+}
+
+.BA{
+		display: inline;
+}
+
+.BA a{
+	color:#333333;
+	font-weight: bold;
 }
 
 .socialA{

@@ -13,7 +13,7 @@
 
   <body>
 
-    <div class="row LOGOCONTAINER">
+    <div class="row hide-for-small-only LOGOCONTAINER">
         <div class="large-6 columns LOGOBAR">
           <%=link_to image_tag("SUN_LOGO.jpg", alt: "Scaling Up Nutrition", title: "Scaling Up Nutrition"),index_path%>
         </div>
@@ -22,9 +22,30 @@
         <div class="large-5 end columns LANGUAGEBAR">
           <center>
             <small>
-            <%= link_to "English", :locale=>'en'%>
-            <%= link_to "Francias", :locale=>'fr'%>
-            <%= link_to "Espanol", :locale=>'es'%>
+            <% if I18n.locale==:en%>
+              <div class='BA'>
+                <%= link_to "English", :locale=>'en'%>
+              </div>
+            <%else%>
+              <%= link_to "English", :locale=>'en'%>
+            <%end%>
+
+          <div class='CER'>
+            <% if I18n.locale==:fr%>
+              <div class='BA'>
+                <%= link_to "Français", :locale=>'fr'%>
+              </div>
+            <%else%>
+              <%= link_to "Français", :locale=>'fr'%>
+            <%end%>
+            <% if I18n.locale==:es%>
+              <div class='BA'>
+                <%= link_to "Español", :locale=>'es'%>
+              </div>
+            <%else%>
+              <%= link_to "Español", :locale=>'es'%>
+            <%end%>
+          </div>
             <%=link_to image_tag("TwitterLogo_white.png", alt: "Twitter", title: "Twitter", size:'25x25'),"https://twitter.com/suncsn"%>
             <%=link_to image_tag("FB-f-Logo__white_50.png", alt: "Facebook", title: "Facebook", size:'25x25'),"https://twitter.com/suncsn"%>
             <%=link_to image_tag("YouTube-logo-light.png", alt: "Youtube", title: "Youtube", size:'55x25'),"https://twitter.com/suncsn"%>
@@ -32,6 +53,44 @@
           </small>
           </center>
         </div>
+    </div>
+
+    <div class="row show-for-small-only LOGOCONTAINER">
+        <div class="large-12 columns LOGOBAR">
+          <%=link_to image_tag("SUN_LOGO.jpg", alt: "Scaling Up Nutrition", title: "Scaling Up Nutrition"),index_path%>
+        </div>
+    </div>
+    <div class="row show-for-small-only LOGOCONTAINER">
+    <div class="large-12 columns LANGUAGEBAR">
+      <center>
+        <small>
+          <% if I18n.locale==:en%>
+            <div class='BA'>
+              <%= link_to "English", :locale=>'en'%>
+            </div>
+          <%else%>
+            <%= link_to "English", :locale=>'en'%>
+          <%end%>
+
+        <div class='CER'>
+          <% if I18n.locale==:fr%>
+            <div class='BA'>
+              <%= link_to "Français", :locale=>'fr'%>
+            </div>
+          <%else%>
+            <%= link_to "Français", :locale=>'fr'%>
+          <%end%>
+          <% if I18n.locale==:es%>
+            <div class='BA'>
+              <%= link_to "Español", :locale=>'es'%>
+            </div>
+          <%else%>
+            <%= link_to "Español", :locale=>'es'%>
+          <%end%>
+        </div>
+        </small>
+      </center>
+    </div>
     </div>
 
     <div class="row show-for-small-only"  style='padding:0px'>
