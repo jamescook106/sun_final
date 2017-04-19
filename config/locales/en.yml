@@ -3,8 +3,8 @@ en:
     attributes:
       resource:
         contenttype: Resource Type
-        content_tag: Content Tag
-        thematic_tag: Thematic Tag
+        content_tag: Skills
+        thematic_tag: Thematic Area
         long: Long Description
         name: Name of Resource
         short: Short Description
@@ -68,13 +68,13 @@ en:
     content_tag:
       Advocacy: Advocacy
       Policy: Policy
-      CampaignAndSocialMobilisation: Campaign and Social Mobilisation
-      Communication: Communication
+      CampaignAndSocialMobilisation: Mobilisation
+      Communication: Communications
       Fundraising: Fundraising
       BestPractisesAndInnovation: Best Practises and Innovation
       Governance: Governance
-      CapacityDevelopment: Capacity Development
-      MultistakeholdersPlatform: Multistakeholders Platform
+      CapacityDevelopment: Capacity Building
+      MultistakeholdersPlatform: Multi-stakeholder Coordination
     protected: You need to be signed in to view this resource
   m_user:
     gender:
