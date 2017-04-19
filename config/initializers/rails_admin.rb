@@ -183,4 +183,75 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model Resource do
+    edit do
+      field :name do
+        required true
+        label 'Resource Title'
+        help 'Title of the Resource'
+      end
+      field :hid do
+        required true
+        label 'Resource Uploader ID'
+        help 'The ID of the user who uploaded the resource. The user ids are listed on the user CMS page'
+      end
+      field :protected do
+        required false
+        label 'Protect the Resource?'
+        help 'If the resource is protected it can only be downloaded by registered users'
+      end
+      field :featured do
+        required false
+        label 'Feature the Resource?'
+      end
+      field :award do
+        required false
+        label 'Place the Resource for Award?'
+      end
+      field :short do
+        required true
+        label 'Short Description'
+        help 'A short description of the resource that will appear on the resource/search splash pages'
+      end
+      field :long do
+        required true
+        label 'Long Description'
+        help 'Long description of the resource that will appear when clicked through to further information'
+      end
+      field :language do
+        required true
+        label 'Language of Resource'
+      end
+      field :contenttype do
+        required true
+        label 'Content Type of Resource'
+      end
+      field :thematic_tag do
+        required true
+        label 'Theme of Resource'
+      end
+      field :content_tag do
+        required true
+        label 'Skills represented by the resource'
+      end
+      field :file do
+        required false
+        label 'Resource File'
+      end
+      field :external do
+        required false
+        label 'External Link'
+        help 'Please supply a link to the resource if not uploading e.g. Youtube, Picasa etc'
+      end
+      field :created_at do
+        required false
+        label 'Resource Creation Date'
+      end
+      field :updated_at do
+        required false
+        label 'Resource Update Date'
+      end
+    end
+  end
+
 end
