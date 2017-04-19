@@ -23,6 +23,7 @@ class ResourceController < ApplicationController
 
   def create
     @resource = Resource.new(resource_params)
+    @resource.hid = current_user.id
     if @resource.save
       flash[:success] = "The Resource was added!"
       redirect_to "/knowledge"
@@ -34,7 +35,7 @@ class ResourceController < ApplicationController
   private
 
   def resource_params
-    params.require(:resource).permit(:name, :short, :long, :file, :language, :contenttype, :protected, :thematic_tag, :content_tag, :award, :external)
+    params.require(:resource).permit(:name, :short, :long, :file, :language, :contenttype, :protected, :thematic_tag, :content_tag, :award, :external, :hid)
   end
 
 end
