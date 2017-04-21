@@ -189,10 +189,13 @@
       <br>
       <h5> BROWSE</h5>
       <ul>
-        <li><%= link_to t(:About_SUN), about_sun_path  %> </li>
-        <li> <%= link_to t(:About_Learning_Route_Programs), about_lr_path  %> </li>
-        <li> <%= link_to t(:knowledge),knowledge_path  %> </li>
+        <li><%= link_to t('c_country.our_network.title'), our_network_path %> </li>
+        <li><%= link_to t('c_general.what_we_do.title'), what_we_do_path  %> </li>
+        <li> <%= link_to t('c_general.governance.title'),governance_path %> </li>
         <li> <%= link_to t(:champions),champions_path  %> </li>
+        <li> <%= link_to t('c_general.advocacy.title'),advocacy_path  %> </li>
+        <li> <%= link_to t(:knowledge),knowledge_path  %> </li>
+        <li> <%= link_to t(:contact),contact_path  %> </li>
       </ul>
       <br>
     </div>
@@ -203,6 +206,7 @@
         <li> <%= link_to t(:About_Learning_Route_Programs), about_lr_path  %> </li>
         <li> <%= link_to t(:lr1),lr1_path  %> </li>
         <li> <%= link_to t(:lr2),lr2_path  %> </li>
+        <li> <%= link_to t(:lrc),'/' %> </li>
       </ul>
     </div>
     <div class="large-3 columns FR">
