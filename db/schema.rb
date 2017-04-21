@@ -87,15 +87,9 @@ ActiveRecord::Schema.define(version: 20170419144852) do
     t.integer  "content_tag",       default: 0
     t.boolean  "award",             default: false
     t.text     "external"
-    t.boolean  "featured"
+    t.boolean  "featured",          default: false
     t.string   "hid"
-    t.boolean  "approved"
-  end
-
-  create_table "searches", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "keywords"
+    t.boolean  "approved",          default: false
   end
 
   create_table "users", force: :cascade do |t|
