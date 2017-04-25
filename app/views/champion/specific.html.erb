@@ -10,6 +10,7 @@
       <%=image_tag(@champions.headshot,width:"100%") %>
     </div>
     <div class = "large-8 columns">
+      <p> <b> <%= @champions.country %> </b> </p>
       <%= simple_format(@champions.long_text) %>
       <% if @champions.contact != nil %>
         <% if @champions.contact.include? "@" %>

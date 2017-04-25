@@ -3,8 +3,8 @@ en:
     attributes:
       resource:
         contenttype: Resource Type
-        content_tag: Content Tag
-        thematic_tag: Thematic Tag
+        content_tag: Skills
+        thematic_tag: Thematic Area
         long: Long Description
         name: Name of Resource
         short: Short Description
@@ -68,13 +68,13 @@ en:
     content_tag:
       Advocacy: Advocacy
       Policy: Policy
-      CampaignAndSocialMobilisation: Campaign and Social Mobilisation
-      Communication: Communication
+      CampaignAndSocialMobilisation: Mobilisation
+      Communication: Communications
       Fundraising: Fundraising
       BestPractisesAndInnovation: Best Practises and Innovation
       Governance: Governance
-      CapacityDevelopment: Capacity Development
-      MultistakeholdersPlatform: Multistakeholders Platform
+      CapacityDevelopment: Capacity Building
+      MultistakeholdersPlatform: Multi-stakeholder Coordination
     protected: You need to be signed in to view this resource
   m_user:
     gender:
@@ -90,13 +90,19 @@ en:
     about_sun:
       title: About SUN CSN
     contact:
-      title: Contact
+      title: Support
     index:
       title: Home
     lr1:
       title: About Learning Route Rwanda
     lr2:
       title: Do you want to host the Learning Route Asia 2017?
+    advocacy:
+      title: Advocacy
+    governance:
+      title: Governance
+    what_we_do:
+      title: What we do
   c_resource:
     index:
       title: Resources
@@ -106,11 +112,16 @@ en:
   c_news:
     index:
       title: News
+  c_country:
+    our_network:
+      title: Our Network
   About_Learning_Route_Programs: Learning Route Programs
   About_SUN: About SUN CSN
+  About_us: About Us
+  our_work: Our Work
   Home: Home
   champions: Champions
-  contact: Contact
+  contact: Support
   knowledge: Resources
   lr1: Learning Route Rwanda
   lr2: Learning Route Asia

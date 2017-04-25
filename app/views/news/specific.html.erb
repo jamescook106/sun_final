@@ -1,7 +1,13 @@
-<% @title=t('c_news.specific.title') %>
+<% @title=@posts.title %>
 
 <div class = "row large-12 columns">
     <h1> <%= @posts.title %> </h1>
+    <p>Date Published: <%= @posts.created_at.to_date.strftime("%d/%m/%Y") %></p>
+    <%=image_tag(@posts.picture.url(:home), alt: @posts.title, title: @posts.title)%>
     <br>
-    <%= @posts.long %>
+    <i> <%= @posts.caption %> </i>
+    <br>
+    <p><%= simple_format(@posts.long) %></p>
+    <h4><b><i>"<%=@posts.quote%></b>"</i></h4>
+    <%= simple_format(@posts.post) %>
 </div>

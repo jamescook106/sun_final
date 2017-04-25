@@ -102,19 +102,37 @@ hr{
 }
 
 .LOGOBAR{
-	margin-top: auto;
+	margin-top: 0 auto;
 	padding-bottom: 25px;
 	padding-top:25px;
 }
 
 .LOGOCONTAINER{
 	padding-bottom:0px;
+	display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -webkit-box-pack: bottom;
+  -moz-box-pack: bottom;
+  -ms-flex-pack: bottom;
+  -webkit-justify-content: bottom;
+  justify-content: bottom;
+
+  -webkit-box-align: bottom;
+  -moz-box-align: bottom;
+
+  -ms-flex-align: bottom;
+  -webkit-align-items: bottom;
 	align-items: bottom;
 	display: flex;
+	margin: 0 auto;
 }
 
 .LANGUAGEBAR{
-	background-color:#cdcdcd;
+	background-color:#E5E5E5;
 	padding: 5px;
 	margin-top: auto;
 }
@@ -122,6 +140,21 @@ hr{
 .LANGUAGEBAR a{
 	color: #f68220;
 	padding: 5px;
+}
+.CER{
+	display: inline;
+}
+.CER a{
+	border-left: 1px solid rgba(102,102,102,0.5);
+}
+
+.BA{
+		display: inline;
+}
+
+.BA a{
+	color:#333333;
+	font-weight: bold;
 }
 
 .socialA{

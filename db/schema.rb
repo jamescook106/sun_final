@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161213154406) do
+ActiveRecord::Schema.define(version: 20170419144852) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,15 +29,45 @@ ActiveRecord::Schema.define(version: 20161213154406) do
     t.text     "long_text"
     t.text     "contact"
     t.boolean  "featured",              default: false
+    t.text     "country"
+    t.boolean  "LR",                    default: false
+  end
+
+  create_table "countries", force: :cascade do |t|
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.text     "name"
+    t.text     "key_p"
+    t.text     "key_a"
+    t.text     "nns"
+    t.text     "contact"
+    t.text     "website"
+    t.string   "flag_file_name"
+    t.string   "flag_content_type"
+    t.integer  "flag_file_size"
+    t.datetime "flag_updated_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.text     "news"
+    t.integer  "region",             default: 0
   end
 
   create_table "news", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
     t.text     "title"
     t.text     "short"
     t.text     "long"
     t.text     "external"
+    t.text     "quote"
+    t.text     "post"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
+    t.text     "caption"
   end
 
   create_table "resources", force: :cascade do |t|
@@ -57,13 +87,9 @@ ActiveRecord::Schema.define(version: 20161213154406) do
     t.integer  "content_tag",       default: 0
     t.boolean  "award",             default: false
     t.text     "external"
-    t.boolean  "featured"
-  end
-
-  create_table "searches", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "keywords"
+    t.boolean  "featured",          default: false
+    t.string   "hid"
+    t.boolean  "approved",          default: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -89,14 +115,9 @@ ActiveRecord::Schema.define(version: 20161213154406) do
     t.string   "surname"
     t.boolean  "newsletter",             default: false
     t.integer  "gender"
-    t.integer  "dob"
     t.string   "sunorg"
     t.boolean  "msun"
-    t.string   "skype"
-    t.string   "whatsapp"
-    t.string   "linkedin"
-    t.string   "facebook"
-    t.string   "c_other"
+    t.date     "dob"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

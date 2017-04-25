@@ -13,18 +13,39 @@
 
   <body>
 
-    <div class="row LOGOCONTAINER">
+    <div class="row hide-for-small-only LOGOCONTAINER">
         <div class="large-6 columns LOGOBAR">
-          <%=link_to image_tag("SUN_LOGO.jpg", alt: "Scaling Up Nutrition", title: "Scaling Up Nutrition"),"http://scalingupnutrition.org"%>
+          <%=link_to image_tag("SUN_LOGO.jpg", alt: "Scaling Up Nutrition", title: "Scaling Up Nutrition"),index_path%>
         </div>
         <div class="small-1 columns LOGOBAR">
         </div>
         <div class="large-5 end columns LANGUAGEBAR">
           <center>
             <small>
-            <%= link_to "English", :locale=>'en'%>
-            <%= link_to "Francias", :locale=>'fr'%>
-            <%= link_to "Espanol", :locale=>'es'%>
+            <% if I18n.locale==:en%>
+              <div class='BA'>
+                <%= link_to "English", :locale=>'en'%>
+              </div>
+            <%else%>
+              <%= link_to "English", :locale=>'en'%>
+            <%end%>
+
+          <div class='CER'>
+            <% if I18n.locale==:fr%>
+              <div class='BA'>
+                <%= link_to "Français", :locale=>'fr'%>
+              </div>
+            <%else%>
+              <%= link_to "Français", :locale=>'fr'%>
+            <%end%>
+            <% if I18n.locale==:es%>
+              <div class='BA'>
+                <%= link_to "Español", :locale=>'es'%>
+              </div>
+            <%else%>
+              <%= link_to "Español", :locale=>'es'%>
+            <%end%>
+          </div>
             <%=link_to image_tag("TwitterLogo_white.png", alt: "Twitter", title: "Twitter", size:'25x25'),"https://twitter.com/suncsn"%>
             <%=link_to image_tag("FB-f-Logo__white_50.png", alt: "Facebook", title: "Facebook", size:'25x25'),"https://twitter.com/suncsn"%>
             <%=link_to image_tag("YouTube-logo-light.png", alt: "Youtube", title: "Youtube", size:'55x25'),"https://twitter.com/suncsn"%>
@@ -34,22 +55,70 @@
         </div>
     </div>
 
+    <div class="row show-for-small-only LOGOCONTAINER">
+        <div class="large-12 columns LOGOBAR">
+          <%=link_to image_tag("SUN_LOGO.jpg", alt: "Scaling Up Nutrition", title: "Scaling Up Nutrition"),index_path%>
+        </div>
+    </div>
+    <div class="row show-for-small-only LOGOCONTAINER">
+    <div class="large-12 columns LANGUAGEBAR">
+      <center>
+        <small>
+          <% if I18n.locale==:en%>
+            <div class='BA'>
+              <%= link_to "English", :locale=>'en'%>
+            </div>
+          <%else%>
+            <%= link_to "English", :locale=>'en'%>
+          <%end%>
+
+        <div class='CER'>
+          <% if I18n.locale==:fr%>
+            <div class='BA'>
+              <%= link_to "Français", :locale=>'fr'%>
+            </div>
+          <%else%>
+            <%= link_to "Français", :locale=>'fr'%>
+          <%end%>
+          <% if I18n.locale==:es%>
+            <div class='BA'>
+              <%= link_to "Español", :locale=>'es'%>
+            </div>
+          <%else%>
+            <%= link_to "Español", :locale=>'es'%>
+          <%end%>
+        </div>
+        </small>
+      </center>
+    </div>
+    </div>
+
     <div class="row show-for-small-only"  style='padding:0px'>
-      <div class="small-12 columns">
-        <div class="top-bar">
+      <div class="small-12 columns" style='padding:0px'>
+        <div class="top-bar" style='padding:0px'>
           <ul class="vertical menu" data-accordion-menu>
             <li>
               <a href="#">Menu</a>
               <ul class="menu vertical nested">
-                  <li style='background-color:#666666;'> <%= link_to t(:News), news_index_path,style: 'color:white'  %> </li>
+                <li style='background-color:#666666;'> <%= link_to t(:News), news_index_path,style: 'color:white'  %> </li>
+                    <% if user_signed_in? %>
+                      <% if current_user.admin? %>
+                        <li style='background-color:#666666;'> <%= link_to "Admin", '/admin' ,style: 'color:white'  %> </li>
+                      <% end %>
+                      <li style='background-color:#666666;'> <%= link_to "Profile", edit_user_registration_path,style: 'color:white'  %> </li>
+                      <li style='background-color:#666666;'> <%= link_to "Logout", destroy_user_session_path, :method => :delete ,style: 'color:white'  %> </li>
+                    <% else %>
+                      <li  style='background-color:#666666;'> <%= link_to 'Login',user_session_path,style: 'color:white'  %> </li>
+                    <% end %>
                 <li> <%= link_to t(:Home),index_path,class: 'drop'    %> </li>
-                <li> <%= link_to t(:About_SUN), about_sun_path,class: 'drop'    %> </li>
-                <li> <%= link_to t(:About_Learning_Route_Programs), about_lr_path,class: 'drop'    %> </li>
-                <li> <%= link_to t(:lr1),lr1_path,class: 'drop'    %> </li>
-                <li> <%= link_to t(:lr2),lr2_path,class: 'drop'    %> </li>
-                <li> <%= link_to t(:knowledge),knowledge_path,class: 'drop'    %> </li>
-                <li> <%= link_to t(:champions),champions_path,class: 'drop'    %> </li>
-                <li> <%= link_to t(:contact),contact_path,class: 'drop'    %> </li>
+                <li> <%= link_to t(:our_network),our_network_path,class: 'drop'  %> </li>
+                <li> <%= link_to t(:what_we_do),what_we_do_path,class: 'drop'    %> </li>
+                <li> <%= link_to t(:governance),governance_path,class: 'drop'    %> </li>
+                <li> <%= link_to t(:About_Learning_Route_Programs), about_lr_path ,class: 'drop'%> </li>
+                <li> <%= link_to t(:champions),champions_path,class: 'drop'%> </li>
+                <li> <%= link_to t(:Advocacy),advocacy_path,class: 'drop'%> </li>
+                <li> <%= link_to t(:knowledge),knowledge_path, class: 'drop'  %> </li>
+                <li> <%= link_to t(:contact),contact_path, class: 'drop'   %> </li>
               </ul>
             </li>
           </ul>
@@ -62,19 +131,34 @@
     <div class="top-bar" style='padding:0px'>
       <div class="top-bar-left" style='padding:0px'>
         <ul class="dropdown menu" data-dropdown-menu>
-          <li style='background-color:#666666;'> <%= link_to t(:News), news_index_path,style: 'color:white'  %> </li>
-          <li  style='background-color:#666666; border-left: 1px solid #E3E5E8;'> <%= link_to 'Login',user_session_path,style: 'color:white'  %> </li>
+          <li style='background-color:#666666; border-left: 1px solid #E3E5E8;'> <%= link_to t(:News), news_index_path,style: 'color:white'  %> </li>
+              <% if user_signed_in? %>
+                <% if current_user.admin? %>
+                  <li style='background-color:#666666; border-left: 1px solid #E3E5E8;;'> <%= link_to "Admin", '/admin' ,style: 'color:white'  %> </li>
+                <% end %>
+                <li style='background-color:#666666; border-left: 1px solid #E3E5E8;;'> <%= link_to "Profile", edit_user_registration_path,style: 'color:white'  %> </li>
+                <li style='background-color:#666666; border-left: 1px solid #E3E5E8;;'> <%= link_to "Logout", destroy_user_session_path, :method => :delete ,style: 'color:white'  %> </li>
+              <% else %>
+                <li  style='background-color:#666666; border-left: 1px solid #E3E5E8;'> <%= link_to 'Login',user_session_path,style: 'color:white'  %> </li>
+              <% end %>
           <li> <%= link_to t(:Home),index_path  %> </li>
-          <li> <%= link_to t(:About_SUN), about_sun_path  %> </li>
           <li>
-            <%= link_to t(:About_Learning_Route_Programs), about_lr_path  %>
+            <%= t(:About_us)%>
             <ul class="menu vertical">
-              <li> <%= link_to t(:lr1),lr1_path,class: 'drop'  %> </li>
-              <li> <%= link_to t(:lr2),lr2_path,class: 'drop'    %> </li>
+              <li> <%= link_to t(:our_network),our_network_path,class: 'drop'  %> </li>
+              <li> <%= link_to t(:what_we_do),what_we_do_path,class: 'drop'    %> </li>
+              <li> <%= link_to t(:governance),governance_path,class: 'drop'    %> </li>
+            </ul>
+          </li>
+          <li style='padding-left:15px;'>
+            <%= t(:our_work)%>
+            <ul class="menu vertical">
+              <li> <%= link_to t(:About_Learning_Route_Programs), about_lr_path ,class: 'drop'%> </li>
+              <li> <%= link_to t(:champions),champions_path,class: 'drop'%> </li>
+              <li> <%= link_to t(:Advocacy),advocacy_path,class: 'drop'%> </li>
             </ul>
           </li>
           <li> <%= link_to t(:knowledge),knowledge_path  %> </li>
-          <li> <%= link_to t(:champions),champions_path  %> </li>
           <li> <%= link_to t(:contact),contact_path  %> </li>
         </ul>
       </div>
@@ -88,7 +172,6 @@
         <p class="alert"><%= alert %></p>
       </div>
     </div>
-<br>
     <%= yield %>
     <br>
     <br>
