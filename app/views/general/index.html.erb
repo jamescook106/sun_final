@@ -1,26 +1,44 @@
 <% @title=t('c_general.index.title') %>
 
-
-<div class='index_span'> </div>
-<br>
 <div class="row">
+  <div class = "large-4 columns">
+    <%=image_tag("place.png", alt: "Placeholder", title: "Placeholder")%>
+  </div>
+  <div class = "large-4 columns">
+    <%=image_tag("place.png", alt: "Placeholder", title: "Placeholder")%>
+  </div>
+  <div class = "large-4 columns">
+    <%=image_tag("place.png", alt: "Placeholder", title: "Placeholder")%>
+  </div>
   <div class="large-12 columns">
-    <p> The SUN Civil Society Network (SUN CSN) is a part of the global SUN Movement seeking to end malnutrition in all its forms. SUN CSN is made up of national and international organisations working in various fields, including women’s empowerment, humanitarian-aid, trade unions and many others.</p>
-    <p> <i> “Civil society plays a vital role in ensuring food security and nutrition. They represent the voice of communities and are able to reach the furthest behind with the messages needed to facilitate behavioural change and ensure equity and sustainability in food and nutrition approaches. If we are to achieve global targets to end hunger and malnutrition by 2030, there needs to be more collaboration between alliances across borders, sharing their experiences to ensure a world where no-one goes hungry.”
-</i><b>Cara Flowers, Scaling up Nutrition Civil Society Network Coordinator.</b> </p>
+    <center> <p> Working together to acheive Zero Hunger </p> </center>
   </div>
 </div>
 
-<br>
 <hr>
 <br>
 <div class="row">
   <div class="large-8 columns">
-  		<h3> Knowledge Sharing</h3>
+    <div class="large-12 columns" style="padding:0px">
+      <h1> Latest News </h1>
       <br>
-    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1OViW5pplv40y4F9k56KUwIyY0VE" width="100%" height="480"></iframe>
-    <br>
-    <br>
+      <% @posts.each do |apple| %>
+        <div class = "large-6 columns" style='padding-left:0px'>
+          <h4><%= apple.title%> </h4>
+          <p> News added on: <%= apple.created_at.to_date %> </p>
+          <%= simple_format(apple.short) %>
+          <% if apple.external!='' %>
+            <%= link_to 'External Link', apple.external, target: "_blank"%>
+          <% else %>
+            <%= link_to 'More Information', '/news/'+apple.id.to_s%>
+          <% end %>
+          <br>
+          <br>
+        </div>
+      <% end %>
+
+  </div>
+
     <div class="large-12">
       <div class="large-6 columns" style="padding:0px">
         <h3> Featured Champion </h3>
@@ -103,6 +121,9 @@
 
   </div>
   <div class="large-4 columns RHS">
+
+    <h3> Latest Tweets</h3>
+  <a class="twitter-timeline" data-height="600" href="https://twitter.com/SUNCSN">Tweets by SUNCSN</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
   		<h3> Login </h3>
     <% if user_signed_in? %>
       <p> Signed in as
@@ -126,28 +147,7 @@
     <% if !user_signed_in? %>
         <%= button_to('Register to become a Contributer', new_user_registration_path, method: :get, class:"expanded success small button")  %>
       <% end %>
-    <br>
-      <h3> Latest Tweets</h3>
-    <a class="twitter-timeline" data-height="600" href="https://twitter.com/SUNCSN">Tweets by SUNCSN</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
-<hr>
-<br>
 
 
-  <div class="large-12 columns">
-    <h1> Latest News </h1>
-    <br>
-    <% @posts.each do |apple| %>
-      <div class = "large-6 columns" style='padding-left:0px'>
-        <h4><%= apple.title%> </h4>
-        <p> News added on: <%= apple.created_at.to_date %> </p>
-        <%= simple_format(apple.short) %>
-        <% if apple.external %>
-          <%= link_to 'External Link', apple.external, target: "_blank"%>
-        <% else %>
-          <%= link_to 'More Information', apple.id.to_s%>
-        <% end %>
-      </div>
-    <% end %>
-</div>
 </div>
