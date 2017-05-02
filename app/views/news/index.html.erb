@@ -12,14 +12,10 @@
 <% @posts.each do |apple| %>
   <div class= 'row'>
    <div class = "large-9 columns">
-    <h4><%= apple.title%> </h4>
+    <h4 class = "title"><%= link_to apple.title, apple.id.to_s %> </h4>
     <p> News added on: <%= apple.created_at.to_date %> </p>
     <%= simple_format(apple.short) %>
-    <% if apple.external!='' %>
-      <%= link_to 'External Link', apple.external, target: "_blank"%>
-    <% else %>
-      <%= link_to 'More Information', apple.id.to_s%>
-    <% end %>
+    <%= link_to 'More Information', apple.id.to_s%>
   </div>
   <div class = "large-3 columns">
     <% if apple.picture %>
