@@ -6,7 +6,10 @@ class Ability
     if user.sadmin? or user.admin?
       can :access, :rails_admin
       can :dashboard
-      can :manage, :all
+      can :manage, [Champion, Resource, News, Country]
+      if user.sadmin?
+        can :manage, :all
+      end
     end
 
     if user.approved?
