@@ -61,9 +61,19 @@
 
       </div>
       <div class = "medium-9 columns">
-      <% url = 'knowledge/' + apple.id.to_s %>
-      <h3><%= apple.name %> </h3>
+      <% url = '/knowledge/' + apple.id.to_s %>
+      <h3 class='title'><%= link_to apple.name, url %> </h3>
       <%= simple_format(apple.short) %>
+      <% if apple.protected %>
+        <% if user_signed_in? %>
+          <a href=<%= url %>>Full Description </a>
+        <% else %>
+          <%=t('m_resource.protected')%>
+        <% end %>
+      <% else %>
+        <a href=<%= url %>>Full Description </a>
+      <% end %>
+      <br>
       <% if apple.protected %>
         <% if user_signed_in? %>
           <% if apple.file.exists?%>
@@ -78,15 +88,6 @@
         <% else %>
           <a href= <%= apple.external %> >Link to External Content</a> <br>
         <% end %>
-      <% end %>
-      <% if apple.protected %>
-        <% if user_signed_in? %>
-          <a href=<%= url %>>Full Description </a>
-        <% else %>
-          <%=t('m_resource.protected')%>
-        <% end %>
-      <% else %>
-        <a href=<%= url %>>Full Description </a>
       <% end %>
     </div>
   </div>

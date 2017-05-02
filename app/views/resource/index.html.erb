@@ -15,23 +15,23 @@
       <%= label_tag :search , 'What would you like to find?' %>
       <%= text_field_tag :search, params[:search] %>
     </div>
-    <div class = 'large-6 columns' style='padding:0px'>
+    <div class = 'large-6 columns' style='padding:2px'>
       <%= label_tag :language , t('activerecord.attributes.resource.language')  %>
       <%= select_tag(:language, options_for_select([['', ''], [t('m_resource.language.eng'),'English'], [t('m_resource.language.fre'),'French'], [t('m_resource.language.spa'),'Spanish']], selected: :language )) %>
     </div>
-    <div class = 'large-6 columns' style='padding:0px'>
+    <div class = 'large-6 columns' style='padding:2px'>
       <%= label_tag :contenttype , t('activerecord.attributes.resource.contenttype') %>
         <%= select_tag(:contenttype, options_for_select([['', ''],[t('m_resource.contenttype.AaP'),'Document'], [t('m_resource.contenttype.video'),'Movie'], [t('m_resource.contenttype.photo'),'Picture'], [t('m_resource.contenttype.presentations'),'Presentation'], [t('m_resource.contenttype.champion'),'Champion'], [t('m_resource.contenttype.websites'),'Website']], selected: :contenttype )) %>
     </div>
-    <div class = 'large-6 columns' style='padding:0px'>
+    <div class = 'large-6 columns' style='padding:2px'>
       <%= label_tag :thematic_tag , t('activerecord.attributes.resource.thematic_tag')  %>
       <%= select_tag(:thematic_tag, options_for_select([['', ''], [t('m_resource.thematic_tag.Nutrition'),'Nutrition'], [t('m_resource.thematic_tag.Health'),'Health'], [t('m_resource.thematic_tag.Agriculture'),'Agriculture'],[t('m_resource.thematic_tag.WASH'),'WASH'],[t('m_resource.thematic_tag.Equity'),'Equity'],[t('m_resource.thematic_tag.GenderOrYouth'),'GenderOrYouth'],[t('m_resource.thematic_tag.ClimateChange'),'ClimateChange']], selected: :thematic_tag )) %>
     </div>
-    <div class = 'large-6 columns' style='padding:0px'>
+    <div class = 'large-6 columns' style='padding:2px'>
       <%= label_tag :content_tag , t('activerecord.attributes.resource.content_tag') %>
       <%= select_tag(:content_tag, options_for_select([['', ''], [t('m_resource.content_tag.Advocacy'),'Advocacy'],[t('m_resource.content_tag.Policy'),'Policy'],[t('m_resource.content_tag.CampaignAndSocialMobilisation'),'CampaignAndSocialMobilisation'],[t('m_resource.content_tag.Communication'),'Communication'],[t('m_resource.content_tag.Fundraising'),'Fundraising'],[t('m_resource.content_tag.BestPractisesAndInnovatio'),'BestPractisesAndInnovation'],[t('m_resource.content_tag.Governance'),'Governance'],[t('m_resource.content_tag.CapacityDevelopment'),'CapacityDevelopment'],[t('m_resource.content_tag.MultistakeholdersPlatform'),'MultistakeholdersPlatform']], selected: :content_tag )) %>
     </div>
-    <div class = 'large-12 columns' style='padding:0px'>
+    <div class = 'large-12 columns' style='padding:2px'>
       <%= button_tag( 'Search',name: nil, type: 'submit',class: "success button") %>
     <% end %>
     </div>
@@ -115,8 +115,18 @@
     </div>
     <div class = "medium-9 columns">
     <% url = 'knowledge/' + apple.id.to_s %>
-    <h3><%= apple.name %> </h3>
+    <h3 class= 'title'><%= link_to apple.name, url %> </h3>
     <%= simple_format(apple.short) %>
+    <% if apple.protected %>
+      <% if user_signed_in? %>
+        <a href=<%= url %>>Full Description </a>
+      <% else %>
+        <%=t('m_resource.protected')%>
+      <% end %>
+    <% else %>
+      <a href=<%= url %>>Full Description </a>
+    <% end %>
+    <br>
     <% if apple.protected %>
       <% if user_signed_in? %>
         <% if apple.file.exists?%>
@@ -131,15 +141,6 @@
       <% else %>
         <a href= <%= apple.external %> >Link to External Content</a> <br>
       <% end %>
-    <% end %>
-    <% if apple.protected %>
-      <% if user_signed_in? %>
-        <a href=<%= url %>>Full Description </a>
-      <% else %>
-        <%=t('m_resource.protected')%>
-      <% end %>
-    <% else %>
-      <a href=<%= url %>>Full Description </a>
     <% end %>
   </div>
 </div>
