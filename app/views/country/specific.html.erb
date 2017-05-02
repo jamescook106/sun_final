@@ -7,11 +7,11 @@
 <div class = "row">
   <div class = "large-8 columns">
     <ul class='circles'>
-      <li> Key Priorities:  <%= @countries.key_p %> </li>
-      <li> Key Activities:  <%= @countries.key_a %> </li>
-      <li> National Nutrition Stats:  <%= @countries.nns %> </li>
-      <li> Contact Details:  <%= @countries.contact %> </li>
-      <li> Website:  <%= @countries.website %> </li>
+      <li> <b>Key Priorities:</b>  <%= @countries.key_p %> </li>
+      <li> <b>Key Activities:</b>  <%= @countries.key_a %> </li>
+      <li> <b>National Nutrition Stats:</b>  <%= @countries.nns %> </li>
+      <li> <b>Contact Details:</b>  <%= @countries.contact %> </li>
+      <li> <%= link_to 'Website' , @countries.website %> </li>
     </ul>
   </div>
   <div class = "large-4 columns">
