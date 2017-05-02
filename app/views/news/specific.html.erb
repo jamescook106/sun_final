@@ -10,4 +10,7 @@
     <p><%= simple_format(@posts.long) %></p>
     <h4><b><i>"<%=@posts.quote%></b>"</i></h4>
     <%= simple_format(@posts.post) %>
+    <% if @posts.external !='' %>
+      <%= link_to 'External Link', @posts.external, target: "_blank"%>
+    <% end %>
 </div>
