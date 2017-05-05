@@ -6,6 +6,7 @@ class LearningRouteController < ApplicationController
   end
 
   def africa
+    @posts = News.lra.order("created_at DESC").page(params[:page]).per(10)
     render template: "learning_route/lr1"
   end
 
