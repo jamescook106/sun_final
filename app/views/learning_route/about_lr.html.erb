@@ -34,8 +34,27 @@
 
 <hr>
 <br>
-
-<div class="row">
-  <div class = "large-12 columns">
+<div class = "row large-12 columns">
+    <h3> Learning News and Opportunities </h3>
+</div>
+<% @posts.each do |apple| %>
+  <div class= 'row'>
+   <div class = "large-9 columns">
+    <h4 class = "title"><%= link_to apple.title, 'news/'+apple.id.to_s %> </h4>
+    <p> News added on: <%= apple.created_at.to_date %> </p>
+    <%= simple_format(apple.short) %>
+    <%= link_to 'More Information', 'news/'+apple.id.to_s%>
   </div>
+  <div class = "large-3 columns">
+    <% if apple.picture %>
+    <%=image_tag(apple.picture.url(:home), alt: apple.title, title: apple.title)%>
+    <% end %>
+  </div>
+ </div>
+ <br>
+<% end %>
+
+
+<div class = "row large-12 columns">
+    <%= paginate @posts %>
 </div>

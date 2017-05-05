@@ -1,6 +1,7 @@
 class LearningRouteController < ApplicationController
 
   def index
+    @posts = News.lr.order("created_at DESC").page(params[:page]).per(10)
     render template: "learning_route/about_lr"
   end
 
