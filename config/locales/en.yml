@@ -85,8 +85,6 @@ en:
     index:
       title: Champions
   c_general:
-    about_lr:
-      title: About Learning Routes
     about_sun:
       title: About SUN CSN
     contact:
@@ -116,6 +114,19 @@ en:
     our_network:
       title: Our Network
 
+  c_learning_route:
+      about_lr:
+        title: About Learning Routes
+      lr1:
+        title: Africa Learning Route
+      lrao:
+        title: Aproaches and Outcomes
+      lrip:
+        title: Innovation Plans
+      lrc:
+        title: Good Practises and Champions
+
+
   About_Learning_Route_Programs: Learning Route Programs
   About_SUN: What We Do
   About_us: About Us
@@ -128,4 +139,3 @@ en:
   lrc: Good Practises and Champions
   lrao: Aproaches and Outcomes
   lrip: Innovation Plans
-  title: Champions
