@@ -23,11 +23,14 @@ Rails.application.routes.draw do
   get "/our_network" => "country#network", page:'our_network'
   get 'country/:id' => "country#specific"
 
+  get "/about_lr" => "learning_route#index"
+  get "/lr1" => "learning_route#africa"
+  get "/lrao" => "learning_route#outcomes"
+  get "/lrc" => "learning_route#lr_champions"
+  get "/lrip" => "learning_route#lr_innovation"
+
   get "/index" => "general#static", page:'index'
   get "/about_sun" => "general#static", page:'about_sun'
-  get "/about_lr" => "general#static", page:'about_lr'
-  get "/lr1" => "general#static", page:'lr1'
-  get "/lr2" => "general#static", page:'lr2'
   get "/our_network" => "general#static", page:'our_network'
   get "/what_we_do" => "general#static", page:'what_we_do'
   get "/governance" => "general#static", page:'governance'
