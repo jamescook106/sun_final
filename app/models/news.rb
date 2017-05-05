@@ -25,4 +25,8 @@ class News < ActiveRecord::Base
       where lra: true
   end
 
+  def self.lrp
+    where lrp: true
+  end
+
 end

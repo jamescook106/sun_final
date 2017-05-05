@@ -15,6 +15,8 @@ class LearningRouteController < ApplicationController
   end
 
   def lr_champions
+    @posts = News.lrp.order("created_at DESC").page(params[:page]).per(10)
+    @champions = Champion.lrc.order("created_at DESC").page(params[:page]).per(10)
     render template: "learning_route/lrc"
   end
 

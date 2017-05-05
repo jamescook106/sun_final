@@ -1,1 +1,58 @@
 <% @title=t('c_learning_route.lrc.title') %>
+
+<div class="row">
+  <div class = "large-12 columns">
+    <h1>Good Practises and Champions</h1>
+    <h3>Good Practises </h3>
+    <p>Text to be extracted</p>
+    <h3>Champions </h3>
+    <p>Text to be extracted</p>
+  </div>
+</div>
+
+<br>
+<hr>
+<br>
+
+<div class="row">
+  <div class = "large-12 columns">
+    <div class = "large-6 columns">
+      <h3> Good Practises </h3>
+      <% @posts.each do |apple| %>
+        <div class= 'row'>
+          <div class = "large-4 columns">
+            <% if apple.picture %>
+            <%=image_tag(apple.picture.url(:home), alt: apple.title, title: apple.title)%>
+            <% end %>
+          </div>
+         <div class = "large-8 columns">
+          <h4 class = "title"><%= link_to apple.title, 'news/'+apple.id.to_s %> </h4>
+          <p> News added on: <%= apple.created_at.to_date %> </p>
+          <%= simple_format(apple.short) %>
+          <%= link_to 'More Information', 'news/'+apple.id.to_s%>
+        </div>
+       </div>
+       <br>
+      <% end %>
+    </div>
+    <div class = "large-6 columns">
+      <h3> Learning Route Champions </h3>
+      <% @champions.each do |apple| %>
+      <% name = apple.first_name + ' ' + apple.last_name%>
+      <% url = 'champions/' + apple.id.to_s %>
+        <div class = "row large-12 columns">
+          <div class = "large-4 columns">
+            <%=link_to image_tag(apple.headshot.url,width:"100%"),url %>
+          </div>
+          <div class = "large-8 columns">
+            <h4 class='nname'><a href=<%= url %>><%= name %></a></h4>
+            <p> <b> <%=apple.country %> </b> </p>
+            <%= simple_format(apple.short_description) %>
+            <a href=<%= url %>>Full Description </a>
+          </div>
+        </div>
+        <br>
+      <% end %>
+    </div>
+  </div>
+</div>
