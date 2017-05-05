@@ -1,0 +1,32 @@
+<% @title=t('c_news.index.title') %>
+
+<div class = "row large-12 columns">
+    <h1> Learning Route News </h1>
+    <%= form_tag news_indexlr_path, method: :get do %>
+      <%= label_tag :search , 'Filter News' %>
+      <%= text_field_tag :search, params[:search] %>
+      <%= button_tag( 'Search',name: nil, type: 'submit',class: "success button") %>
+    <% end %>
+</div>
+
+<% @posts.each do |apple| %>
+  <div class= 'row'>
+   <div class = "large-9 columns">
+    <h4 class = "title"><%= link_to apple.title, apple.id.to_s %> </h4>
+    <p> News added on: <%= apple.created_at.to_date %> </p>
+    <%= simple_format(apple.short) %>
+    <%= link_to 'More Information', apple.id.to_s%>
+  </div>
+  <div class = "large-3 columns">
+    <% if apple.picture %>
+    <%=image_tag(apple.picture.url(:home), alt: apple.title, title: apple.title)%>
+    <% end %>
+  </div>
+ </div>
+ <br>
+<% end %>
+
+
+<div class = "row large-12 columns">
+    <%= paginate @posts %>
+</div>
