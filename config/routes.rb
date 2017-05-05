@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   get 'news/index'
+  get 'news/indexlr'
   get "/news/:id" => "news#specific"
 
   get "/champions" => "champion#index"

@@ -17,4 +17,16 @@ class News < ActiveRecord::Base
     where("title iLIKE ? OR short iLIKE ?", "%#{search}%","%#{search}%")
   end
 
+  def self.lr
+      where lr: true
+  end
+
+  def self.lra
+      where lra: true
+  end
+
+  def self.lrp
+    where lrp: true
+  end
+
 end

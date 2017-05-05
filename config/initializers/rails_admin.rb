@@ -43,6 +43,21 @@ RailsAdmin.config do |config|
         label 'Headline'
         help 'This is the headline for your article'
       end
+      field :lr do
+        required false
+        label 'Learning Route News'
+        help 'Learning Route News Tag'
+      end
+      field :lra do
+        required false
+        label 'Learning Route Africa News'
+        help 'Learning Route News Africa Tag'
+      end
+      field :lrp do
+        required false
+        label 'Learning Route Good Practices'
+        help 'Learning Route Good Practices Tag'
+      end
       field :short do
         required true
         label 'Preview text'
@@ -76,7 +91,6 @@ RailsAdmin.config do |config|
       field :external do
         required false
         label 'Link to external article'
-        help 'Leave this blank unless you are linking to an article you are not hosting on the site'
       end
     end
   end
