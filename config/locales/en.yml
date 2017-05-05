@@ -115,6 +115,7 @@ en:
   c_country:
     our_network:
       title: Our Network
+
   About_Learning_Route_Programs: Learning Route Programs
   About_SUN: What We Do
   About_us: About Us
@@ -123,7 +124,8 @@ en:
   champions: Nutrition Champions
   contact: Support
   knowledge: Resources
-  lr1: Learning Route Rwanda
-  lr2: Learning Route Asia
-  lrc: Learning Route Champions
+  lr1: Africa Learning Route
+  lrc: Good Practises and Champions
+  lrao: Aproaches and Outcomes
+  lrip: Innovation Plans
   title: Champions

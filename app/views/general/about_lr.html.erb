@@ -1,90 +1,41 @@
 <% @title=t('c_general.about_lr.title') %>
 
 <div class="row">
-<div class = "large-12 columns">
-    <h1>About SUN CSN’s Learning Routes</h1>
-</div>
-</div>
-<br>
-
-<div class='index_span'> </div>
-<br>
-
-<div class="row">
-<div class = "large-6 columns">
-  <p>SUN CSN’s Learning Route programme (2016 – 2018) aims to increase peer-to-peer learning between SUN civil society alliances (CSAs). At the heart of the programme are two Learning Route visits - the first was to <%= link_to "Rwanda",lr1_path %> and took place in November 2016, the second will be in <%= link_to "Asia",lr2_path %> and is scheduled for May – June 2017.  </p>
-  <h3> Programme objectives </h3>
-  <ul class='circles'>
-    <li>to contribute to build and strengthen the capacity of SUN CSAs  </li>
-    <li> to enable CSAs to ‘cascade’ the learning and build capacity in their own country </li>
-  </ul>
-  <h3> Focus learning areas </h3>
-  <ul class='circles'>
-    <li>Policy review and tracking, communications, democratic processes </li>
-    <li>Engagement and stimulation of multi stakeholder platforms</li>
-    <li>Budget tracking, data collection and sharing for monitoring and accountability</li>
-    <li>Advocacy, social mobilization, campaign development </li>
-    <li>Good governance, accountability and participatory processes </li>
-  </ul>
-</div>
-  <div class = "large-6 columns RHS">
-    <h3> What is a Learning Route? </h3>
-    <br>
-    <center>
-    <iframe src="https://www.youtube.com/embed/TJ8X0xoMcRE" frameborder="0" allowfullscreen></iframe>
-  </center>
-    <br>
-    <ul class='circles'>
-      <li>A ‘learning route’ is a proven process for accelerating knowledge sharing and peer-to-peer learning. At the heart of a learning route is a facilitated visit to a host country by representatives of different countries.  </li>
-      <li>The ultimate aim is to develop the ability of the participants to identify potentially useful innovations that can be adapted and then applied in their own country.</li>
-      <li>The Learning Route’s methodology has been tested, adapted and renewed since 1996, through a long-term partnership between <%= link_to 'Procasur', 'https://www.procasur.org', target: "_blank"%> IFAD and other international organisations. </li>
-      <li>The Learning Route methodology has been used in more than 35 countries in Latin America and the Caribbean, Africa and Asia, involving over 3000 development practitioners.</li>
-    </ul>
+  <div class = "large-12 columns">
+    <h1>SUN Civil Society Learning Route Programme</h1>
+    <p>A “Learning Route” is a proven process developed by Procasur Corporation, for accelerating knowledge sharing and peer-to-peer learning. At the heart of the learning route is a facilitated visit to a host country by representatives of different countries.</p>
+    <p>Main objective of the programme is strengthening SUN Civil Society Alliances mutual collaboration and scaling up innovative solutions.</p>
+  </div>
+  <div class = "large-4 columns">
+    <%=image_tag("place.png", alt: "Placeholder", title: "Placeholder")%>
+    <p> Approaches and Outcomes </p>
+  </div>
+  <div class = "large-4 columns">
+    <%=image_tag("place.png", alt: "Placeholder", title: "Placeholder")%>
+    <p> LR in Africa </p>
+  </div>
+  <div class = "large-4 columns">
+    <%=image_tag("place.png", alt: "Placeholder", title: "Placeholder")%>
+    <p> Good Practises and Champions </p>
+  </div>
+  <div class = "large-4 columns">
+    <%=image_tag("place.png", alt: "Placeholder", title: "Placeholder")%>
+    <p> Learning Route News </p>
+  </div>
+  <div class = "large-4 columns">
+    <%=image_tag("place.png", alt: "Placeholder", title: "Placeholder")%>
+    <p> Innovation Plans </p>
+  </div>
+  <div class = "large-4 columns">
+    <%=image_tag("place.png", alt: "Placeholder", title: "Placeholder")%>
+    <p> Join the Facebook Community </p>
   </div>
 </div>
-<br>
-<hr>
-<br>
-<div class="row">
-<div class = "large-12 columns">
-    <h3>Main steps of a Learning Route</h3>
-    <ol>
-      <li> <b>Identifying and selecting the host country experiences </b> that will be documented. We are looking for evidence of good practice and innovation that has proved successful in addressing local challenges and in improving local people’s livelihoods and nutrition.</li>
-      <li> <b>Analysis and documentation of these experiences.</b> We call this ‘systemisation’ and the aim is to capture the process (the how, who, what), identify the keys to success and extract lesson so that other people to adopt and scale up these successes.  </li>
-      <li> <b>Identifying champions.</b> We are aiming to find successful people and train them to become capacity builders and use their own experiences as the source of training. </li>
-      <li> <b>Learning visit.</b> Each learning exchange visit will feature representatives from at least 7 CSAs. The visit end with the CSAs drafting of an action plan related to implementing or testing some of the learning acquired during the visit.   </li>
-      <li> <b>Follow up and on-going support.</b> Participants are supported to draw on their learning, to share their learning with others, and to implement their action plans.</li>
-    </ol>
-</div>
-</div>
-<br>
+
 <hr>
 <br>
 
-<div class='row'>
-<div class="large-6 columns">
-  <h3> Latest News </h3>
-  <% @posts.each do |apple| %>
-    <div class = "large-12 columns" style="padding-left:0px">
-      <h4><%= apple.title%> </h4>
-      <p> News added on: <%= apple.created_at.to_date %> </p>
-      <%= simple_format(apple.short) %>
-      <% if apple.external %>
-        <%= link_to 'External Link', apple.external, target: "_blank"%>
-      <% else %>
-        <%= link_to 'More Information', apple.id.to_s%>
-      <% end %>
-      <br>
-      <br>
-    </div>
-  <% end %>
-</div>
-<div class="large-6 columns" style="border-left: 1px solid #E3E5E8;">
-<h3> Join Us Now! </h3>
-<p>We use the facebook group to discuss, revise the next steps before actually doing them and to revise our steps while and after we are going forward! Use this page to feed, shape OUR learning program.</p>
-<%=link_to image_tag("FACEBOOK.jpg"),"https://www.facebook.com/groups/SUNCSNLearningRoute/"%>
-<br>
-<h3> Latest Tweets</h3>
-<a class="twitter-timeline" data-height="600" href="https://twitter.com/SUNCSN">Tweets by SUNCSN</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
+<div class="row">
+  <div class = "large-12 columns">
+  </div>
 </div>
