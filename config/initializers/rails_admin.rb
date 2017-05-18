@@ -131,10 +131,6 @@ RailsAdmin.config do |config|
         label 'Link to Website'
         help 'Full URL of website'
       end
-      field :flag do
-        required true
-        label 'Country Flag'
-      end
       field :photo do
         required true
         label 'Photo of Alliance'
