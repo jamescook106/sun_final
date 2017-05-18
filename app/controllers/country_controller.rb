@@ -1,6 +1,6 @@
 class CountryController < ApplicationController
   def network
-    @countries = Country.all
+    @countries = Country.order('name ASC')
   end
 
   def specific
