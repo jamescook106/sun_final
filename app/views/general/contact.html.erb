@@ -1,7 +1,7 @@
 <% @title=t('c_general.contact.title') %>
 
 <div class = "row large-12 columns">
-    <h1> Support </h1>
+    <h1> <%=t('c_general.contact.title') %></h1>
     <p>The SUN CSN Secretariat are here to support the work of national civil society alliance. Please find below a summary of how we can help you as well as some useful links.</p>
 </div>
 
@@ -30,9 +30,8 @@
 <div class = "row large-12 columns">
     <h4> How can we help? </h4>
     <ul class='circles'>
-      <li>Contact us</li>
-      <li>Request Technical Assistance</li>
-      <li>Check out our resources </li>
-      <li>Information about the SUN Movement</li>
+      <li><%= mail_to 'sun.csnetwork@savethechildren.org.uk','Contact us'  %></li>
+      <li><%= link_to 'Request Technical Assistance' , 'https://docs.google.com/forms/d/e/1FAIpQLSc24FQcJH7RYtBSKrK67iewgrPY6SirnVTJYFER-3urvm1Sfg/viewform?usp=sf_link' %></li>
+      <li><%= link_to 'Check out our resources',knowledge_path%> </li>
     </ul>
   </div>
