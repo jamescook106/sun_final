@@ -2,13 +2,13 @@
 
 <div class = "row large-12 columns">
     <h1> <%= @posts.title %> </h1>
-    <p>Date Published: <%= @posts.created_at.to_date.strftime("%d/%m/%Y") %></p>
+    <p><%= @posts.created_at.to_date.strftime("%d/%m/%Y") %></p>
     <%=image_tag(@posts.picture.url(:home), alt: @posts.title, title: @posts.title)%>
     <br>
     <i> <%= @posts.caption %> </i>
     <br>
-    <p><%= simple_format(@posts.long) %></p>
-    <h4><b><i>"<%=@posts.quote%></b>"</i></h4>
+    <p><b><%= simple_format(@posts.long) %></b></p>
+    <h6><i>"<%=@posts.quote%>"</i></h6>
     <%= simple_format(@posts.post) %>
     <% if @posts.external !='' %>
       <%= link_to 'External Link', @posts.external, target: "_blank"%>
