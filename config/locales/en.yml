@@ -1,4 +1,7 @@
 en:
+  date:
+    formats:
+      default: "%d-%m-%Y"
   activerecord:
     attributes:
       resource:

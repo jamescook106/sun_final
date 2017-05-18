@@ -3,7 +3,7 @@
 <div class = "row large-12 columns">
     <h1> Learning Route News </h1>
     <%= form_tag news_indexlr_path, method: :get do %>
-      <%= label_tag :search , 'Filter News' %>
+      <%= label_tag :search , 'Search News' %>
       <%= text_field_tag :search, params[:search] %>
       <%= button_tag( 'Search',name: nil, type: 'submit',class: "success button") %>
     <% end %>
@@ -13,9 +13,9 @@
   <div class= 'row'>
    <div class = "large-9 columns">
     <h4 class = "title"><%= link_to apple.title, apple.id.to_s %> </h4>
-    <p> News added on: <%= apple.created_at.to_date %> </p>
+    <p> <%= l(apple.created_at.to_date) %> </p>
     <%= simple_format(apple.short) %>
-    <%= link_to 'More Information', apple.id.to_s%>
+    <%= link_to 'Read More', apple.id.to_s%>
   </div>
   <div class = "large-3 columns">
     <% if apple.picture %>
