@@ -116,7 +116,7 @@
 
     <h3> Latest Tweets</h3>
   <a class="twitter-timeline" data-height="600" href="https://twitter.com/SUNCSN">Tweets by SUNCSN</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-      <h3> Want to sign up to our Newsletter?</h3>
+      <h3> Want our latest updates?</h3>
       <%= button_to('Sign up to our Newsletter','', method: :get, class:"success small button")  %>
 
       <h3> Login </h3>
@@ -140,7 +140,8 @@
       <% end %>
     <% end %>
     <% if !user_signed_in? %>
-        <%= button_to('Register to become a Contributer', new_user_registration_path, method: :get, class:"expanded success small button")  %>
+    <p> Register as a user to access further resources and upload your own </p>
+        <%= button_to('Sign Up', new_user_registration_path, method: :get, class:"expanded success small button")  %>
       <% end %>
   </div>
 
