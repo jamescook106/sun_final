@@ -2,8 +2,8 @@
 
 <div class = "row">
   <div class= "large-12 columns">
-  <h1>Nutrition Champions</h1>
-  <p> We are supporting a global network of Nutrition Champions, a group of passionate individuals who are working together to end malnutrition. Our nutrition champions come from a variety of backgrounds; they may have developed an innovative approach to tackling malnutrition which is positively affecting their community, they may be training others in practical solutions to fight malnutrition, they may be working in their community to increase awareness of people’s right to food or they might be raising their voice on a global platform. </p>
+  <h1><%=t('c_champion.index.title') %></h1>
+  <p> We are supporting a global network of Nutrition Champions, a group of powerful advocates who are working together to end malnutrition. Our nutrition champions come from a variety of backgrounds; they may be working in their community to increase awareness of people’s right to food, they may be training others in practical solutions to fight malnutrition, or they might be raising their voice on a global platform.</p>
   <p> Find out about some of our current champions: </p>
 </div>
 </div>
@@ -19,11 +19,12 @@
       <h4 class='nname'><a href=<%= url %>><%= name %></a></h4>
       <p> <b> <%=apple.country %> </b> </p>
       <%= simple_format(apple.short_description) %>
-      <a href=<%= url %>>Full Description </a>
+      <a href=<%= url %>>Read More </a>
     </div>
   </div>
   <br>
 <% end %>
 <div class="large-12 columns row">
-<p> Would you like to become a nutrition champion? Or do you know someone who is a leader in their community? Nominate a nutrition champion <b>here</b> (link to google form). </p>
+  <p>If you would like contact one of our nutrition champions with relevant opportunities please email <%= mail_to 'sun.csnetwork@savethechildren.org.uk', 'sun.csnetwork@savethechildren.org.uk' %></p>
+  <p> Interested in becoming a nutrition champion? Or want to nominate a leader in your community? Nominate your nutrition champion <b> <%= link_to 'here', 'https://docs.google.com/forms/d/e/1FAIpQLSeQmurcfLx1PHbWVPBP7R5dy5tXJqiDZ0bMv35pb6fNbeqfNQ/viewform?usp=sf_link' %> </b></p>
 </div>
