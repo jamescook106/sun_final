@@ -61,21 +61,21 @@ RailsAdmin.config do |config|
       field :short do
         required true
         label 'Preview text'
-        help 'This is a short summary of the article that would appear on the news homepage'
+        help 'This is a short summary of the article that will appear on the news homepage'
       end
       field :long do
         required true
-        label 'Pre-Quote Text'
+        label 'Paragraph 1 (this will be in bold)'
         help 'This is your intoductory paragraph/paragraphs that will appear before the quote'
       end
       field :quote do
         required true
-        label 'Article Quote'
+        label 'Quote'
         help 'This is the quote from the articles'
       end
       field :post do
         required true
-        label 'Post-Quote Text'
+        label 'Main text'
         help 'This is the paragraph/paragraphs that will appear after the quote'
       end
       field :picture do
@@ -173,12 +173,12 @@ RailsAdmin.config do |config|
       field :short_description do
         required true
         label 'Short Description'
-        help 'This is a short description of the champion that will appear on the Nutrition Champions splash page'
+        help 'This is a short description of the champion that will appear on the Nutrition Champions home page'
       end
       field :long_text do
         required true
         label 'Long Description'
-        help 'This is a long description of the champion that will appear on the specific champion page'
+        help 'This is a long description of the champion that will appear on each champion’s full profile'
       end
       field :contact do
         required true
@@ -188,7 +188,7 @@ RailsAdmin.config do |config|
       field :headshot do
         required false
         label 'Champion Photo'
-        help 'A photo of the champion'
+        help 'Please upload a photo of the champion'
       end
     end
   end
@@ -208,7 +208,7 @@ RailsAdmin.config do |config|
       field :hid do
         required true
         label 'Resource Uploader ID'
-        help 'The ID of the user who uploaded the resource. The user ids are listed on the user CMS page'
+        help 'This will automatically be populated'
       end
       field :protected do
         required false
@@ -219,19 +219,15 @@ RailsAdmin.config do |config|
         required false
         label 'Feature the Resource?'
       end
-      field :award do
-        required false
-        label 'Place the Resource for Award?'
-      end
       field :short do
         required true
         label 'Short Description'
-        help 'A short description of the resource that will appear on the resource/search splash pages'
+        help 'A short description of the resource which will appear on the ‘Resources’ homepage'
       end
       field :long do
         required true
         label 'Long Description'
-        help 'Long description of the resource that will appear when clicked through to further information'
+        help 'A full description of the resource which will appear on the full resource profile'
       end
       field :language do
         required true
