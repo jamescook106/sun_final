@@ -14,11 +14,9 @@ en:
         surname: Surname
         email: Email Address
         gender: Gender
-        dob: Date of Birth
         country: Country
-        organisation: Belonging Organisation
-        msun: Member of Sun
-        sunorg: Network/Alliance of SUN (If a member of SUN)
+        organisation: Organisation
+        msun: Tick here if you are a member of SUN Civil Society Network
         motivation: Tell us about you! (max 200 characters)
         newsletter: Opt in to receive the SUN Newsletter
         skype: Skype
