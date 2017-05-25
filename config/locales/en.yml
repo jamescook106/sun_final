@@ -117,11 +117,59 @@ en:
 
   c_learning_route:
       about_lr:
-        title: About Learning Routes
+        title: Sharing Learning
+        p1: The SUN Civil Society Network supports a range of programmes to facilitate learning and knowledge exchange across civil society organisations working to end malnutrition. Our aim is to share examples of best practice and strengthen the capacity of civil society to support national plans to scale up nutrition.
+        lnop: Learning News and Opportunities
+      lrao:
+        title: Learning Programme Overview
+        p1: Here are some of the programmes led by the SUN Civil Society Network to facilitate learning exchange across civil society organisations working to end malnutrition.
+        b1:
+          title: Learning Routes
+          text: this is a peer-to-peer learning methodology (see below) centered on an exchange visit to a host country, an approach we used for the
+          link: Africa Learning Route
+          link_p: in 2016.
+        b2:
+          title: International Learning Exchanges
+          text: we host a range of international exchanges such as our Asia Regional Learning Exchange, Indonesia Regional Meeting and take part in the
+          link: SUN Global Gathering.
+        b3:
+          title: Peer to Peer Learning Exchange
+          text: this includes our ‘Creativity and Collaboration Award’, which supports capacity building and joint projects between civil society alliances
+          link: http://suncivilsocietynet.wixsite.com/learningroute/award
+        b4:
+          title: Virtual Learning Exchange
+          text: the SUN CSN hosts a range of online webinars and training for members of the network, for example our series of webinars on implementation of the BMS code.
+        stitle1: What is a Learning Route?
+        p2: A ‘Learning Route’ is a methodology developed by Procasur Corporation, which facilitates knowledge sharing and peer-to-peer learning across civil society. At the heart of the learning route is an international exchange visit, hosted by representatives of civil society in the host country.
+        stitle2: What is the Learning Route approach?
+        p3: A ‘Learning Route’ is a learning exchange methodology with the following characteristics
+        ba1:
+          pb: It is
+          b: demand driven
+          ppb: and designed to address specific learning needs identified by CSAs.
+        ba2:
+          pb: It is based around successful examples of
+          b: best practice
+          ppb: in the host country that match identified learning needs and knowledge gaps
+        ba3:
+          pb: The best practice examples are documented in a
+          b: participatory and inclusive
+          ppb: way by the host country to identify the process that led to the success and the key steps needed to replicate it.
+        ba4:
+          pb: The host country identifies local
+          b: learning champions
+          ppb: to be the lead trainer for each example of best practice and draw on their knowledge and experience.
+        ba5:
+          bb: The Learning Route 
+          pb: experience is based on
+          b: on practical training session
+          ppb: led by local champions, where participants learn by doing, and analytical sessions, where participants reflect on these experience and identify opportunities for replication in their country.
+        ba6:
+          pb: Visiting and host CSAs finish the Learning Route by developing
+          b: developing innovation plans, practical next steps
+          ppb: applying their learning to their own context and which they will cascade to stakeholders in their own country.
       lr1:
         title: Africa Learning Route
-      lrao:
-        title: Aproaches and Outcomes
       lrip:
         title: Innovation Plans
       lrc:

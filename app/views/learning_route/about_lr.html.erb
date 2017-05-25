@@ -2,9 +2,8 @@
 
 <div class="row">
   <div class = "large-12 columns">
-    <h1>SUN Civil Society Learning Route Programme</h1>
-    <p>A “Learning Route” is a proven process developed by Procasur Corporation, for accelerating knowledge sharing and peer-to-peer learning. At the heart of the learning route is a facilitated visit to a host country by representatives of different countries.</p>
-    <p>Main objective of the programme is strengthening SUN Civil Society Alliances mutual collaboration and scaling up innovative solutions.</p>
+    <h1><%=t('c_learning_route.about_lr.title') %></h1>
+    <p><%=t('c_learning_route.about_lr.p1') %></p>
   </div>
   <div class = "large-4 columns">
     <%=link_to image_tag("Learning programmes.jpg", alt: "Approaches and Outcomes", title: "Approaches and Outcomes"), 'lrao'%>
@@ -30,7 +29,7 @@
 <hr>
 <br>
 <div class = "row large-12 columns">
-    <h3> Learning News and Opportunities </h3>
+  <h1><%=t('c_learning_route.about_lr.lnop') %></h1>
 </div>
 <% @posts.each do |apple| %>
   <div class= 'row'>
