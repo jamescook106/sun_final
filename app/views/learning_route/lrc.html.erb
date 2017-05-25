@@ -2,11 +2,11 @@
 
 <div class="row">
   <div class = "large-12 columns">
-    <h1>Good Practises and Champions</h1>
-    <h3>Good Practises </h3>
-    <p>Text to be extracted</p>
-    <h3>Champions </h3>
-    <p>Text to be extracted</p>
+    <h1><%=t('c_learning_route.lrc.title') %></h1>
+    <p><%=t('c_learning_route.lrc.p1.pb') %> <b><%=t('c_learning_route.lrc.p1.b') %></b> <%=t('c_learning_route.lrc.p1.pl') %> <%= link_to t('c_learning_route.lrc.p1.l'),'http://www.sunalliancerwanda.org/' %> <%=t('c_learning_route.lrc.p1.ppl') %>
+    <br> <br> <%=t('c_learning_route.lrc.p2.pb') %> <b><%=t('c_learning_route.lrc.p2.b') %></b> <%=t('c_learning_route.lrc.p2.pl') %> </p>
+    <p><%=link_to t('c_learning_route.lrc.p3.l'),'http://suncivilsocietynet.wixsite.com/learningroute/copy-of-rwanda-learning-route-2' %> <%=t('c_learning_route.lrc.p3.t') %></p>
+    <p><%=t('c_learning_route.lrc.p4.t') %> <%=link_to t('c_learning_route.lrc.p4.l'), 'https://www.facebook.com/groups/SUNCSNLearningRoute/' %></p>
   </div>
 </div>
 
@@ -17,7 +17,7 @@
 <div class="row">
   <div class = "large-12 columns">
     <div class = "large-6 columns">
-      <h3> Good Practises </h3>
+      <h3> <%=t('c_learning_route.lrc.stitle1') %> </h3>
       <% @posts.each do |apple| %>
         <div class= 'row'>
           <div class = "large-4 columns">
@@ -36,7 +36,7 @@
       <% end %>
     </div>
     <div class = "large-6 columns">
-      <h3> Learning Route Champions </h3>
+      <h3> <%=t('c_learning_route.lrc.stitle2') %> </h3>
       <% @champions.each do |apple| %>
       <% name = apple.first_name + ' ' + apple.last_name%>
       <% url = 'champions/' + apple.id.to_s %>

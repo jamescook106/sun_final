@@ -215,8 +215,24 @@ en:
         title: Innovation Plans
       lrc:
         title: Good Practises and Champions
-
-
+        p1:
+          pb: Five
+          b: best practice examples
+          pl: were identified by the
+          l: SUN Alliance Rwanda
+          ppl: in response to the learning needs highlighted by other CSAs.
+        p2:
+          pb: Each best practice example was presented by a local
+          b: champion
+          pl: who has been instrumental in the success of the approach to addressing malnutrition. The champions’ role was to provide training to other CSAs during the Learning Route.
+        p3:
+          l: Click here
+          t: for more about the best practice examples.
+        p4:
+          t: Join the Learning Route Community on Facebook
+          l: here.
+        stitle1: Good Practises
+        stitle2: Learning Route Champions
   About_Learning_Route_Programs: Learning Route Programs
   About_SUN: What We Do
   About_us: About Us
