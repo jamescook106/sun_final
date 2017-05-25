@@ -1,32 +1,36 @@
 <% @title=t('c_learning_route.lr1.title') %>
 <div class = "row large-12 columns">
   <div class = "large-12 columns">
-    <h1> Africa Learning Route </h1>
+    <h1><%= t('c_learning_route.lr1.title') %></h1>
   </div>
   <div class = "large-9 columns">
-    <p><i>I found the Learning Route experience amazing! I came with a number of expectations, but these have been surpassed. We have been able to go to the communities and see the way of life of the people, share with them what their challenges are, talk to them and find out how they are looking at the issue of malnutrition and dealing with its consequences.</i><b> (Christine Muyama, Uganda Civil Society Coalition on Scaling Up Nutrition, Uganda)</b> </p>
-    <p>The Learning Route in Rwanda is the result of the active collaboration among SUN Civil Society Network, SUN Alliance (Rwanda) and its member organizations and PROCASUR Corporation.</p>
+    <p><i>"<%= t('c_learning_route.lr1.q1') %>"</i><b> <br> <%= t('c_learning_route.lr1.q1a') %></b> </p>
   </div>
   <div class = "large-3 columns">
     <%=image_tag("place.png", alt: "Placeholder", title: "Placeholder")%>
   </div>
   <div class = "large-12 columns">
-    <p>The  Learning Route was implemented in Rwanda, in the localities of Kigali, Nyanza, Huye and Gisagara. While the programme started in March 2016, the Learning Route international exchange took place from the 30th of October in Kigali and ended on the 5th of November 2016. The following SUN Civil Society delegations participated to the Learning Route: Ethiopia; Kenya; Malawi; Rwanda; Sierra Leone; Nigeria; Tanzania; Uganda; Zimbabwe.</p>
-    <p>The learning objectives of the programme were to:</p>
+    <p><%= t('c_learning_route.lr1.p1.p1a')%> <%= link_to t('c_learning_route.lr1.p1.p1ha'), 'http://www.sunalliancerwanda.org/index.php/en/'%> <%= t('c_learning_route.lr1.p1.p1b')%>  <%= link_to t('c_learning_route.lr1.p1.p1hb'), 'http://www.procasur.org/'%> <%=t('c_learning_route.lr1.p1.p1c')%><br><br>
+    <%=t('c_learning_route.lr1.p1.p1d')%> <%= link_to t('c_learning_route.lr1.p1.p1hc'), 'http://suncivilsocietynet.wixsite.com/learningroute/csas-that-applied-for-the-lr-in-africa'%> <%= t('c_learning_route.lr1.p1.p1e')%><br><br>
+  <%=t('c_learning_route.lr1.p1.p1f')%>:</p>
     <ul class='circles'>
-      <li>Identify successful CSA initiatives to tackle malnutrition at community, provincial and national level, understand the processes and factors for success as well as explore potential for scale up;</li>
-      <li>Recognise processes through which civil society enhances national and local policies, and strategies to address nutrition issues with specific focus on vulnerable and disadvantaged groups;</li>
-      <li>Recognise efficient mechanisms to make policy makers accountable in addressing nutrition; </li>
-      <li>Identify effective social mobilisation and communication strategies to raise awareness of nutrition sensitive issues and behaviour change.</li>
+      <li><%= t('c_learning_route.lr1.l1.i1')%></li>
+      <li><%= t('c_learning_route.lr1.l1.i2')%></li>
+      <li><%= t('c_learning_route.lr1.l1.i3')%></li>
+      <li><%= t('c_learning_route.lr1.l1.i4')%></li>
     </ul>
   </div>
-  <div class = "large-9 columns">
-    <p>Learning Route Case Studies and Champions (link to the page) </p>
-    <p>Learning Route Innovation plans (link to the page) </p>
-    <p>Learning Route Rwanda Blog</p>
-  </div>
-  <div class = "large-3 columns">
-    <%=image_tag("place.png", alt: "Placeholder", title: "Placeholder")%>
+  <div class = "large-12 columns">
+    <h3><%= t('c_learning_route.lr1.stitle1') %></h3>
+    <ul class='circles'>
+      <li><%= link_to t('c_learning_route.lr1.l2.i1.l'),'/'%> - <%=t('c_learning_route.lr1.l2.i1.t')%></li>
+      <li><%= link_to t('c_learning_route.lr1.l2.i2.l'),'/'%> - <%=t('c_learning_route.lr1.l2.i2.t')%></li>
+      <li><%= link_to t('c_learning_route.lr1.l2.i3.l'),'/'%> - <%=t('c_learning_route.lr1.l2.i3.t')%></li>
+      <li><%= link_to t('c_learning_route.lr1.l2.i4.l'),'/'%> - <%=t('c_learning_route.lr1.l2.i4.t')%></li>
+      <li><%= link_to t('c_learning_route.lr1.l2.i5.l'),'/'%> - <%=t('c_learning_route.lr1.l2.i5.t')%></li>
+      <li><%= link_to t('c_learning_route.lr1.l2.i6.l'),'/'%> - <%=t('c_learning_route.lr1.l2.i6.t')%></li>
+      <li><%= link_to t('c_learning_route.lr1.l2.i7.l'),'/'%> - <%=t('c_learning_route.lr1.l2.i7.t')%></li>
+    </ul>
   </div>
 </div>
 
@@ -34,7 +38,7 @@
 <hr>
 <br>
 <div class = "row large-12 columns">
-    <h3> News </h3>
+    <h3><%= t('c_learning_route.lr1.stitle2') %></h3>
 </div>
 <% @posts.each do |apple| %>
   <div class= 'row'>
