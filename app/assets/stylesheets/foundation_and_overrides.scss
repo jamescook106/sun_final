@@ -101,34 +101,19 @@ hr{
 	margin-top: 0px;
 }
 
+.LOGOCONTAINER{
+	padding-bottom:0px;
+	display: -ms-flexbox;
+  display: flex;
+	-ms-flex-align: end;
+	align-items: flex-end;
+	margin: 0 auto;
+}
+
 .LOGOBAR{
 	margin-top: 0 auto;
 	padding-bottom: 25px;
 	padding-top:25px;
-}
-
-.LOGOCONTAINER{
-	padding-bottom:0px;
-	display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-
-  -webkit-box-pack: bottom;
-  -moz-box-pack: bottom;
-  -ms-flex-pack: bottom;
-  -webkit-justify-content: bottom;
-  justify-content: bottom;
-
-  -webkit-box-align: bottom;
-  -moz-box-align: bottom;
-
-  -ms-flex-align: bottom;
-  -webkit-align-items: bottom;
-	align-items: bottom;
-	display: flex;
-	margin: 0 auto;
 }
 
 .LANGUAGEBAR{
