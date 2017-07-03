@@ -1,6 +1,7 @@
 <% @title=@posts.title %>
 
-<div class = "row large-12 columns">
+<div class = "row">
+  <div class="large-6 columns end">
     <h1> <%= @posts.title %> </h1>
     <p><%= @posts.created_at.to_date.strftime("%d/%m/%Y") %></p>
     <%=image_tag(@posts.picture.url(:home), alt: @posts.title, title: @posts.title)%>
@@ -13,4 +14,5 @@
     <% if @posts.external !='' %>
       <%= link_to 'External Link', @posts.external, target: "_blank"%>
     <% end %>
+  </div>
 </div>
