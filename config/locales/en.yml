@@ -191,26 +191,22 @@ en:
         stitle2: Learning Route Africa News
         l2:
           i1:
-            l: Learning Route Africa Rwanda Final Report
-            t: summary report covering every aspect of the Rwanda visit, including brief details of the innovation plans developed by participants
+            l: Learning Route blog
           i2:
-            l: Africa Learning Route; best practise and agenda
-            t: details of the best practice examples identified during the Learning Route in Rwanda
+            l: Learning Route background report
+            t: Details of the best practice examples identified during the Learning Route in Rwanda
           i3:
             l: Champions
             t: Read more about the local champions who led training during the Learning Route.
           i4:
-            l: Innovation Plans
-            t: Read more about the innovation plans developed during Learning Route.
+            l: Photos
+            t: Check out some of the pictures from the Rwanda visit
           i5:
-            l: Background Report; Learning Route in Rwanda
-            t: the briefing document sent out to participants
+            l: Video
+            t: Check out our short films about the Learning Route
           i6:
-            l: Rwanda Country Profile
-            t: background information on the host country
-          i7:
-            l: Photo blog
-            t: pictures from the Rwanda visit
+            l: SUN Movement Learning Route
+            t: Find out more about other Learning Routes happening across the SUN Movement
       lrip:
         title: Innovation Plans
         stitle1: What is an innovation plan?
