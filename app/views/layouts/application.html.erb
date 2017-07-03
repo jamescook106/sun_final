@@ -179,44 +179,46 @@
     <br>
     <div class="large-3 columns">
       <br>
-      <h5> SOCIAL MEDIA</h5>
+      <h5> Social Media</h5>
         <%=link_to image_tag("TwitterLogo_white.png", alt: "Twitter", title: "Twitter", size:'25x25'),"https://twitter.com/suncsn", class: "socialA"%>
         <%=link_to image_tag("FB-f-Logo__white_50.png", alt: "Facebook", title: "Facebook", size:'25x25')," https://www.facebook.com/groups/SUNCivilSocietyNetwork/?ref=bookmarks", class: "socialA"%>
         <%=link_to image_tag("YouTube-logo-light.png", alt: "Youtube", title: "Youtube", size:'55x25'),"https://www.youtube.com/channel/UCYLB1s81wlJXxDEzt-rROTQ", class: "socialA"%>
         <br>
         <br>
         <ul style='display:table-row;'>
-          <li ><%= link_to 'Sign up to our Newsletter', '' %> </li>
+          <li> <%= link_to t('Footer.contact'),contact_path  %> </li>
+          <li> <%= link_to t('Footer.JTN'),""  %> </li>
+          <li ><%= link_to t('Footer.SU'), '' %> </li>
         </ul>
     </div>
     <div class="large-3 columns FR">
       <br>
-      <h5> BROWSE</h5>
+      <h5> Browse</h5>
       <ul>
-        <li><%= link_to t('c_country.our_network.title'), our_network_path %> </li>
-        <li><%= link_to t('c_general.what_we_do.title'), what_we_do_path  %> </li>
-        <li> <%= link_to t('c_general.governance.title'),governance_path %> </li>
-        <li> <%= link_to t(:champions),champions_path  %> </li>
-        <li> <%= link_to t('c_general.advocacy.title'),advocacy_path  %> </li>
+        <li><%= link_to t(:News), news_index_path %></li>
+        <li><%= link_to t('what_we_do'), what_we_do_path  %> </li>
+        <li><%= link_to t('our_network'), our_network_path %> </li>
+        <li> <%= link_to t('governance'),governance_path %> </li>
         <li> <%= link_to t(:knowledge),knowledge_path  %> </li>
         <li> <%= link_to t(:contact),contact_path  %> </li>
       </ul>
     </div>
     <div class="large-3 columns FR">
       <br>
-      <h5> Learning Route</h5>
+      <h5> <%=t(:our_work) %></h5>
       <ul>
         <li> <%= link_to t(:About_Learning_Route_Programs), about_lr_path  %> </li>
-        <li> <%= link_to t(:lrao),'lrao'  %> </li>
-        <li> <%= link_to t(:lrc),'lrc' %> </li>
-        <li> <%= link_to t(:lr1),'lr1'  %> </li>
-        <li> <%= link_to t(:lrip),'lrip' %> </li>
+        <li> <%= link_to t(:lr1),'/lr1'  %> </li>
+        <li> <%= link_to t(:champions),champions_path%> </li>
+        <li> <%= link_to t(:Advocacy),advocacy_path%> </li>
+        <li> <%= link_to t('Footer.Cal'),""  %> </li>
       </ul>
     </div>
     <div class="large-3 columns FR">
       <br>
-      <p> PARTNERS</p>
+      <p> Quick Links</p>
       <ul>
+        <li> <%= link_to t('Footer.SUN'),"​http://scalingupnutrition.org/"%> </li>
       </ul>
     </div>
   </div>
