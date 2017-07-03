@@ -2,7 +2,7 @@
 
 <div class="row">
   <div class="large-12 columns">
-    <%=image_tag("Homepagegraphic.jpg", alt: "Placeholder", title: "Placeholder")%>
+    <%=link_to image_tag("Homepagegraphic.jpg", alt: "Working together to End Malnutrition Graphic", title: "Working together to End Malnutrition Graphic"),what_we_do_path%>
     <br>
     <br>
   </div>
@@ -18,9 +18,9 @@
       <% @posts.each do |apple| %>
         <div class = "large-6 columns" style='padding-left:0px'>
           <h4 class = "news_home"><%= link_to apple.title, '/news/'+apple.id.to_s %> </h4>
-          <p> News added on: <%= apple.created_at.to_date %> </p>
+          <p> <%= apple.created_at.to_date.strftime("%d/%m/%Y") %> </p>
           <%= simple_format(apple.short) %>
-          <%= link_to 'More Information', '/news/'+apple.id.to_s%>
+          <%= link_to 'Read More', '/news/'+apple.id.to_s%>
           <br>
           <br>
         </div>

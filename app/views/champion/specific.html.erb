@@ -3,7 +3,7 @@
 <div class = "row large-12 columns">
   <h1><%= @champions.first_name %> <%= @champions.last_name %> </h1>
   <br>
-<div>
+</div>
 
   <div class = "row large-12 columns">
     <div class = "large-4 columns">
@@ -15,9 +15,9 @@
       <% if @champions.contact != nil %>
         <% if @champions.contact.include? "@" %>
           <% linkke = "mailto:"+@champions.contact%>
-            <p> Contact: <a href= <%= linkke %> ><%= @champions.contact %></a> </p>
+            <p> <a href= <%= linkke %> >Contact Me</a> </p>
         <%else %>
-          <p> Contact: <a href= <%= @champions.contact %> ><%= @champions.contact %></a></p>
+          <p> <a href= <%= @champions.contact %> >Contact Me</a></p>
         <% end %>
       <% end %>
     </div>

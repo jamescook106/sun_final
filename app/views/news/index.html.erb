@@ -13,7 +13,7 @@
   <div class= 'row'>
    <div class = "large-9 columns">
     <h4 class = "title"><%= link_to apple.title, apple.id.to_s %> </h4>
-    <p> <%= l(apple.created_at.to_date) %> </p>
+    <p> <%= apple.created_at.to_date.strftime("%d/%m/%Y") %> </p>
     <%= simple_format(apple.short) %>
     <%= link_to 'Read More', apple.id.to_s%>
   </div>
