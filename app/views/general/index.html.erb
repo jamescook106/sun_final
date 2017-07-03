@@ -20,7 +20,7 @@
           <h4 class = "news_home"><%= link_to apple.title, '/news/'+apple.id.to_s %> </h4>
           <p> <%= apple.created_at.to_date.strftime("%d/%m/%Y") %> </p>
           <%= simple_format(apple.short) %>
-          <%= link_to 'More Information', '/news/'+apple.id.to_s%>
+          <%= link_to 'Read More', '/news/'+apple.id.to_s%>
           <br>
           <br>
         </div>
