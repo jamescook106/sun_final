@@ -1,46 +1,41 @@
 <% @title=t('c_learning_route.lr1.title') %>
-<div class = "row large-12 columns">
+<div class = "rowcolumns">
   <div class = "large-12 columns">
     <h1><%= t('c_learning_route.lr1.title') %></h1>
-  </div>
-  <div class = "large-12 columns">
-    <p><i>"<%= t('c_learning_route.lr1.q1') %>"</i><b> <br> <%= t('c_learning_route.lr1.q1a') %></b> </p>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/qzw0GC_HNJs?list=PLmkP-_uSr1KrjJn-Fn6jK_WwaoTvXmEvE" frameborder="0" allowfullscreen></iframe>
-  </div>
-  <div class = "large-12 columns">
-    <p><%= t('c_learning_route.lr1.p1.p1a')%> <%= link_to t('c_learning_route.lr1.p1.p1ha'), 'http://www.sunalliancerwanda.org/index.php/en/'%> <%= t('c_learning_route.lr1.p1.p1b')%>  <%= link_to t('c_learning_route.lr1.p1.p1hb'), 'http://www.procasur.org/'%> <%=t('c_learning_route.lr1.p1.p1c')%><br><br>
-    <%=t('c_learning_route.lr1.p1.p1d')%> <%= link_to t('c_learning_route.lr1.p1.p1hc'), 'http://suncivilsocietynet.wixsite.com/learningroute/csas-that-applied-for-the-lr-in-africa'%> <%= t('c_learning_route.lr1.p1.p1e')%><br><br>
-  <%=t('c_learning_route.lr1.p1.p1f')%>:</p>
+    <p><%=t('c_learning_route.lr1.paragraph_1.initial_text') %> <%= link_to t('c_learning_route.lr1.paragraph_1.hyperlink_1'), 'http://www.sunalliancerwanda.org/index.php/en/', class:"blink" %> <%=t('c_learning_route.lr1.paragraph_1.middle_text') %> <%= link_to t('c_learning_route.lr1.paragraph_1.hyperlink_2'), 'http://www.procasur.org/', class:"blink" %> <%=t('c_learning_route.lr1.paragraph_1.last_text') %></p>
+    <p><%=t('c_learning_route.lr1.paragraph_2.initial_text') %> <%= link_to t('c_learning_route.lr1.paragraph_2.hyperlink'), 'http://www.sunalliancerwanda.org/index.php/en/', class:"blink" %> <%=t('c_learning_route.lr1.paragraph_2.last_text') %> </p>
+    <p><%=t('c_learning_route.lr1.paragraph_3') %> </p>
     <ul class='circles'>
-      <li><%= t('c_learning_route.lr1.l1.i1')%></li>
-      <li><%= t('c_learning_route.lr1.l1.i2')%></li>
-      <li><%= t('c_learning_route.lr1.l1.i3')%></li>
-      <li><%= t('c_learning_route.lr1.l1.i4')%></li>
+      <li> <%=t('c_learning_route.lr1.list_1.item_1') %> </li>
+      <li> <%=t('c_learning_route.lr1.list_1.item_2') %> </li>
+      <li> <%=t('c_learning_route.lr1.list_1.item_3') %> </li>
+      <li> <%=t('c_learning_route.lr1.list_1.item_4') %> </li>
     </ul>
-  </div>
-  <div class = "large-12 columns">
-    <h3><%= t('c_learning_route.lr1.stitle1') %></h3>
+    <p><i> '<%=t('c_learning_route.lr1.paragraph_4.quote') %> </i>' <br> <b> <%=t('c_learning_route.lr1.paragraph_4.source') %> </b> </p>
     <ul class='circles'>
-      <li><%= link_to t('c_learning_route.lr1.l2.i1.l'),'http://suncivilsocietynet.wixsite.com/learningroute/blog'%></li>
-      <li><%= link_to t('c_learning_route.lr1.l2.i2.l'),'http://guarded-sea-28798.herokuapp.com/en/lrc'%> - <%=t('c_learning_route.lr1.l2.i2.t')%></li>
-      <li><%= link_to t('c_learning_route.lr1.l2.i3.l'),'http://guarded-sea-28798.herokuapp.com/en/lrc'%> - <%=t('c_learning_route.lr1.l2.i3.t')%></li>
-      <li><%= link_to t('c_learning_route.lr1.l2.i4.l'),'https://www.flickr.com/photos/suncivilsocietynetwork/sets/72157673720419253'%> - <%=t('c_learning_route.lr1.l2.i4.t')%></li>
-      <li><%= link_to t('c_learning_route.lr1.l2.i5.l'),'https://www.youtube.com/playlist?list=PLmkP-_uSr1KrjJn-Fn6jK_WwaoTvXmEvE'%> - <%=t('c_learning_route.lr1.l2.i5.t')%></li>
-      <li><%= link_to t('c_learning_route.lr1.l2.i6.l'),'http://scalingupnutrition.org/share-learn/strengthen-capacity-for-multi-sectoral-actions-at-all-levels/face-to-face-exchange-with-learning-routes/'%> - <%=t('c_learning_route.lr1.l2.i6.t')%></li>
+      <li> <%= link_to t('c_learning_route.lr1.list_2.item_1.hyperlink'), 'http://suncivilsocietynet.wixsite.com/learningroute/blog', class:"blink" %></li>
+      <li> <%= link_to t('c_learning_route.lr1.list_2.item_2.hyperlink'), 'http://guarded-sea-28798.herokuapp.com/en/lrc', class:"blink" %> <%=t('c_learning_route.lr1.list_2.item_2.text') %> </li>
+      <li> <%= link_to t('c_learning_route.lr1.list_2.item_3.hyperlink'), '/lrc', class:"blink" %> <%=t('c_learning_route.lr1.list_2.item_3.text') %> </li>
+      <li> <%= link_to t('c_learning_route.lr1.list_2.item_4.hyperlink'), '/lrc', class:"blink" %></li>
+      <li> <%= link_to t('c_learning_route.lr1.list_2.item_5.hyperlink'), 'https://www.flickr.com/photos/suncivilsocietynetwork/sets/72157673720419253', class:"blink" %> <%=t('c_learning_route.lr1.list_2.item_5.text') %> </li>
+      <li> <%= link_to t('c_learning_route.lr1.list_2.item_6.hyperlink'), 'https://www.youtube.com/playlist?list=PLmkP-_uSr1KrjJn-Fn6jK_WwaoTvXmEvE', class:"blink" %> <%=t('c_learning_route.lr1.list_2.item_6.text') %> </li>
+      <li> <%= link_to t('c_learning_route.lr1.list_2.item_7.hyperlink'), 'http://scalingupnutrition.org/share-learn/strengthen-capacity-for-multi-sectoral-actions-at-all-levels/face-to-face-exchange-with-learning-routes/', class:"blink" %> <%=t('c_learning_route.lr1.list_2.item_7.text') %> </li>
+      <li> <%= link_to t('c_learning_route.lr1.list_2.item_8.hyperlink'), '/lrc', class:"blink" %></li>
     </ul>
-  </div>
+    <h4><%= t('c_learning_route.lr1.sub_title.find_out_more') %></h4>
 </div>
 
 <br>
 <hr>
 <br>
 <div class = "row large-12 columns">
-    <h3><%= t('c_learning_route.lr1.stitle2') %></h3>
+    <h4><%= t('c_learning_route.lr1.sub_title.africa_news') %></h4>
 </div>
 <% @posts.each do |apple| %>
   <div class= 'row'>
    <div class = "large-9 columns">
-    <h4 class = "title"><%= link_to apple.title, 'news/'+apple.id.to_s %> </h4>
+    <h5 class = "title"><%= link_to apple.title, 'news/'+apple.id.to_s %> </h5>
     <p> News added on: <%= apple.created_at.to_date %> </p>
     <%= simple_format(apple.short) %>
     <%= link_to 'More Information', 'news/'+apple.id.to_s%>
