@@ -117,164 +117,148 @@ en:
 
   c_learning_route:
       about_lr:
-        title: Sharing Learning
-        p1: The SUN Civil Society Network supports a range of programmes to facilitate learning and knowledge exchange across civil society organisations working to end malnutrition. Our aim is to share examples of best practice and strengthen the capacity of civil society to support national plans to scale up nutrition.
-        lnop: Learning News and Opportunities
+        title: Learning Exchange
+        paragraph_1: The SUN Civil Society Network facilitates the sharing of learning across civil society. Our aim is to share examples of best practice and strengthen the capacity of civil society to support national plans to scale up nutrition.
+        paragraph_2: "Here are some of the programmes delivered by the SUN Civil Society Network to facilitate the sharing of learning between civil society actor:"
+        list_1:
+          item_1:
+            bold_text: Learning Routes
+            initial_text: this is a peer-to-peer learning methodology centered on an exchange visit to a host country. Read more about Learning Routes
+            hyperlink_1: here
+            middle_text: ", including our"
+            hyperlink_2: Africa Learning Route
+            last_text: " in 2016."
+          item_2:
+            bold_text: International Learning Exchanges
+            text: " - we host and take part in a range of international exchanges such as our Asia Regional Learning Exchange and the"
+            hyperlink: SUN Global Gathering.
+          item_3:
+            bold_text: Peer to Peer Learning Exchange
+            initial_text:  – we support south-south collaboration and learning exchange between SUN CSAs. This includes our
+            hyperlink:  "‘Creativity and Collaboration Award’"
+            last_text: ", which supports capacity building and joint projects between civil society alliances "
+          item_4:
+            bold_text: Virtual Learning Exchange
+            text: " the SUN CSN hosts a range of online webinars and training for members of the network, for example our series of webinars on implementation of the BMS code. Find out about upcoming webinars on "
+            hyperlink: the SUN CSN calendar.
+        paragraph_3:
+          text: Join the SUN Civil Society Network Learning Exchange on Facebook
+          hyperlink: here.
+        sub_title:
+          lnop: Learning News and Opportunities
       lrao:
-        title: Learning Programme Overview
-        p1: Here are some of the programmes led by the SUN Civil Society Network to facilitate learning exchange across civil society organisations working to end malnutrition.
-        b1:
-          title: Learning Routes
-          text: this is a peer-to-peer learning methodology (see below) centered on an exchange visit to a host country, an approach we used for the
-          link: Africa Learning Route
-          link_p: in 2016.
-        b2:
-          title: International Learning Exchanges
-          text: we host a range of international exchanges such as our Asia Regional Learning Exchange, Indonesia Regional Meeting and take part in the
-          link: SUN Global Gathering.
-        b3:
-          title: Peer to Peer Learning Exchange
-          text: this includes our ‘Creativity and Collaboration Award’, which supports capacity building and joint projects between civil society alliances
-          link: http://suncivilsocietynet.wixsite.com/learningroute/award
-        b4:
-          title: Virtual Learning Exchange
-          text: the SUN CSN hosts a range of online webinars and training for members of the network, for example our series of webinars on implementation of the BMS code.
-        stitle1: What is a Learning Route?
-        p2: A ‘Learning Route’ is a methodology developed by Procasur Corporation, which facilitates knowledge sharing and peer-to-peer learning across civil society. At the heart of the learning route is an international exchange visit, hosted by representatives of civil society in the host country.
-        stitle2: What is the Learning Route approach?
-        p3: A ‘Learning Route’ is a learning exchange methodology with the following characteristics
-        ba1:
-          pb: It is
-          b: demand driven
-          ppb: and designed to address specific learning needs identified by CSAs.
-        ba2:
-          pb: It is based around successful examples of
-          b: best practice
-          ppb: in the host country that match identified learning needs and knowledge gaps
-        ba3:
-          pb: The best practice examples are documented in a
-          b: participatory and inclusive
-          ppb: way by the host country to identify the process that led to the success and the key steps needed to replicate it.
-        ba4:
-          pb: The host country identifies local
-          b: learning champions
-          ppb: to be the lead trainer for each example of best practice and draw on their knowledge and experience.
-        ba5:
-          bb: The Learning Route
-          pb: experience is based on
-          b: on practical training session
-          ppb: led by local champions, where participants learn by doing, and analytical sessions, where participants reflect on these experience and identify opportunities for replication in their country.
-        ba6:
-          pb: Visiting and host CSAs finish the Learning Route by developing
-          b: developing innovation plans, practical next steps
-          ppb: applying their learning to their own context and which they will cascade to stakeholders in their own country.
+        title: "What is a Learning Route?"
+        paragraph_1: "A ‘Learning Route’ is a methodology developed by Procasur Corporation, which facilitates knowledge sharing and peer-to-peer learning across civil society. At the heart of the learning route is an international exchange visit, hosted by representatives of civil society in the host country."
+        sub_title:
+          learning_route_approach: "What is the Learning Route approach?"
+        paragraph_2: "A ‘Learning Route’ is a specific learning exchange methodology based on the following characteristics"
+        list_1:
+          item_1:
+            initial_text: It is
+            bold_text: demand driven
+            last_text: and designed to address specific learning needs identified by CSAs
+          item_2:
+            initial_text: It is based around successful examples of
+            bold_text: best practice
+            last_text:  in the host country that match the learning needs and knowledge gaps of participants.
+          item_3:
+            initial_text: The best practice examples are documented in a
+            bold_text: participatory and inclusive
+            last_text:  way by the host country to identify the process that led to the success and the key steps needed to replicate it.
+          item_4:
+            initial_text: The host country identifies local
+            bold_text:  learning champions
+            last_text:  as for each best practice, draw on their knowledge and experience. Read about some of our Learning Route Champions here.
+          item_5:
+            bold_text_1: The Learning Route
+            initial_text: experience is based
+            bold_text_2: on practical training sessions
+            last_text: led by local champions, where participants learn by doing, and analytical sessions, where participants reflect on these experience and identify opportunities for replication in their country.
+          item_6:
+            initial_text: Visiting and host CSAs finish the Learning Route by
+            bold_text:  developing innovation plans,
+            last_text: to apply their learning to their own context and plan how to cascade learnings to other stakeholders in their own country.
+        paragraph_3:
+          hyperlink: Read about our Africa Learning Route held in Rwanda in 2016.
       lr1:
         title: Africa Learning Route
-        q1: I found the Learning Route experience amazing – it surpassed my expectations! We were able to go to the communities and see the way of life of the people, share with them what their challenges are, talk to them and find out how they are looking at the issue of malnutrition and dealing with its consequences.
-        q1a: Christine Muyama, Uganda Civil Society Coalition on Scaling Up Nutrition, Uganda
-        l1:
-          i1:	Identify successful CSA initiatives to tackle malnutrition at community, provincial and national level, understand the processes and factors for success as well as explore potential for scale up;
-          i2:	Recognise processes through which civil society enhances national and local policies, and strategies to address nutrition issues with specific focus on vulnerable and disadvantaged groups;
-          i3:	Recognise efficient mechanisms to make policy makers accountable in addressing nutrition;
-          i4: Identify effective social mobilisation and communication strategies to raise awareness of nutrition sensitive issues and behaviour change.
-        p1:
-          p1a: The Learning Route in Rwanda was delivered by the SUN Civil Society Network, in partnership with
-          p1ha: SUN Alliance Rwanda
-          p1b: and its member organisations, and
-          p1hb: Procasur Corporation.
-          p1c: The exchange visit took place from 30th October to 5th November 2016.
-          p1d: CSAs from the following countries took part;
-          p1hc: Ethiopia; Kenya; Malawi; Rwanda; Sierra Leone; Nigeria; Tanzania; Uganda; Zimbabwe.
-          p1e: Each country delegation was made up of three representatives from the CSA who were working on nutrition at national or subnational level.
-          p1f: The learning objectives of the Learning Route were to
-        stitle1: Find out more
-        stitle2: Learning Route Africa News
-        l2:
-          i1:
-            l: Learning Route blog
-          i2:
-            l: Learning Route background report
-            t: Details of the best practice examples identified during the Learning Route in Rwanda
-          i3:
-            l: Champions
-            t: Read more about the local champions who led training during the Learning Route.
-          i4:
-            l: Photos
-            t: Check out some of the pictures from the Rwanda visit
-          i5:
-            l: Video
-            t: Check out our short films about the Learning Route
-          i6:
-            l: SUN Movement Learning Route
-            t: Find out more about other Learning Routes happening across the SUN Movement
-      lrip:
-        title: Innovation Plans
-        stitle1: What is an innovation plan?
-        p1: During the final sessions of the Learning Route, each national CSA developed an ‘Innovation Plan’ drawing on what they had learned during the exchange visit. The plan was a set of practical steps the CSA could take to strengthen their own work to address malnutrition.
-        p2: The innovation plans had to
-        l1:
-          li1: 	build on new ideas gained from the learning route
-          li2:	be practical to implement within 6 months
-          li3: 	be practical to implement within 6 months
-          li4: have potential to scale up or be replicated
-        stitle2: The innovation plans
-        p3: Read more about each of the innovation plans developed during the Africa Learning Route
-        l2:
-          li1:	ETHIOPIA – ‘Nutrition visibility and awareness through the media’
-          li2:	KENYA – ‘Mainstreaming nutrition as a multi-sectorial agenda in Mombasa County’
-          li3:	MALAWI – ‘Stakeholder mapping’
-          li4:	NIGERIA –  ‘Improving nutrition through policy implementation at all levels’
-          li5:	RWANDA – ‘Enhancing faith-based organisations to promote nutrition behaviour change’
-          li6:	SIERRA LEONE  – ‘Eat what you grow’
-          li7:	ZIMBABWE –  ‘Strengthening of food and nutrition security committees in Mashonaland Central and Mashonaland West Provinces’
-          li8:	UGANDA – ‘Nutrition budget line advocacy’
-          li9:	TANZANIA – ‘Accountable district nutrition steering committees to scale up nutrition’
-        stitle3: Innovation Plan Awards
-        p4: Three innovation plans were chosen to receive seed funding of 5,000 USD to accelerate implementation. The awards were announced by Gerda Verburg, Coordinator of the SUN Movement, during the post-Learning Route webinar
-        p4l:  ‘Fostering learning and Scaling up Innovation in Nutrition’.
-        p5: The winning Innovation plans were
-        l3:
-          li1: 	SUNI-CSP SL (Sierra Leone); ‘Eat what you grow’
-          li2:	PANITA (Tanzania);  ‘Accountable district nutrition steering committees to scale up nutrition’
-          li3: 	ECSC-SUN (Ethiopia); ‘Nutrition visibility and awareness through the media’
-          li4: ETHIOPIA
-        p6: Join the Learning Route Community on Facebook
-        p6l: here
+        sub_title:
+          find_out_more: Find Out More
+          africa_news: Learning Route Africa News
+        paragraph_1:
+          initial_text: The Learning Route in Rwanda was delivered by the SUN Civil Society Network, in partnership with
+          hyperlink_1: SUN Alliance Rwanda
+          middle_text: and its member organisations, and
+          hyperlink_2: Procasur Corporation.
+          last_text: The exchange visit took place from 30th October to 5th November 2016.
+        paragraph_2:
+          initial_text: "CSAs from the following countries took part;"
+          hyperlink: " Ethiopia; Kenya; Malawi; Rwanda; Sierra Leone; Nigeria; Tanzania; Uganda; Zimbabwe."
+          last_text: Each country delegation was made up of three representatives from the CSA who were working on nutrition at national or subnational level.
+        paragraph_3: "The learning objectives of the Learning Route were to:"
+        list_1:
+          item_1: "Identify successful CSA initiatives to tackle malnutrition at community, provincial and national level, understand the processes and factors for success and  explore potential for scale up;"
+          item_2: "Recognise processes through which civil society enhances national and local policies, and strategies to address nutrition issues with specific focus on vulnerable and disadvantaged groups;"
+          item_3: "Recognise efficient mechanisms to make policy makers accountable in addressing nutrition;"
+          item_4: "Identify effective social mobilisation and communication strategies to raise awareness of nutrition sensitive issues and behaviour change."
+        paragraph_4:
+          quote: "I found the Learning Route experience amazing – it surpassed my expectations! We were able to go to the communities and see the way of life of the people, share with them what their challenges are, talk to them and find out how they are looking at the issue of malnutrition and dealing with its consequences."
+          source: Christine Muyama, Uganda Civil Society Coalition on Scaling Up Nutrition, Uganda
+        list_2:
+          item_1:
+            hyperlink: Learning Route blog
+          item_2:
+            hyperlink: Learning Route background report
+            text: "- Details of the best practice examples identified during the Learning Route in Rwanda"
+          item_3:
+            hyperlink: Champions
+            text: "- Read more about the local champions who led training during the Learning Route."
+          item_4:
+            hyperlink: Best practices
+          item_5:
+            hyperlink: Photos
+            text: "- Check out some of the pictures from the Rwanda visit"
+          item_6:
+            hyperlink: Video
+            text: "- Check out our short films about the Learning Route"
+          item_7:
+            hyperlink: SUN Movement Learning Route
+            text:  "- Find out more about other Learning Routes happening across the SUN Movement"
+          item_8:
+            hyperlink: Africa Learning Route Innovation awards
       lrc:
-        title: Good Practise and Champions
-        p1:
-          pb: Five
-          b: best practice examples
-          pl: were identified by the
-          l: SUN Alliance Rwanda
-          ppl: in response to the learning needs highlighted by other CSAs.
-        p2:
-          pb: Each best practice example was presented by a local
-          b: champion
-          pl: who has been instrumental in the success of the approach to addressing malnutrition. The champions’ role was to provide training to other CSAs during the Learning Route.
-        p3:
-          l: Click here
-          t: for more about the best practice examples.
-        p4:
-          t: Join the Learning Route Community on Facebook
-          l: here.
-        stitlem: Our Learning Route Champions
-        l1:
-          i1: Silvya Muteteli- case study 2   |    LR Expert for; Radio Soap opera programmes development, communication, BCC communication and social mobilization - Belonging organization URUNANA DC
-          i2: Teogene Munyensanga- case study 4   |    LR Expert for; Livestock- breeding, veterinary, production;  Agriculture, Cooperative management, biogas and climate smart agriculture techniques; health and nutrition community mobilizer - Giramata Mworozi Dairy cooperative  (Kinyarwanda, French)
-          i3: Zilipa Mykarwego- case study 4   |   LR Expert for; Livestock- breeding, veterinary, production; Cooperative management; Women empowerment; small agribusiness; health and nutrition community mobilizer - Belonging organization Giramata Mworozi Dairy cooperative  (Kinyarwanda)
-          i4: Evode Micomyiza- case study 5  |    LR Expert for; policy review; multi-stakeholder coordination; adovcacy; nutrition programe coordinatin - Belonging organization Care international (English, French, Kinyarwanda)
-          i5: Innocent Benineza- case study 3  |    LR Expert for; Pro- poor Public Private Partnership - Belonging organization Duhamic-ADRI (English, French, Kinyarwanda)
-          i6: Jeanette Kayirangwa- case study 1   |    LR Expert for; Stakeholder mapping - Belonging organization UNREACH (English, French, Kinyarwanda)
-        stitle1: Good Practises
-        stitle2: Learning Route Champions
+        title: "Best Practise, Champions and Innovation Awards"
+        sub_title:
+          best_practises: Best Practices
+          champions: Champions
+          innovation_plans: Innovation Plans
+        paragraph_1:
+          initial_text: Five
+          bold_text:  best practice approaches
+          middle_text:  to scaling up nutrition were identified by the
+          hyperlink: SUN Alliance Rwanda
+          last_text:  in response to the learning needs highlighted by other CSAs in the region.
+        paragraph_2: Read more about each of the best practise examples studied at the bottom of the page.
+        paragraph_3:
+          initial_text: Each best practice example was presented by a local
+          bold_text: champion
+          last_text: "who has been instrumental in the success of the approach to addressing malnutrition. The champions’ role was to provide training to other CSAs during the Learning Route. Find out more about each of the Learning Route champions at the bottom of the page."
+        paragraph_4: Following the Learning Route, all participating CSAs developed their own innovation plans, applying the best practices studied during the learning route to their own country context. Innovation plans are required to build on existing national strategies, apply examples of innovation, be sustainable and have the potential to be scaled up.
+        paragraph_5: "Three Innovation plans were awarded with a grant of 5,000 USD to implement their project. Read more about each of the winning plans:"
+        list_1:
+          item_1:
+            hyperlink: " SUNI-CSP SL (Sierra Leone): Eat what you grow"
+          item_2:
+            hyperlink: " PANITA (Tanzania):  Accountable district nutrition steering committees to scale up nutrition"
+          item_3:
+            hyperlink: "ECSC-SUN (Ethiopia): Nutrition visibility and awareness through the media"
   About_SUN: What We Do
   Home: Home
   About_us: About Us
   what_we_do: About the Network
   our_network: Where we work
   governance: Membership & Governance
-  our_work: Current Programmes
+  our_work: Activities
   About_Learning_Route_Programs: Learning Programmes
   champions: Nutrition Champions
   Advocacy: ​Parliamentarian Engagement
@@ -285,8 +269,13 @@ en:
   lrao: Aproaches and Outcomes
   lrip: Innovation Plans
   Footer:
+    current_work: Current Work
+    Advocacy: Advocacy
     contact: Contact Us
     JTN: Join the Network
     SU: Sign up to our Newsletter
     Cal: Events Calendar
-    SUN: SUN CSN Movement
+    SUN: SUN Movement
+    The_global_nutrition_report: The Global Nutrition Report
+    Research_for_development: Research For Development
+    SDG2: SDG2 Advocacy Hub
