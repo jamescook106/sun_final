@@ -205,12 +205,11 @@
     </div>
     <div class="large-3 columns FR">
       <br>
-      <h5> <%=t(:our_work) %></h5>
+      <h5> <%=t('Footer.current_work') %></h5>
       <ul>
-        <li> <%= link_to t(:About_Learning_Route_Programs), about_lr_path  %> </li>
         <li> <%= link_to t(:lr1),'/lr1'  %> </li>
         <li> <%= link_to t(:champions),champions_path%> </li>
-        <li> <%= link_to t(:Advocacy),advocacy_path%> </li>
+        <li> <%= link_to t('Footer.Advocacy'),advocacy_path%> </li>
         <li> <%= link_to t('Footer.Cal'),""  %> </li>
       </ul>
     </div>
@@ -218,7 +217,10 @@
       <br>
       <p> Quick Links</p>
       <ul>
+        <li> <%= link_to t('Footer.The_global_nutrition_report'),"http://www.globalnutritionreport.org/"%> </li>
+        <li> <%= link_to t('Footer.Research_for_development'),"​http://www.investinnutrition.org/"%> </li>
         <li> <%= link_to t('Footer.SUN'),"​http://scalingupnutrition.org/"%> </li>
+        <li> <%= link_to t('Footer.SDG2'),"​http://sdg2advocacyhub.org/"%> </li>
       </ul>
     </div>
   </div>
