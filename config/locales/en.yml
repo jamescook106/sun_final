@@ -117,9 +117,35 @@ en:
 
   c_learning_route:
       about_lr:
-        title: Sharing Learning
-        p1: The SUN Civil Society Network supports a range of programmes to facilitate learning and knowledge exchange across civil society organisations working to end malnutrition. Our aim is to share examples of best practice and strengthen the capacity of civil society to support national plans to scale up nutrition.
-        lnop: Learning News and Opportunities
+        title: Learning Exchange
+        paragraph_1: The SUN Civil Society Network facilitates the sharing of learning across civil society. Our aim is to share examples of best practice and strengthen the capacity of civil society to support national plans to scale up nutrition.
+        paragraph_2: "Here are some of the programmes delivered by the SUN Civil Society Network to facilitate the sharing of learning between civil society actor:"
+        list_1:
+          item_1:
+            bold_text: Learning Routes
+            initial_text: this is a peer-to-peer learning methodology centered on an exchange visit to a host country. Read more about Learning Routes
+            hyperlink_1: here
+            middle_text: ", including our"
+            hyperlink_2: Africa Learning Route
+            last_text: " in 2016."
+          item_2:
+            bold_text: International Learning Exchanges
+            text: " - we host and take part in a range of international exchanges such as our Asia Regional Learning Exchange and the"
+            hyperlink: SUN Global Gathering.
+          item_3:
+            bold_text: Peer to Peer Learning Exchange
+            initial_text:  – we support south-south collaboration and learning exchange between SUN CSAs. This includes our
+            hyperlink:  "‘Creativity and Collaboration Award’"
+            last_text: ", which supports capacity building and joint projects between civil society alliances "
+          item_4:
+            bold_text: Virtual Learning Exchange
+            text: " the SUN CSN hosts a range of online webinars and training for members of the network, for example our series of webinars on implementation of the BMS code. Find out about upcoming webinars on "
+            hyperlink: the SUN CSN calendar.
+        paragraph_3:
+          text: Join the SUN Civil Society Network Learning Exchange on Facebook
+          hyperlink: here.
+        sub_title:
+          lnop: Learning News and Opportunities
       lrao:
         title: Learning Programme Overview
         p1: Here are some of the programmes led by the SUN Civil Society Network to facilitate learning exchange across civil society organisations working to end malnutrition.

@@ -3,25 +3,15 @@
 <div class="row">
   <div class = "large-12 columns">
     <h1><%=t('c_learning_route.about_lr.title') %></h1>
-    <p><%=t('c_learning_route.about_lr.p1') %></p>
-  </div>
-  <div class = "large-4 columns">
-    <%=link_to image_tag("Learning programmes.jpg", alt: "Approaches and Outcomes", title: "Approaches and Outcomes"), 'lrao'%>
-  </div>
-  <div class = "large-4 columns">
-    <%=link_to image_tag("AfricaLR.JPG", alt: "Africa Learning Route", title: "Africa Learning Route"), 'lr1'%>
-  </div>
-  <div class = "large-4 columns">
-    <%=link_to image_tag("Good practices.jpg", alt: "Good Practises and Champions", title: "Good Practises and Champions"), 'lrc'%>
-  </div>
-  <div class = "large-4 columns">
-    <%=link_to image_tag("Resources.jpg", alt: "Learning Route News", title: "Learning Route News"), news_indexlr_path%>
-  </div>
-  <div class = "large-4 columns">
-    <%=link_to image_tag("Innovation plans.jpg", alt: "Innovation Plans ", title: "Innovation Plans "), 'lrip'%>
-  </div>
-  <div class = "large-4 columns">
-    <%=link_to image_tag("Join the community.jpg", alt: "Join the community", title: "Join the community"), 'https://www.facebook.com/groups/SUNCSNLearningRoute/'%>
+    <p><%=t('c_learning_route.about_lr.paragraph_1') %></p>
+    <p><%=t('c_learning_route.about_lr.paragraph_2') %></p>
+    <ul>
+      <li><b><%=t('c_learning_route.about_lr.list_1.item_1.bold_text') %></b> - <%=t('c_learning_route.about_lr.list_1.item_1.initial_text') %> <%= link_to t('c_learning_route.about_lr.list_1.item_1.hyperlink_1'), 'lrao', class:"blink" %> <%=t('c_learning_route.about_lr.list_1.item_1.middle_text') %> <%= link_to t('c_learning_route.about_lr.list_1.item_1.hyperlink_2'), 'lr1', class:"blink" %> <%=t('c_learning_route.about_lr.list_1.item_1.last_text') %>   </li>
+      <li><b><%=t('c_learning_route.about_lr.list_1.item_2.bold_text') %></b> - <%=t('c_learning_route.about_lr.list_1.item_2.text') %> <%= link_to t('c_learning_route.about_lr.list_1.item_2.hyperlink'), 'http://scalingupnutrition.org/events/2017-sun-movement-global-gathering/', class:"blink" %></li>
+      <li><b><%=t('c_learning_route.about_lr.list_1.item_3.bold_text') %></b> - <%=t('c_learning_route.about_lr.list_1.item_3.initial_text') %> <%= link_to t('c_learning_route.about_lr.list_1.item_3.hyperlink'), 'http://suncivilsocietynet.wixsite.com/learningroute/award', class:"blink" %> <%=t('c_learning_route.about_lr.list_1.item_1.last_text') %>   </li>
+      <li><b><%=t('c_learning_route.about_lr.list_1.item_4.bold_text') %></b> - <%=t('c_learning_route.about_lr.list_1.item_4.text') %> <%= link_to t('c_learning_route.about_lr.list_1.item_4.hyperlink'), 'https://calendar.google.com/calendar/render?pli=1#main_7', class:"blink" %></li>
+    </ul>
+    <p><%=t('c_learning_route.about_lr.paragraph_3.text') %> <%= link_to t('c_learning_route.about_lr.paragraph_3.hyperlink'), 'https://www.facebook.com/groups/SUNCSNLearningRoute/', class:"blink" %></p>
   </div>
 </div>
 
@@ -29,7 +19,7 @@
 <hr>
 <br>
 <div class = "row large-12 columns">
-  <h1><%=t('c_learning_route.about_lr.lnop') %></h1>
+  <h1><%=t('c_learning_route.about_lr.sub_title.lnop') %></h1>
 </div>
 <% @posts.each do |apple| %>
   <div class= 'row'>
