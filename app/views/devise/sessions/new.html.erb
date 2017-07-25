@@ -1,8 +1,10 @@
+<% @title=t('user_management.log_in.title') %>
+
 <div class='row column large 12'>
 
-<h2>Log in</h2>
+<h1><%= t('user_management.log_in.title') %></h1>
 
-<p> Login to access further resources and add your own </p>
+<p> Login to access further resources and upload your own for others to use. </p>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
