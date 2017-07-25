@@ -2,7 +2,7 @@
 
 <div class="row">
   <div class="large-12 columns">
-    <%=link_to image_tag("Homepagegraphic.jpg", alt: "Working together to End Malnutrition Graphic", title: "Working together to End Malnutrition Graphic"),what_we_do_path%>
+    <%=link_to image_tag("home_page_banner.jpg", alt: "Working together to End Malnutrition Graphic", title: "Working together to End Malnutrition Graphic"),what_we_do_path%>
     <br>
     <br>
   </div>
@@ -110,7 +110,7 @@
     <h3> Latest Tweets</h3>
   <a class="twitter-timeline" data-height="600" href="https://twitter.com/SUNCSN">Tweets by SUNCSN</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
       <h3> Want our latest updates?</h3>
-      <%= button_to('Sign up to our Newsletter','', method: :get, class:"success small button")  %>
+      <%= button_to('Join our Mailing List','https://docs.google.com/forms/d/e/1FAIpQLSdEaIDy4d8cXFA2oBPGD91Q0EJ3CBzjlEXOtlRIvdfaP0IgFg/viewform?usp=sf_link', method: :get, class:"success small button")  %>
 
       <h3> Login </h3>
     <% if user_signed_in? %>

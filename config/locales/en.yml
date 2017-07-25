@@ -21,7 +21,7 @@ en:
         organisation: Organisation
         msun: Tick here if you are a member of SUN Civil Society Network
         motivation: Tell us about you! (max 200 characters)
-        newsletter: Opt in to receive the SUN Newsletter
+        newsletter: Opt in to sign up to the SUN CSN mailing list
         skype: Skype
         whatsapp: Whatsapp
         linkedin: LinkedIn
@@ -46,6 +46,11 @@ en:
               too_short: to short
             short:
               blank: is required
+  user_management:
+    log_in:
+      title: Log In
+    sign_up:
+      title: Sign Up
   m_resource:
     language:
       eng: English
@@ -255,13 +260,13 @@ en:
   About_SUN: What We Do
   Home: Home
   About_us: About Us
-  what_we_do: About the Network
-  our_network: Where we work
+  what_we_do: What We Do
+  our_network: Where We Work
   governance: Membership & Governance
   our_work: Activities
   About_Learning_Route_Programs: Learning Programmes
   champions: Nutrition Champions
-  Advocacy: ​Parliamentarian Engagement
+  Advocacy: Advocacy
   knowledge: Resources
   contact: Support
   lr1: Africa Learning Route
@@ -273,9 +278,9 @@ en:
     Advocacy: Advocacy
     contact: Contact Us
     JTN: Join the Network
-    SU: Sign up to our Newsletter
+    join_our_mailing_list: Join our Mailing List
     Cal: Events Calendar
     SUN: SUN Movement
     The_global_nutrition_report: The Global Nutrition Report
-    Research_for_development: Research For Development
+    Research_for_development: Invest in Nutrition
     SDG2: SDG2 Advocacy Hub
