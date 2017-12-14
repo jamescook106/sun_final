@@ -1,5 +1,16 @@
 <% @title=t('c_general.index.title') %>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62126022-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62126022-1');
+</script>
+
+
 <div class="row">
   <div class="large-12 columns">
     <%=link_to image_tag("home_page_banner.jpg", alt: "Working together to End Malnutrition Graphic", title: "Working together to End Malnutrition Graphic"),what_we_do_path%>
